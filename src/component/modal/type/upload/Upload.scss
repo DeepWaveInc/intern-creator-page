@@ -1,0 +1,36 @@
+@import '../../../../css/_variable';
+@import '../../../../css/_mixin';
+
+.modal-dialog {
+  &.hullaballoo-modal {
+    &__upload {
+      @media all and (min-width: (1200px)) {
+        width: 100%;
+        max-width: 969px;
+      }
+
+      @media all and (min-width: 992px) and (max-width: 1200px) {
+        width: 100%;
+        max-width: 969px;
+      }
+
+      @media all and (max-width: (576px)) {
+        @include modal_container();
+      }
+
+      .hullaballoo-modal__content {
+        margin-top: 0;
+      }
+
+      &.file-selected {
+        @media all and (min-width: (1200px)) {
+          max-width: 630px;
+        }
+
+        @media all and (min-width: 992px) and (max-width: 1200px) {
+          max-width: 500px;
+        }
+      }
+    }
+  }
+}

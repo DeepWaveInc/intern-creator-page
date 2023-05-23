@@ -1,0 +1,64 @@
+@import '../../../../css/_variable';
+@import '../../../../css/_mixin';
+
+$progressBar-handler-size: 22px;
+$progressBar-percentage-color: #3c88ee;
+$progressBar-background-color: #e5e5e5;
+$progressBar-tracker-height: 8px;
+
+.noise-difference-player {
+  .progressBar {
+    display: flex;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      content: '';
+      width: 100%;
+      height: $progressBar-tracker-height;
+      border-radius: 10px;
+      background-color: $progressBar-background-color;
+      pointer-events: none;
+      touch-action: none;
+    }
+
+    &__track {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      height: $progressBar-tracker-height;
+      border-radius: 10px;
+      background-color: $progressBar-percentage-color;
+      pointer-events: none;
+      touch-action: none;
+
+      &:before {
+        position: absolute;
+        content: '';
+        top: 50%;
+        right: calc(-#{$progressBar-handler-size} / 2);
+        width: $progressBar-handler-size;
+        height: $progressBar-handler-size;
+        background-color: $color-primary-dark;
+        transform: translateY(-50%);
+        border-radius: 50%;
+      }
+    }
+
+    input[type='range'] {
+      @include appearance(none);
+      width: 100%;
+      height: $progressBar-handler-size;
+      background: transparent;
+      overflow: hidden;
+      outline: none;
+      cursor: pointer;
+      opacity: 0;
+    }
+  }
+}

@@ -1,0 +1,152 @@
+@import '../../../../../../../css/_variable';
+@import '../../../../../../../css/_mixin';
+
+$margin_top: 24px;
+
+.landing-steps {
+  &__steps-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    @include breakpoint-pad-md() {
+      max-width: 320px;
+      width: 100%;
+    }
+
+    &__item {
+      position: relative;
+      padding-left: 55px;
+      cursor: pointer;
+
+      &:before,
+      &:after {
+        position: absolute;
+        display: block;
+        content: '';
+        left: 15px;
+        transform: translateX(-50%);
+        width: 4px;
+        background-color: $color-primary-default;
+      }
+
+      &:before {
+        height: 50%;
+        top: -19px;
+      }
+
+      &:after {
+        height: 50%;
+        top: calc(50% + 11px + 8px);
+      }
+
+      &:first-of-type {
+        &:before {
+          display: none;
+        }
+      }
+
+      &:last-of-type {
+        &:after {
+          display: none;
+        }
+      }
+
+      > p {
+        font-size: $font-size-h3-32;
+        line-height: 1.25;
+        font-weight: 400;
+        color: rgba(0, 0, 0, 0.43);
+        margin: 0;
+
+        @include breakpoint-pc-md() {
+          font-size: 28px;
+          line-height: 35px;
+        }
+
+        @include breakpoint-phone-lg() {
+          font-size: $font-size-h4-24;
+          line-height: 24px;
+        }
+      }
+
+      > h3 {
+        font-size: 28px;
+        line-height: 40px;
+        font-weight: 500;
+        color: $color-grey-scale;
+        margin: 0;
+        margin-top: 2px;
+
+        @include breakpoint-pc-md() {
+          font-size: $font-size-h4-24;
+          line-height: 30px;
+        }
+
+        @include breakpoint-phone-lg() {
+          font-size: $font-size-body-20;
+          line-height: 28px;
+        }
+      }
+
+      > span {
+        display: flex;
+        font-size: $font-size-body-20;
+        line-height: 30px;
+        font-weight: 400;
+        margin-top: 2px;
+
+        @include breakpoint-phone-lg() {
+          font-size: $font-size-body-16;
+          line-height: 22px;
+        }
+      }
+
+      &:not(:first-of-type) {
+        margin-top: $margin_top;
+      }
+
+      &__dot {
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: $color-primary-default;
+
+        @include breakpoint-phone-lg() {
+          width: 24px;
+          height: 24px;
+          left: 3px;
+        }
+
+        &.active {
+          &:before {
+            display: block;
+          }
+        }
+
+        &:before {
+          display: none;
+          position: absolute;
+          content: '';
+          top: 50%;
+          left: 50%;
+          transform: translateX(-50%) translateY(-50%);
+          background-color: $color-white;
+          width: 18px;
+          height: 18px;
+          border-radius: 50%;
+
+          @include breakpoint-phone-lg() {
+            width: 14px;
+            height: 14px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,297 @@
+@import '../../../css/_variable';
+@import '../../../css/_mixin';
+
+$hullaballoo-button-normal-play-triangle-height: 18px;
+
+.hullaballoo-button {
+  &__normal-play {
+    position: relative;
+    display: inline-flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    font-size: $font-size-body-16;
+    padding: 12px 24px;
+    line-height: 1.4;
+    outline: none;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    transition: background-color 0.2s ease, border 0.2s ease, color 0.2s ease;
+    user-select: none;
+
+    &__icon {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      outline: none;
+      cursor: pointer;
+      border-color: transparent;
+      margin-right: 10px;
+
+      &:before,
+      &:after {
+        position: absolute;
+        content: '';
+      }
+
+      &.play {
+        &:before {
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: calc(
+              $hullaballoo-button-normal-play-triangle-height / 2
+            )
+            0 calc($hullaballoo-button-normal-play-triangle-height / 2)
+            ($hullaballoo-button-normal-play-triangle-height * 0.866);
+          border-color: transparent transparent transparent $color-white;
+          top: 50%;
+          left: 50%;
+          transform: translateX(-30%) translateY(-50%);
+        }
+        &:after {
+          display: none;
+        }
+      }
+
+      &.pause {
+        &:before,
+        &:after {
+          position: absolute;
+          width: 4.5px;
+          height: $hullaballoo-button-normal-play-triangle-height;
+          background-color: $color-white;
+          border-radius: 1.2px;
+          top: 50%;
+          transform: translateY(-50%) translateX(-50%);
+        }
+
+        &:before {
+          left: calc(50% - #{4px});
+        }
+
+        &::after {
+          left: calc(50% + #{4px});
+        }
+      }
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+      outline: none;
+    }
+
+    &--lg {
+      font-size: $font-size-h4-24;
+      line-height: 1.4;
+    }
+
+    &--md {
+      font-size: $font-size-body-16;
+    }
+
+    &[disabled] {
+      position: relative;
+      pointer-events: none;
+      opacity: 0.4;
+    }
+
+    &[loading='true'] {
+      pointer-events: none;
+
+      * {
+        opacity: 0;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: block;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        border-width: 4px;
+        border-style: solid;
+        border-bottom-color: transparent;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        animation: buttonSpin 1s linear infinite;
+      }
+    }
+
+    &:active {
+      font-weight: 700;
+    }
+
+    &[type='primary'] {
+      background-color: $color-primary-default;
+      color: $color-white;
+
+      &:hover {
+        background-color: $color-primary-default;
+
+        .hullaballoo-button__normal-play__icon {
+          &.play {
+            &:before {
+              border-color: transparent transparent transparent
+                $color-primary-default;
+            }
+          }
+          &.pause {
+            &:before,
+            &:after {
+              background-color: $color-primary-default;
+            }
+          }
+        }
+
+        &[outline='true'] {
+          background-color: $color-primary-default;
+          color: $color-white;
+
+          .hullaballoo-button__normal-play__icon {
+            &.play {
+              &:before {
+                border-color: transparent transparent transparent
+                  $color-primary-default;
+              }
+            }
+            &.pause {
+              &:before,
+              &:after {
+                background-color: $color-primary-default;
+              }
+            }
+          }
+        }
+      }
+
+      &[outline='true'] {
+        background-color: transparent;
+        border-color: $color-primary-default;
+        color: $color-primary-default;
+      }
+
+      .hullaballoo-button__normal-play__icon {
+        background-color: $color-white;
+
+        &.play {
+          &:before {
+            border-color: transparent transparent transparent
+              $color-primary-default;
+          }
+        }
+
+        &.pause {
+          &:before,
+          &:after {
+            background-color: $color-primary-default;
+          }
+        }
+      }
+
+      span {
+        color: $color-white;
+      }
+    }
+    &[type='secondary'] {
+      background-color: $color-secondary-default;
+      color: $color-white;
+
+      &:hover {
+        background-color: $color-secondary-dark;
+
+        .hullaballoo-button__normal-play__icon {
+          &.play {
+            &:before {
+              border-color: transparent transparent transparent
+                $color-secondary-dark;
+            }
+          }
+          &.pause {
+            &:before,
+            &:after {
+              background-color: $color-secondary-dark;
+            }
+          }
+        }
+
+        &[outline='true'] {
+          background-color: $color-secondary-default;
+          color: $color-white;
+
+          .hullaballoo-button__normal-play__icon {
+            &.play {
+              &:before {
+                border-color: transparent transparent transparent
+                  $color-secondary-default;
+              }
+            }
+            &.pause {
+              &:before,
+              &:after {
+                background-color: $color-secondary-default;
+              }
+            }
+          }
+        }
+      }
+
+      &[outline='true'] {
+        background-color: transparent;
+        border-color: $color-secondary-default;
+        color: $color-secondary-default;
+      }
+
+      .hullaballoo-button__normal-play__icon {
+        background-color: $color-white;
+
+        &.play {
+          &:before {
+            border-color: transparent transparent transparent
+              $color-secondary-default;
+          }
+        }
+
+        &.pause {
+          &:before,
+          &:after {
+            background-color: $color-secondary-default;
+          }
+        }
+      }
+    }
+
+    &[type='blank'] {
+      background-color: $color-white;
+      color: $color-grey-scale;
+
+      &:hover {
+        color: $color-primary-default;
+      }
+
+      .hullaballoo-button__normal-play__icon {
+        background-color: $color-white;
+
+        &.play {
+          &:before {
+            border-color: transparent transparent transparent $color-grey-scale;
+          }
+        }
+
+        &.pause {
+          &:before,
+          &:after {
+            background-color: $color-grey-scale;
+          }
+        }
+      }
+    }
+  }
+}

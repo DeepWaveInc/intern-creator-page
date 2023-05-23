@@ -1,0 +1,51 @@
+@import '../../../../css/_variable';
+@import '../../../../css/_mixin';
+
+.noise-difference-player {
+  .progressWave {
+    display: flex;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    margin-left: 24px;
+
+    input[type='range'] {
+      @include appearance(none);
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      overflow: hidden;
+      outline: none;
+      cursor: pointer;
+      opacity: 0;
+    }
+
+    &__container {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      z-index: -1;
+
+      &.active {
+        opacity: 1;
+        z-index: 0;
+      }
+    }
+
+    &__static,
+    &__progress {
+      position: absolute;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      touch-action: none;
+    }
+
+    &__progress {
+      overflow: hidden;
+    }
+  }
+}

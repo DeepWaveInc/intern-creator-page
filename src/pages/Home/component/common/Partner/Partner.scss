@@ -1,0 +1,170 @@
+@import '../../../../../css/_variable';
+@import '../../../../../css/_mixin';
+
+.home-page {
+  .landing-partner {
+    position: relative;
+    display: flex;
+    margin-top: 195px;
+    width: 100%;
+
+    @include breakpoint-pad-md() {
+      margin-top: 70px;
+    }
+
+    &__container {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 1200px;
+      width: 100%;
+      height: 100%;
+      flex: 1;
+      margin: 0 auto;
+
+      @include breakpoint-pc-sm() {
+        max-width: 992px;
+      }
+
+      @include breakpoint-pad-lg() {
+        max-width: 824px;
+      }
+
+      @include breakpoint-pad-md() {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      @include breakpoint-pad-sm() {
+        max-width: 100%;
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+
+      > h2 {
+        font-weight: 500;
+        font-size: $font-size-h1-40;
+        line-height: 1.4;
+        color: $color-primary-default;
+
+        @include breakpoint-pc-md() {
+          font-size: $font-size-h3-32;
+          line-height: 40px;
+        }
+
+        @include breakpoint-pad-md() {
+          font-size: 28px;
+          line-height: 40px;
+        }
+      }
+
+      > ul {
+        display: flex;
+        width: 100%;
+        margin-top: 18px;
+        margin-left: -20px;
+        margin-right: -20px;
+        padding-bottom: 160px;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        @include breakpoint-pad-md() {
+          justify-content: space-evenly;
+          padding-bottom: 70px;
+        }
+
+        > li {
+          position: relative;
+          cursor: pointer;
+          margin-top: 30px;
+          margin-left: 20px;
+          margin-right: 20px;
+
+          svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: opacity 0.25s linear;
+
+            &:first-of-type {
+              opacity: 0;
+
+              @include breakpoint-phone-lg() {
+                opacity: 1;
+              }
+            }
+
+            &:last-of-type {
+              opacity: 1;
+
+              @include breakpoint-phone-lg() {
+                opacity: 0;
+              }
+            }
+          }
+
+          &:hover {
+            svg {
+              &:first-of-type {
+                opacity: 1;
+              }
+
+              &:last-of-type {
+                opacity: 0;
+              }
+            }
+          }
+
+          &.metaedu {
+            width: 150px;
+            height: 23px;
+          }
+
+          &.moist {
+            width: 191px;
+            height: 46px;
+          }
+
+          &.ebc {
+            width: 65px;
+            height: 37px;
+          }
+
+          &.iii {
+            width: 276px;
+            height: 37px;
+          }
+
+          &.aws {
+            width: 67px;
+            height: 42px;
+          }
+
+          &.ui {
+            width: 195px;
+            height: 47px;
+          }
+
+          &.gopro {
+            width: 122px;
+            height: 32px;
+          }
+
+          &.google {
+            width: 122px;
+            height: 41px;
+          }
+
+          &.tita {
+            width: 146px;
+            height: 34px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+@import '../../../../css/_variable';
+@import '../../../../css/_mixin';
+
+.noise-difference-player {
+  .list {
+    & + .player {
+      flex-basis: 748px;
+      max-width: 748px;
+
+      @include breakpoint-pad-lg() {
+        width: 100%;
+        max-width: 100%;
+        flex-basis: unset;
+      }
+    }
+  }
+
+  .player {
+    position: relative;
+    display: flex;
+    background-color: $color-white;
+    justify-content: center;
+    flex: 1;
+    flex-shrink: 0;
+    height: 460px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+
+    @include breakpoint-pad-lg() {
+      margin-left: 0;
+      margin-top: 27px;
+    }
+
+    .switch {
+      position: absolute;
+      top: 38px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .control {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+    }
+  }
+}

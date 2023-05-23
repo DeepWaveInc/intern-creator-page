@@ -1,0 +1,38 @@
+@import '../../../../css/_variable';
+@import '../../../../css/_mixin';
+
+.modal-dialog {
+  &.hullaballoo-modal {
+    &__share-link {
+      @media all and (min-width: (1200px)) {
+        max-width: 667px;
+      }
+
+      @media all and (min-width: 992px) and (max-width: 1200px) {
+        width: 100%;
+        max-width: 667px;
+      }
+
+      @media all and (max-width: (576px)) {
+        @include modal_container();
+      }
+
+      .hullaballoo-modal__share-link__content {
+        &__status-container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 13px;
+        }
+
+        &__status-dropdown {
+          border: none;
+
+          .ant-select-selection-item {
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}

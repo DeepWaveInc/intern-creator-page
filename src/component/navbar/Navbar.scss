@@ -1,0 +1,46 @@
+@import '../../css/_variable';
+@import '../../css/_mixin';
+
+nav {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 56px;
+  padding-left: 60px;
+  padding-right: 60px;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background-color: transparent;
+  transition: background-color 0.3s;
+
+  @include breakpoint-pad-lg() {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  > .logo {
+    display: flex;
+
+    > svg {
+      width: 220px;
+      height: 45px;
+    }
+  }
+
+  &.dark-theme {
+    background-color: $color-primary-default;
+  }
+
+  .hamburger {
+    display: none;
+    position: absolute;
+    right: 20px;
+
+    @include breakpoint-pad-lg() {
+      display: flex;
+    }
+  }
+}

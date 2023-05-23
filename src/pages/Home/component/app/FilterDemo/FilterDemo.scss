@@ -1,0 +1,120 @@
+@import '../../../../../css/_variable';
+@import '../../../../../css/_mixin';
+
+.home-page {
+  .landing-filter-demo-app {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__container {
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      max-width: 821px;
+      width: 100%;
+      height: 100%;
+      flex: 1;
+      margin: 0 auto;
+      margin-top: 78px;
+      margin-bottom: 72px;
+      gap: 46px;
+
+      @include breakpoint-pad-md() {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      @include breakpoint-pad-sm() {
+        max-width: 100%;
+        margin-top: 70px;
+        padding-left: 24px;
+        padding-right: 24px;
+        margin-bottom: 0;
+      }
+    }
+
+    &__title {
+      max-width: 413px;
+      order: 2;
+
+      @include breakpoint-pad-md() {
+        order: 1;
+      }
+
+      > h2 {
+        font-weight: 500;
+        font-size: $font-size-h1-40;
+        line-height: 1.4;
+        color: $color-primary-default;
+        text-align: left;
+
+        @include breakpoint-pc-md() {
+          font-size: $font-size-h3-32;
+          line-height: 40px;
+        }
+
+        @include breakpoint-pad-md() {
+          font-size: 28px;
+          line-height: 40px;
+          text-align: center;
+        }
+      }
+
+      > p {
+        font-size: $font-size-body-20;
+        color: $color-grey-scale;
+        line-height: 1.4;
+        margin: 0;
+        margin-top: 20px;
+        text-align: left;
+
+        @include breakpoint-pad-md() {
+          text-align: center;
+        }
+      }
+
+      > button {
+        margin-top: 24px;
+        min-width: 183px;
+        font-size: $font-size-h4-24;
+        line-height: 30px;
+
+        @include breakpoint-pc-md() {
+          font-size: $font-size-body-20;
+          line-height: 28px;
+        }
+
+        @include breakpoint-pad-md() {
+          display: none;
+        }
+      }
+    }
+
+    &__content {
+      order: 1;
+      position: relative;
+      justify-content: center;
+      display: flex;
+      width: 100%;
+      flex: 1;
+
+      @include breakpoint-pad-md() {
+        order: 2;
+      }
+    }
+
+    &__action {
+      display: none;
+      min-width: 183px;
+      font-size: $font-size-body-20;
+      line-height: 28px;
+
+      @include breakpoint-pad-md() {
+        display: inline-flex;
+        order: 3;
+      }
+    }
+  }
+}

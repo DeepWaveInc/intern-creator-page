@@ -1,0 +1,41 @@
+@import '../../css/_variable';
+@import '../../css/_mixin';
+
+.hullaballoo-mobile-drawer {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 24px 14px 14px;
+  background: $color-white;
+  box-shadow: 0px -4px 20px rgba(0, 0, 0, 0.12);
+  border-radius: 16px 16px 0px 0px;
+  z-index: 2;
+
+  > * {
+    z-index: 1;
+  }
+
+  &__handler {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 36px;
+    z-index: 2;
+
+    &:before {
+      position: absolute;
+      content: '';
+      left: 50%;
+      top: 8px;
+      width: 64px;
+      height: 5px;
+      border-radius: 100px;
+      background-color: #e3e3e3;
+
+      transform: translateX(-50%);
+    }
+  }
+}

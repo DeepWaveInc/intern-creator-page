@@ -1,0 +1,7 @@
+{
+  "cSpell.ignoreWords": ["denoised","cookieconsent", "cookieconsentmodal", "clsx", "Sovia", "DEEPWAVE", "noopener", "noreferrer", "pageview", "antd", "denoise", "browserslist", "mutationobserver",
+   "popperjs", "dwave", "quicktime", "errcode", "errstatus", "rubberband"],
+  "i18n-ally.localesPaths": "src/assets/lang",
+  "i18n-ally.keystyle": "nested",
+  "i18n-ally.sourceLanguage": "en"
+}

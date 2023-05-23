@@ -1,0 +1,32 @@
+@import '../../../../css/_variable';
+@import '../../../../css/_mixin';
+@import '../../../../css/_extend';
+
+.modal-dialog {
+  &.hullaballoo-modal {
+    &__track-detail-export {
+      @extend %modal_alert;
+
+      .hullaballoo-modal__before-title {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+
+        @media all and (max-width: (768px)) {
+          margin-bottom: 16px;
+        }
+      }
+
+      .hullaballoo-modal__track-detail-export__wave {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        .hullaballoo-loading__wave_2 {
+          top: unset;
+        }
+      }
+    }
+  }
+}

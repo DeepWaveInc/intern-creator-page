@@ -1,0 +1,64 @@
+@import '../../../../../../css/_variable';
+@import '../../../../../../css/_mixin';
+
+$hullaballoo-modal-before-upload-background: rgba(152, 183, 235, 0.33);
+
+.hullaballoo-modal {
+  &__upload {
+    &__before-upload {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      background-color: $hullaballoo-modal-before-upload-background;
+      background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='10' ry='10' stroke='%230C2773' stroke-width='2' stroke-dasharray='7' stroke-dashoffset='0' stroke-linecap='butt'/%3e%3c/svg%3e");
+      padding: 20px;
+      margin-top: 15px;
+
+      &__img {
+        width: 116px;
+        margin-top: 36px;
+      }
+
+      button[type='blank'] {
+        display: inline-flex;
+        border: 1px solid $color-primary-default;
+        margin-top: 10px;
+        font-size: $font-size-h4-24;
+        color: $color-primary-default;
+        padding: 10px 12px;
+
+        .hullaballoo-modal__upload__before-upload__add-icon {
+          width: 22px;
+          height: 22px;
+        }
+      }
+
+      > h4 {
+        font-weight: normal;
+        font-size: $font-size-h4-24;
+        line-height: 34px;
+        color: $color-primary-default;
+        margin-top: 10px;
+
+        @media all and (max-width: (768px)) {
+          display: none;
+        }
+      }
+
+      > span {
+        font-size: $font-size-body-16;
+        line-height: 22px;
+        color: $color-grey-scale;
+        margin-top: 30px;
+        margin-bottom: 18px;
+        text-align: center;
+
+        @media all and (max-width: (768px)) {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}

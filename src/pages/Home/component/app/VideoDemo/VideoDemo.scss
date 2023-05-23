@@ -1,0 +1,124 @@
+@import '../../../../../css/_variable';
+@import '../../../../../css/_mixin';
+
+.home-page {
+  .landing-video-demo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__container {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 1006px;
+      width: 100%;
+      height: 100%;
+      flex: 1;
+      margin: 0 auto;
+      margin-top: 125px;
+
+      @include breakpoint-pc-sm() {
+        max-width: 992px;
+      }
+
+      @include breakpoint-pad-lg() {
+        max-width: 824px;
+      }
+
+      @include breakpoint-pad-sm() {
+        max-width: 100%;
+        margin-top: 70px;
+      }
+    }
+
+    &__title {
+      @include breakpoint-pad-md() {
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+
+      > h2 {
+        font-weight: 500;
+        font-size: $font-size-h1-40;
+        line-height: 1.4;
+        color: $color-primary-default;
+        text-align: center;
+
+        @include breakpoint-pc-md() {
+          font-size: $font-size-h3-32;
+          line-height: 40px;
+        }
+
+        @include breakpoint-pad-md() {
+          font-size: 28px;
+          line-height: 40px;
+        }
+      }
+
+      > p {
+        font-size: $font-size-body-20;
+        color: $color-grey-scale;
+        line-height: 1.4;
+        margin: 0;
+        margin-top: 20px;
+        text-align: center;
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      margin-top: 48px;
+      width: 100%;
+      flex: 1;
+
+      @include breakpoint-phone-lg() {
+        margin-top: 38px;
+      }
+
+      &__video {
+        position: relative;
+        width: 470px;
+        height: 295px;
+        aspect-ratio: 470 / 295;
+        margin: 0 auto;
+
+        @include breakpoint-phone-lg() {
+          width: 100%;
+          height: auto;
+          aspect-ratio: 4 / 3;
+        }
+
+        iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: $color-grey-scale;
+        }
+      }
+
+      > p {
+        margin: 0;
+        margin-top: 16px;
+        text-align: center;
+        font-size: $font-size-body-20;
+        line-height: 18px;
+        color: $color-grey-scale;
+
+        a {
+          color: $color-grey-scale;
+          text-decoration: underline;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+@import '../../css/_variable';
+@import '../../css/_mixin';
+
+$pagination-normal-color: #828282;
+
+.hullaballoo-pagination {
+  font-size: $font-size-body-16;
+
+  .ant-pagination-item {
+    color: $pagination-normal-color;
+    border-color: $pagination-normal-color;
+    min-width: 38px;
+
+    &:hover {
+      color: $color-grey-scale3;
+      border-color: $color-grey-scale3;
+      a {
+        color: $color-grey-scale3;
+      }
+    }
+  }
+
+  .ant-pagination-item,
+  .ant-pagination-total-text {
+    height: 38px;
+    line-height: 38px;
+    margin-right: 10px;
+  }
+
+  .anticon {
+    vertical-align: -0.14em;
+  }
+
+  .anticon-double-right,
+  .anticon-double-left {
+    vertical-align: 0.05em;
+    color: $color-primary-default;
+  }
+
+  .ant-pagination-item-active {
+    color: $color-primary-default;
+    border-color: $color-primary-default;
+
+    &:hover,
+    &:hover a {
+      border-color: $color-primary-default;
+      color: $color-primary-default;
+    }
+  }
+
+  .ant-pagination-jump-next,
+  .ant-pagination-jump-prev,
+  .ant-pagination-next,
+  .ant-pagination-prev {
+    min-width: 38px;
+    height: 38px;
+    line-height: 38px;
+  }
+
+  .ant-pagination-jump-next,
+  .ant-pagination-jump-prev {
+    margin-right: 2px;
+    margin-left: -8px;
+  }
+
+  .ant-pagination-next,
+  .ant-pagination-prev {
+    .ant-pagination-item-link {
+      border-color: transparent;
+      color: $color-grey-scale2;
+    }
+
+    &:hover {
+      .ant-pagination-item-link {
+        color: $color-primary-default;
+      }
+    }
+  }
+
+  .ant-pagination-disabled {
+    .ant-pagination-item-link,
+    &:hover .ant-pagination-item-link {
+      color: rgba($color: $color-grey-scale2, $alpha: 0.2);
+    }
+  }
+}

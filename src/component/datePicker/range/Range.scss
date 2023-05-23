@@ -1,0 +1,48 @@
+@import '../../../css/_variable';
+@import '../../../css/_mixin';
+
+.ant-picker-range {
+  &.hullaballoo-datepicker {
+    &__range {
+      border-radius: 8px;
+      font-size: $font-size-base;
+      color: $color-grey-scale;
+      line-height: 1.4;
+      border-color: $color-grey-scale7;
+      padding: 8px 11px;
+      max-width: 314px;
+
+      &.ant-picker-focused {
+        box-shadow: none;
+      }
+
+      .ant-picker-input {
+        > input {
+          height: 100%;
+          font-size: $font-size-body-18;
+          line-height: 1.4;
+        }
+      }
+
+      .ant-picker-separator {
+        display: flex;
+        align-items: center;
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      .ant-picker-suffix {
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      &:hover {
+        border-color: $color-grey-scale3;
+      }
+    }
+  }
+}

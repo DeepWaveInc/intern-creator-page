@@ -1,0 +1,32 @@
+@import '../../../../css/_variable';
+@import '../../../../css/_mixin';
+@import '../../../../css/_extend';
+
+.modal-dialog {
+  &.hullaballoo-modal {
+    &__track-detail-error {
+      @extend %modal_alert;
+
+      .hullaballoo-modal__before-title {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+
+        @media all and (max-width: (768px)) {
+          margin-bottom: 16px;
+        }
+
+        svg {
+          max-width: 224px;
+          max-height: 198px;
+          width: 100%;
+          height: 100%;
+
+          @media all and (max-width: (768px)) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

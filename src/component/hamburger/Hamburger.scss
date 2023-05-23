@@ -1,0 +1,70 @@
+@import '../../css/_variable';
+@import '../../css/_mixin';
+
+$height: 2px;
+$transition-duration: 0.2s;
+
+.hamburger {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  width: 44px;
+  height: 38px;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+
+  &--inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    &__container {
+      width: 100%;
+      height: $height;
+      background-color: $color-white;
+      transition: background-color $transition-duration ease-in-out;
+
+      &:before,
+      &:after {
+        position: absolute;
+        content: '';
+        display: flex;
+        width: 100%;
+        height: $height;
+        background-color: $color-white;
+        left: 0;
+        transition: transform $transition-duration ease-in-out,
+          top $transition-duration ease-in-out;
+      }
+
+      &:before {
+        top: 0;
+      }
+
+      &:after {
+        top: calc(100% - $height);
+      }
+    }
+  }
+
+  &.active {
+    .hamburger--inner__container {
+      background: transparent;
+      &:before,
+      &:after {
+        top: 50%;
+      }
+      &:before {
+        transform: rotate(45deg);
+      }
+      &:after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}

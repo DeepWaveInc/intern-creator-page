@@ -1,0 +1,75 @@
+@import '../../../../css/_variable';
+@import '../../../../css/_mixin';
+
+$switch-padding: 4px;
+$switch-background-color: $color-primary-default;
+
+.noise-difference-player {
+  .switch {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $switch-padding;
+    background-color: $switch-background-color;
+    border-radius: 5px;
+    min-width: 260px;
+    width: fit-content;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 50%;
+      height: calc(100% - #{$switch-padding * 2});
+      top: $switch-padding;
+      left: $switch-padding;
+      background-color: $color-white;
+      border-radius: 5px;
+      transition: left 0.3s ease, width 0.3s ease;
+      z-index: 0;
+    }
+
+    button {
+      position: relative;
+      padding: 7px 22px;
+      flex: 1;
+      flex-shrink: 0;
+      border: none;
+      font-size: $font-size-body-16;
+      transition: color 0.3s ease;
+      text-align: center;
+      background-color: transparent;
+      outline: none;
+      z-index: 1;
+
+      &:focus {
+        outline: none;
+      }
+
+      &:first-child {
+        color: $switch-background-color;
+      }
+
+      &:last-child {
+        color: $color-white;
+      }
+    }
+
+    &.active {
+      &:before {
+        width: calc(50% - #{$switch-padding});
+        left: calc(50%);
+      }
+
+      button {
+        &:first-child {
+          color: $color-white;
+        }
+
+        &:last-child {
+          color: $switch-background-color;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,135 @@
+@import '../../css/_variable';
+@import '../../css/_mixin';
+
+footer {
+  font-family: $font-stack;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 46px;
+  padding-bottom: 38px;
+  background-color: $color-primary-default;
+  color: $color-white;
+
+  &.fixed__button {
+    @include breakpoint-pad-sm() {
+      padding-bottom: calc(96px);
+    }
+  }
+
+  .footer {
+    &__container {
+      display: flex;
+      width: 100%;
+      max-width: 697px;
+      justify-content: space-between;
+
+      @include breakpoint-pad-sm() {
+        width: 100%;
+        display: grid;
+        padding-left: 8.5%;
+        padding-right: 8.5%;
+        grid-template-areas:
+          'a b'
+          'c d';
+        row-gap: 100px;
+      }
+
+      > section {
+        @include breakpoint-pad-sm() {
+          display: inline-flex;
+          flex-direction: column;
+
+          &:nth-of-type(1) {
+            grid-area: a;
+          }
+          &:nth-of-type(2) {
+            grid-area: b;
+          }
+          &:nth-of-type(3) {
+            grid-area: c;
+          }
+          &:nth-of-type(4) {
+            grid-area: d;
+          }
+        }
+      }
+    }
+
+    &__item {
+      &__title {
+        font-weight: 700;
+        font-size: $font-size-body-16;
+        line-height: $font-size-h4-24;
+
+        @include breakpoint-pad-sm() {
+          font-size: $font-size-body-18;
+          line-height: 1;
+        }
+      }
+
+      &__container {
+        margin-top: 27px !important;
+        @include breakpoint-pad-sm() {
+          margin-top: 36px !important;
+        }
+
+        li {
+          &:not(:first-child) {
+            margin-top: 16px !important;
+          }
+
+          a {
+            color: $color-white;
+            display: flex;
+            align-items: center;
+            font-size: $font-size-body-16;
+            font-weight: 400;
+
+            @include breakpoint-pad-sm() {
+              font-size: $font-size-body-18;
+            }
+
+            svg {
+              width: 16px;
+              height: 16px;
+              margin-right: 12px;
+              @include breakpoint-pad-sm() {
+                width: 29px;
+                height: 29px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &__store {
+      display: none;
+      flex-direction: column;
+      gap: 8px;
+
+      > svg {
+        max-width: 165px;
+        width: 100%;
+        flex-shrink: 0;
+      }
+
+      @include breakpoint-pad-sm() {
+        display: flex;
+      }
+    }
+
+    &__copyright {
+      font-family: $font-stack;
+      font-size: $font-size-subtitle;
+      margin-top: 123px;
+
+      @include breakpoint-pad-sm() {
+        margin-top: 80px;
+        font-size: $font-size-body-18;
+      }
+    }
+  }
+}

@@ -1,0 +1,108 @@
+@import '../../../../css/_variable';
+@import '../../../../css/_mixin';
+
+.hullaballoo-modal {
+  position: relative;
+  font-size: $font-size-base;
+
+  .modal-content {
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px rgba($color: $color-grey-scale, $alpha: 0.25);
+  }
+
+  &__container {
+    position: relative;
+    padding: 20px 24px;
+    color: $color-grey-scale;
+
+    &__close {
+      display: block;
+      margin-top: 5px;
+      margin-right: 0;
+      margin-left: auto;
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+
+      &:hover {
+        color: $color-primary-default;
+      }
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font-size: $font-size-h4-24;
+    line-height: 34px;
+
+    @media all and (max-width: 768px) {
+      font-size: $font-size-body-20;
+    }
+  }
+
+  &__content {
+    font-size: $font-size-body-18;
+    text-align: center;
+    line-height: 25px;
+    margin-top: 16px;
+    word-break: break-word;
+
+    @media all and (max-width: 768px) {
+      font-size: $font-size-body-16;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 32px;
+
+    @media all and (max-width: (768px)) {
+      margin-top: 16px;
+    }
+
+    @media all and (max-width: 768px) {
+      flex-direction: column;
+    }
+
+    @for $i from 1 through 4 {
+      &--count-#{$i} {
+        > * {
+          width: calc(100% / #{$i});
+
+          @if $i != 1 {
+            margin-left: 16px;
+
+            &:first-child {
+              margin-left: 0;
+            }
+
+            @media all and (max-width: 768px) {
+              width: 100%;
+              margin-left: 0;
+              margin-top: 12px;
+
+              &:first-child {
+                margin-top: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__full-loading {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: $color-white, $alpha: 0.7);
+    border-radius: 10px;
+  }
+}

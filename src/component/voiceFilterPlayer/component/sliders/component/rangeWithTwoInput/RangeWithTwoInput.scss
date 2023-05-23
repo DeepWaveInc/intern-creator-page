@@ -1,0 +1,103 @@
+@import '../../../../../../css/_variable';
+@import '../../../../../../css/_mixin';
+
+.eraser-voice-filter-player {
+  &__range-with-two-input {
+    display: flex;
+    align-items: center;
+    padding-bottom: 25px;
+    gap: 20px;
+
+    @include breakpoint-phone-lg() {
+      justify-content: space-between;
+      flex: 1;
+      width: 100%;
+      flex-wrap: wrap;
+    }
+
+    &.loading {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+    &__label,
+    &__percentage {
+      font-size: $font-size-body-20;
+      line-height: 1.4;
+      color: $color-grey-scale;
+
+      @include breakpoint-phone-lg() {
+        font-size: $font-size-body-16;
+      }
+    }
+
+    &__tooltip {
+      display: none;
+      background-color: $color-grey-scale;
+      padding: 6px 16px;
+      border-radius: 6px;
+      color: $color-gray-scale10;
+      font-size: $font-size-base;
+      line-height: 20px;
+      z-index: 1;
+
+      &[data-show] {
+        display: block;
+      }
+
+      > div {
+        visibility: hidden;
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background: inherit;
+        z-index: -1;
+        &:before {
+          position: absolute;
+          top: -4px;
+          width: 16px;
+          height: 16px;
+          background: inherit;
+          visibility: visible;
+          content: '';
+          transform: rotate(45deg);
+        }
+      }
+    }
+
+    &__number-wrapper {
+      display: flex;
+      align-items: center;
+
+      @include breakpoint-phone-lg() {
+        order: 1;
+      }
+
+      > svg {
+        flex-shrink: 0;
+        width: 32px;
+        height: 32px;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+    }
+
+    &__percentage {
+      margin-left: 10px;
+    }
+
+    &__range {
+      width: 100%;
+
+      @include breakpoint-phone-lg() {
+        order: 3;
+      }
+    }
+
+    &__number {
+      max-width: 60px;
+      min-width: 60px;
+      background-color: transparent;
+      padding: 4px 12px;
+    }
+  }
+}

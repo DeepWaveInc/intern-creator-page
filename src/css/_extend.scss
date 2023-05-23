@@ -1,0 +1,21 @@
+@import '../css/_mixin';
+
+%landing_wave {
+  width: 1906px;
+  height: 537px;
+}
+
+%modal_alert {
+  @media all and (min-width: (1200px)) {
+    max-width: 667px;
+  }
+
+  @media all and (min-width: 992px) and (max-width: 1200px) {
+    width: 100%;
+    max-width: 667px;
+  }
+
+  @media all and (max-width: (576px)) {
+    @include modal_container();
+  }
+}

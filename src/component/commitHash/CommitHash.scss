@@ -1,0 +1,17 @@
+@import '../../css/_variable';
+@import '../../css/_mixin';
+
+$height: 3px;
+$transition-duration: 0.2s;
+
+.commit-hash {
+  position: fixed;
+  padding: 2px 4px;
+  bottom: 5px;
+  left: 5px;
+  border-radius: 4px;
+  color: $color-white;
+  background-color: rgba($color-grey-scale, 0.7);
+  z-index: 20;
+  pointer-events: none;
+}

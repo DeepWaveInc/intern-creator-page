@@ -1,0 +1,22 @@
+@import '../../../../../../css/_variable';
+@import '../../../../../../css/_mixin';
+
+$eraser-voice-filter-player_period_color: #878787;
+
+.eraser-voice-filter-player {
+  &__period {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: $font-size-body-18;
+    line-height: 1.4;
+    color: $eraser-voice-filter-player_period_color;
+    bottom: -31px;
+    position: absolute;
+    width: 100%;
+
+    @include breakpoint-phone-lg() {
+      bottom: -26px;
+    }
+  }
+}

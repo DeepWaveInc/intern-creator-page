@@ -1,0 +1,18 @@
+@import '../../../../css/_variable';
+@import '../../../../css/_mixin';
+
+.eraser-voice-filter-player {
+  &__sliders {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 28px;
+    transition: max-height 0.3s ease;
+    margin-top: 50px;
+
+    @include breakpoint-phone-lg() {
+      gap: 20px;
+      margin-top: 43px;
+    }
+  }
+}

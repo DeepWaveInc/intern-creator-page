@@ -1,0 +1,32 @@
+@import '../../css/_variable';
+@import '../../css/_mixin';
+
+.eraser-voice-filter-player {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
+    overflow: hidden;
+  }
+
+  &__normal-play-btn {
+    display: none;
+    margin-top: 25px;
+    > span {
+      font-size: $font-size-body-20;
+    }
+
+    @include breakpoint-phone-lg() {
+      margin-left: 24px;
+      margin-right: 24px;
+      display: flex;
+    }
+  }
+}

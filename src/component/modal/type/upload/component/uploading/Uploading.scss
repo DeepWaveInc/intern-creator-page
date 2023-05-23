@@ -1,0 +1,64 @@
+@import '../../../../../../css/_variable';
+@import '../../../../../../css/_mixin';
+
+.hullaballoo-modal {
+  &__upload {
+    &--loading {
+      .modal-content {
+        overflow: hidden;
+      }
+    }
+    &__uploading {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 36px;
+
+      .hullaballoo-loading__wave {
+        position: absolute;
+        width: 695px;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 0;
+
+        @media all and (max-width: (768px)) {
+          top: 40px;
+        }
+      }
+
+      h3 {
+        position: relative;
+        font-size: $font-size-h1-40;
+        color: $color-primary-dark;
+        font-weight: 400;
+        margin-top: 24px;
+        z-index: 1;
+
+        @media all and (max-width: (768px)) {
+          margin-top: 60px;
+        }
+      }
+
+      h4 {
+        margin-top: 50px;
+        font-size: $font-size-h4-24;
+        font-weight: 400;
+        line-height: 33px;
+      }
+
+      span {
+        margin-top: 32px;
+        font-size: $font-size-body-18;
+        font-weight: 400;
+        line-height: 25px;
+
+        @media all and (max-width: (768px)) {
+          margin-top: 6px;
+        }
+      }
+    }
+  }
+}

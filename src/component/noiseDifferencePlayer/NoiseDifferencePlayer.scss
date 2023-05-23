@@ -1,0 +1,12 @@
+@import '../../css/_variable';
+@import '../../css/_mixin';
+
+.noise-difference-player {
+  display: flex;
+  width: 100%;
+
+  @include breakpoint-pad-lg() {
+    flex-direction: column;
+    align-items: center;
+  }
+}

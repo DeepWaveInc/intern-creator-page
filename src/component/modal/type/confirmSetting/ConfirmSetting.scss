@@ -1,0 +1,15 @@
+@import '../../../../css/_variable';
+@import '../../../../css/_mixin';
+@import '../../../../css/_extend';
+
+.modal-dialog {
+  &.hullaballoo-modal {
+    &__confirm-setting {
+      @extend %modal_alert;
+
+      .hullaballoo-modal__content {
+        color: $color-secondary-dark;
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@import '../../css/_variable';
+@import '../../css/_mixin';
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+  font-size: $font-size-base;
+  font-family: $font-stack;
+  overflow: hidden;
+}

@@ -1,0 +1,164 @@
+@import '../../../css/_variable';
+@import '../../../css/_mixin';
+@import '../../../css/_keyframes';
+
+.hullaballoo-button {
+  &__normal {
+    position: relative;
+    display: inline-flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    font-size: $font-size-body-16;
+    padding: 12px 24px;
+    line-height: 1.4;
+    outline: none;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    transition: background-color 0.2s ease, border 0.2s ease, color 0.2s ease;
+    user-select: none;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: none;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      border-width: 4px;
+      border-style: solid;
+      border-bottom-color: transparent;
+      transform: translate(-50%, -50%) rotate(-45deg);
+      animation: buttonSpin 1s linear infinite;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+      & + span {
+        margin-left: 8px;
+      }
+    }
+
+    span {
+      & + svg {
+        margin-left: 8px;
+      }
+    }
+
+    * {
+      display: inline-flex;
+    }
+
+    &--lg {
+      font-size: $font-size-h4-24;
+      line-height: 1.4;
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    &--md {
+      font-size: $font-size-body-16;
+      padding: 13px 24px;
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+      outline: none;
+    }
+
+    &[disabled] {
+      position: relative;
+      pointer-events: none;
+      opacity: 0.4;
+    }
+
+    &[loading='true'] {
+      pointer-events: none;
+
+      * {
+        opacity: 0;
+      }
+
+      &::after {
+        display: block;
+      }
+    }
+
+    &[type='primary'] {
+      background-color: $color-primary-default;
+      color: $color-white;
+
+      &:hover {
+        background-color: $color-primary-dark;
+        &[outline='true'] {
+          background-color: $color-primary-default;
+          color: $color-white;
+        }
+      }
+
+      &[outline='true'] {
+        background-color: transparent;
+        border-color: $color-primary-default;
+        color: $color-primary-default;
+      }
+    }
+    &[type='secondary'] {
+      background-color: $color-secondary-default;
+      color: $color-white;
+
+      &:hover {
+        background-color: $color-secondary-dark;
+        &[outline='true'] {
+          background-color: $color-secondary-default;
+          color: $color-white;
+        }
+      }
+
+      &[outline='true'] {
+        background-color: transparent;
+        border-color: $color-secondary-default;
+        color: $color-secondary-default;
+      }
+    }
+
+    &[type='blank'] {
+      background-color: $color-white;
+      color: $color-grey-scale;
+
+      &:hover {
+        color: $color-primary-dark;
+      }
+    }
+
+    &[type='remove'] {
+      background-color: $color-primary-default;
+      color: $color-white;
+
+      &:hover {
+        background-color: $color-primary-dark;
+        &[outline='true'] {
+          border-color: $color-danger;
+          background-color: $color-danger;
+          color: $color-white;
+        }
+      }
+
+      &[outline='true'] {
+        background-color: transparent;
+        border-color: $color-primary-default;
+        color: $color-primary-default;
+      }
+    }
+  }
+}

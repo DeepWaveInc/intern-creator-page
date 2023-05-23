@@ -1,0 +1,94 @@
+@import '../../../../css/_variable';
+@import '../../../../css/_mixin';
+
+.noise-difference-player {
+  .loading__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    touch-action: none;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 1;
+  }
+
+  .loading {
+    position: relative;
+    left: -9999px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: $color-primary-default;
+    color: $color-primary-default;
+    box-shadow: 9999px 0 0 -5px $color-primary-default;
+    animation: dotPulse 1.5s infinite linear;
+    animation-delay: 0.25s;
+
+    &::before,
+    &::after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      width: 10px;
+      height: 10px;
+      border-radius: 5px;
+      background-color: $color-primary-default;
+      color: $color-primary-default;
+    }
+
+    &::before {
+      box-shadow: 9984px 0 0 -5px $color-primary-default;
+      animation: dotPulseBefore 1.5s infinite linear;
+      animation-delay: 0s;
+    }
+
+    &::after {
+      box-shadow: 10014px 0 0 -5px $color-primary-default;
+      animation: dotPulseAfter 1.5s infinite linear;
+      animation-delay: 0.5s;
+    }
+  }
+}
+
+@keyframes dotPulseBefore {
+  0% {
+    box-shadow: 9984px 0 0 -5px $color-primary-default;
+  }
+  30% {
+    box-shadow: 9984px 0 0 2px $color-primary-default;
+  }
+  60%,
+  100% {
+    box-shadow: 9984px 0 0 -5px $color-primary-default;
+  }
+}
+
+@keyframes dotPulse {
+  0% {
+    box-shadow: 9999px 0 0 -5px $color-primary-default;
+  }
+  30% {
+    box-shadow: 9999px 0 0 2px $color-primary-default;
+  }
+  60%,
+  100% {
+    box-shadow: 9999px 0 0 -5px $color-primary-default;
+  }
+}
+
+@keyframes dotPulseAfter {
+  0% {
+    box-shadow: 10014px 0 0 -5px $color-primary-default;
+  }
+  30% {
+    box-shadow: 10014px 0 0 2px $color-primary-default;
+  }
+  60%,
+  100% {
+    box-shadow: 10014px 0 0 -5px $color-primary-default;
+  }
+}

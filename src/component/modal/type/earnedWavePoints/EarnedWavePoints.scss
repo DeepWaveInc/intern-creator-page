@@ -1,0 +1,29 @@
+@import '../../../../css/_variable';
+@import '../../../../css/_mixin';
+@import '../../../../css/_extend';
+.modal-dialog {
+  &.hullaballoo-modal {
+    &__earned-wave-points {
+      @extend %modal_alert;
+
+      .hullaballoo-modal__before-title {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
+
+        @media all and (max-width: (768px)) {
+          margin-bottom: 16px;
+        }
+
+        svg {
+          max-width: 255.5px;
+          width: 100%;
+
+          @media all and (max-width: (768px)) {
+            max-width: 177.37px;
+          }
+        }
+      }
+    }
+  }
+}

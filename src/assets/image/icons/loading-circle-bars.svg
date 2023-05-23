@@ -1,0 +1,26 @@
+<svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M20.1875 6V13.0937" stroke="#60A0FF" stroke-width="2" />
+  <path d="M20.1875 34.375V27.2812" stroke="#60A0FF" stroke-width="2" />
+  <path d="M34.375 20.1875H27.2812" stroke="#60A0FF" stroke-width="2" />
+  <path d="M6 20.1875H13.0937" stroke="#60A0FF" stroke-width="2" />
+  <path
+    d="M30.2192 10.1558L25.2063 15.1687"
+    stroke="#60A0FF"
+    stroke-width="2"
+  />
+  <path
+    d="M10.1558 30.2192L15.1687 25.2063"
+    stroke="#60A0FF"
+    stroke-width="2"
+  />
+  <path
+    d="M30.2192 30.2192L25.2063 25.2063"
+    stroke="#60A0FF"
+    stroke-width="2"
+  />
+  <path
+    d="M10.1558 10.1558L15.1687 15.1687"
+    stroke="#60A0FF"
+    stroke-width="2"
+  />
+</svg>

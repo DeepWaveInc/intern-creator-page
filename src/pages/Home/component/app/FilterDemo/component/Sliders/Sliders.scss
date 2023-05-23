@@ -1,0 +1,64 @@
+@import '../../../../../../../css/_variable';
+@import '../../../../../../../css/_mixin';
+
+.home-page {
+  .landing-filter-demo-app {
+    &__sliders {
+      margin-bottom: 10px;
+
+      &__container {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #cfd9e4;
+        box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
+        padding: 12px 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      &__slider {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+
+        > span {
+          font-size: $font-size-caption;
+          line-height: 1.4;
+        }
+
+        &__container {
+          display: flex;
+          align-items: center;
+
+          > span {
+            width: 100%;
+            max-width: 20px;
+            font-size: $font-size-caption;
+            text-align: center;
+          }
+        }
+
+        &__range {
+          display: flex;
+          align-items: center;
+          flex: 1;
+
+          input[type='range'] {
+            height: 4px;
+            background-color: rgba(120, 120, 128, 0.2);
+            margin-right: 10px;
+
+            @include input-range-thumb() {
+              width: 15px;
+              height: 15px;
+              box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25),
+                0px -2px 6px rgba(0, 0, 0, 0.25);
+            }
+          }
+        }
+      }
+    }
+  }
+}

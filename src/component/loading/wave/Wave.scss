@@ -1,0 +1,76 @@
+@import '../../../css/_variable';
+@import '../../../css/_mixin';
+
+.hullaballoo-loading {
+  &__wave {
+    position: relative;
+    max-width: 659px;
+    max-height: 105px;
+    width: 100%;
+    height: 105px;
+    opacity: 0.6;
+    overflow: hidden;
+
+    > * {
+      position: absolute;
+      width: 100%;
+    }
+
+    @for $i from 0 through 2 {
+      &_#{$i} {
+        left: 0;
+      }
+    }
+
+    &_0 {
+      animation: loadingWave 1.2s infinite ease-out;
+      animation-delay: 0s;
+    }
+    &_1 {
+      animation: loadingWave2 0.8s infinite ease-in;
+      animation-delay: 0s;
+    }
+
+    &_2 {
+      top: 0;
+      animation: loadingWave 0.5s infinite linear;
+      animation-delay: 0.2s;
+    }
+  }
+}
+
+@keyframes loadingWave {
+  0% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(1, 0.5);
+  }
+  50% {
+    transform: scale(1, 0);
+  }
+  75% {
+    transform: scale(1, 0.7);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes loadingWave2 {
+  0% {
+    transform: scale(1, 1.5);
+  }
+  25% {
+    transform: scale(1, 0.5);
+  }
+  50% {
+    transform: scale(1, 0.1);
+  }
+  75% {
+    transform: scale(1, 0.8);
+  }
+  100% {
+    transform: scale(1, 1.5);
+  }
+}

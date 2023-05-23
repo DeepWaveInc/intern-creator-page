@@ -1,0 +1,46 @@
+@import '../../../css/_variable';
+@import '../../../css/_mixin';
+
+.hullaballoo-input {
+  &__normal {
+    width: 100%;
+    display: inline-flex;
+    -moz-appearance: textfield;
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    padding: 8px 12px;
+    border: 1px solid #819ad6;
+    border-radius: 10px;
+    font-size: $font-size-body-20;
+    line-height: 1.4;
+    color: $color-grey-scale;
+    min-width: 80px;
+
+    &:hover,
+    &:focus {
+      border-color: #3c88ee;
+    }
+
+    &::placeholder {
+      color: rgba($color: $color-grey-scale5, $alpha: 0.5);
+    }
+
+    &[disabled] {
+      border-color: rgba($color: #819ad6, $alpha: 0.9);
+      color: $color-grey-scale;
+
+      &::placeholder {
+        color: rgba($color: $color-grey-scale5, $alpha: 0.7);
+      }
+
+      &:hover,
+      &:focus {
+        border-color: rgba($color: #819ad6, $alpha: 0.9);
+      }
+    }
+  }
+}

@@ -1,0 +1,112 @@
+@import '../../../css/_variable';
+@import '../../../css/_mixin';
+
+$hullaballoo-button-switch-padding: 4px;
+
+.hullaballoo-button {
+  &__switch {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: $hullaballoo-button-switch-padding;
+    background-color: $color-primary-dark;
+    border-radius: 5px;
+    min-width: 270px;
+    width: fit-content;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 50%;
+      height: calc(100% - #{$hullaballoo-button-switch-padding * 2});
+      top: $hullaballoo-button-switch-padding;
+      left: $hullaballoo-button-switch-padding;
+      background-color: $color-white;
+      border-radius: 5px;
+      transition: left 0.3s ease, width 0.3s ease;
+      z-index: 0;
+    }
+
+    button {
+      display: inline-flex;
+      position: relative;
+      padding: 7.5px 23.75px;
+      flex: 0 0 50%;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      font-size: $font-size-body-16;
+      transition: color 0.3s ease;
+      text-align: center;
+      background-color: transparent;
+      outline: none;
+      z-index: 1;
+      text-align: center;
+
+      span {
+        white-space: nowrap;
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+      &:first-child {
+        color: $color-primary-dark;
+      }
+
+      &:last-child {
+        color: $color-white;
+      }
+    }
+
+    &.active {
+      &:before {
+        width: calc(50% - #{$hullaballoo-button-switch-padding});
+        left: calc(50%);
+      }
+
+      button {
+        &:first-child {
+          color: $color-white;
+        }
+
+        &:last-child {
+          color: $color-primary-dark;
+        }
+      }
+    }
+
+    &.disabled {
+      background-color: $color-btn-switch-disabled;
+      cursor: not-allowed;
+
+      button {
+        pointer-events: none;
+
+        &:first-child {
+          color: $color-btn-switch-disabled;
+        }
+
+        &:last-child {
+          color: $color-white;
+        }
+      }
+
+      &.active {
+        button {
+          &:first-child {
+            color: $color-white;
+          }
+
+          &:last-child {
+            color: $color-btn-switch-disabled;
+          }
+        }
+      }
+    }
+  }
+}

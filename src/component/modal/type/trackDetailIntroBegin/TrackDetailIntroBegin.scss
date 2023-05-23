@@ -1,0 +1,40 @@
+@import '../../../../css/_variable';
+@import '../../../../css/_mixin';
+@import '../../../../css/_extend';
+
+.modal-dialog {
+  &.hullaballoo-modal {
+    &__track-detail-intro {
+      @media all and (min-width: (1200px)) {
+        max-width: 500px;
+      }
+
+      @media all and (min-width: 992px) and (max-width: 1200px) {
+        width: 100%;
+        max-width: 667px;
+      }
+
+      @media all and (max-width: (576px)) {
+        @include modal_container();
+      }
+
+      .hullaballoo-modal__title {
+        font-size: $font-size-body-20;
+        line-height: 1.4;
+      }
+    }
+
+    .hullaballoo-modal__actions {
+      button {
+        @media all and (max-width: (768px)) {
+          margin-top: 0;
+
+          &[outline='true'] {
+            order: 1;
+            margin-top: 12px;
+          }
+        }
+      }
+    }
+  }
+}

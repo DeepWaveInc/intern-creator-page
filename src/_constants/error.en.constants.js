@@ -1,0 +1,36 @@
+export const errorMessageEn = {
+  411: 'Please logout and login again',
+  412: 'Please logout and login again',
+  413: 'Please logout and login again',
+  414: 'Please logout and login again',
+  419: 'Please logout and login again',
+  420: 'Please logout and login again',
+  421: 'Please logout and login again',
+
+  500: 'Unexpected error',
+  501: 'Please logout and try it again',
+  502: 'Format error',
+  516: 'You can upload no more than 5 files',
+  522: 'Not enouth point',
+  523: 'Length error',
+  524: 'Format error',
+  601: 'Please logout and try it again',
+  607: 'File does not exist',
+  616: 'You can analyze no more than 5 files',
+  622: 'Not enough point',
+  623: 'Please upload files within 30 minutes',
+  624: 'Multiple errors. Please make sure all file is in mp3, wav, m4a, mp4 and mov format and within 30 minutes, and check your if your WP is enough',
+  701: 'Please logout and try it again',
+  702: 'Please logout and try it again',
+  707: 'File does not exist',
+
+  formatError: 'We only accept mp3, wav, m4a, mp4 and mov format',
+  sizeError: 'Please upload file within 1GB',
+  limitError: 'You can upload no more than 5 files',
+  longError: 'Please upload file within 30 minutes',
+  missError: 'Please drop your file before continuing',
+  startAnalyze:
+    'Upload successful, you will received files through mail after finishing analyzing, thank you for your patient',
+  point: 'point',
+  require: '. Require'
+}

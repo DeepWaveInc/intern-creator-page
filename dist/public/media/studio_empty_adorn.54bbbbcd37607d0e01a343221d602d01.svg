@@ -1,0 +1,22 @@
+<svg
+  width="101"
+  height="94"
+  viewBox="0 0 101 94"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M96.96 88.8798L0 4.44385H11.716L96.96 88.8798Z"
+    fill="black"
+    fill-opacity="0.1"
+  />
+  <path
+    d="M7.67617 4.444V0L11.7162 4.444H7.67617Z"
+    class="studio_empty_adorn_shadow"
+  />
+  <path
+    d="M101 93.3241L7.27213 0.404053H85.0001C93.8367 0.404053 101 7.56751 101 16.4041V93.3241Z"
+    fill="currentColor"
+  />
+  <path d="M97 93H101L97 89V93Z" class="studio_empty_adorn_shadow" />
+</svg>

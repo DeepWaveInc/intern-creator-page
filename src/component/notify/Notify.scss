@@ -1,0 +1,73 @@
+@import '../../css/_variable';
+@import '../../css/_mixin';
+
+$hullaballoo-notify-color-success: #a0d35f;
+$hullaballoo-notify-color-info: $color-grey-scale9;
+$hullaballoo-notify-color-error: #fff2f0;
+$hullaballoo-notify-color-warning: $color-secondary-default;
+
+.hullaballoo-notify {
+  position: relative;
+  display: inline-flex;
+  padding: 14px 20px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  flex-grow: 0;
+  font-size: $font-size-body-20;
+  line-height: 28px;
+
+  @include breakpoint-pad-md() {
+    padding: 10px 20px;
+  }
+
+  &__success {
+    background-color: $hullaballoo-notify-color-success;
+    color: $color-white;
+  }
+
+  &__info {
+    background-color: $hullaballoo-notify-color-info;
+    color: $color-grey-scale;
+  }
+
+  &__error {
+    background-color: $hullaballoo-notify-color-error;
+    color: $color-grey-scale;
+  }
+
+  &__warning {
+    background-color: $hullaballoo-notify-color-warning;
+    color: $color-white;
+  }
+
+  &__close {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: 20px;
+    top: 16px;
+    cursor: pointer;
+    flex-shrink: 0;
+
+    @include breakpoint-pad-md() {
+      top: 13px;
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__prefix {
+    flex-shrink: 0;
+    width: 19px;
+    height: 19px;
+    margin-right: 8px;
+    transform: translateY(5px);
+  }
+
+  &.closeable {
+    padding-right: 56px;
+  }
+}

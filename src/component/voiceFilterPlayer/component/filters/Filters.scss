@@ -1,0 +1,66 @@
+@import '../../../../css/_variable';
+@import '../../../../css/_mixin';
+
+.eraser-voice-filter-player {
+  &__filters {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    justify-content: space-between;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    padding: 24px;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    > button {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      border-radius: 10px;
+      border: 1px solid #3c88ee;
+      background-color: #ebf4ff;
+      color: $color-primary-default;
+      font-size: $font-size-h5-20;
+      line-height: 1.4;
+      width: 100%;
+      padding: 12px;
+      cursor: pointer;
+
+      @include breakpoint-phone-lg() {
+        font-size: $font-size-body-18;
+      }
+
+      > span {
+        margin-left: 4px;
+        white-space: nowrap;
+      }
+
+      > .eraser-voice-filter-player__filters__adorn {
+        width: 40px;
+        height: 40px;
+        flex-shrink: 0;
+      }
+
+      &.active {
+        background: $color-primary-default;
+        box-shadow: 0px 4px 20px rgba(1, 87, 203, 0.3);
+        color: $color-white;
+      }
+    }
+
+    &__premium {
+      display: flex;
+      flex-shrink: 0;
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      top: -10px;
+      right: -10px;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+@import '../../../../../../css/_variable';
+@import '../../../../../../css/_mixin';
+
+.eraser-voice-filter-player {
+  &__range-with-input {
+    display: flex;
+    align-items: center;
+    padding-bottom: 12px;
+
+    &.loading {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+
+    &.en {
+      .eraser-voice-filter-player__range-with-input__label {
+        max-width: 126px;
+        min-width: 126px;
+
+        @include breakpoint-phone-lg() {
+          max-width: 102px;
+          min-width: 102px;
+        }
+      }
+    }
+
+    &__label,
+    &__percentage {
+      font-size: $font-size-body-20;
+      line-height: 1.4;
+      color: $color-grey-scale;
+
+      @include breakpoint-phone-lg() {
+        font-size: $font-size-body-16;
+      }
+    }
+
+    &__label {
+      display: flex;
+      flex-shrink: 0;
+      margin-right: 16px;
+      min-width: 62px;
+      max-width: 62px;
+
+      @include breakpoint-phone-lg() {
+        min-width: 50px;
+        max-width: 50px;
+      }
+    }
+
+    &__percentage {
+      margin-left: 10px;
+    }
+
+    &__range {
+      width: 100%;
+      margin-right: 20px;
+    }
+
+    &__number {
+      max-width: 70px;
+      min-width: 70px;
+      background-color: transparent;
+    }
+  }
+}

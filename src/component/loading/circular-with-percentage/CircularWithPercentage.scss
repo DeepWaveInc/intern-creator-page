@@ -1,0 +1,29 @@
+@import '../../../css/_variable';
+@import '../../../css/_mixin';
+
+.hullaballoo-loading-circular-with-percentage {
+  --deg: calc(360deg * calc(var(--percentage) / 100));
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  margin: 0px auto;
+  background-image: conic-gradient(
+    #60a0ff var(--deg),
+    $color-grey-scale8 var(--deg)
+  );
+  position: relative;
+
+  &__inner {
+    position: absolute;
+    display: flex;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: $color-white;
+    width: calc(var(--size) - var(--border-width));
+    height: calc(var(--size) - var(--border-width));
+    align-items: center;
+    justify-content: center;
+  }
+}

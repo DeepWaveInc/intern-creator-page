@@ -1,0 +1,89 @@
+@import '../../../../../css/_variable';
+@import '../../../../../css/_mixin';
+
+.phone-container {
+  position: relative;
+  max-width: 281px;
+  max-height: 568px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  aspect-ratio: 281 / 568;
+
+  @include breakpoint-pc-md() {
+    max-width: 256px;
+    height: 532px;
+    aspect-ratio: 256 / 532;
+  }
+
+  @include breakpoint-pad-lg() {
+    max-width: 265px;
+    height: 538px;
+    aspect-ratio: 265 / 538;
+  }
+
+  .swiper {
+    width: 100%;
+  }
+
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: calc(100% - 30px);
+    height: calc(100% - 24px);
+    margin: 12px 15px;
+    border-radius: 32px;
+    background: $color-white;
+    overflow: hidden;
+    z-index: 2;
+
+    @include breakpoint-pc-md() {
+      width: calc(100% - 22px);
+      height: calc(100% - 22px);
+      margin: 11px;
+      border-radius: 30px;
+    }
+
+    @include breakpoint-pc-sm() {
+      width: calc(100% - 26px);
+      height: calc(100% - 24px);
+      margin: 12px 13px;
+      border-radius: 25px;
+    }
+  }
+
+  &__adorn {
+    position: absolute;
+    width: 48%;
+    height: auto;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+
+    @include breakpoint-pad-lg() {
+      width: 52%;
+      top: 12px;
+    }
+  }
+}

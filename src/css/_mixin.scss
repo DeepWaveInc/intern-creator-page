@@ -1,0 +1,99 @@
+@mixin breakpoint-pc-lg() {
+  @media all and (max-width: ($pc-lg-media)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-pc-md() {
+  @media all and (max-width: ($pc-md-media)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-pc-sm() {
+  @media all and (max-width: ($pc-sm-media)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-pad-lg() {
+  @media all and (max-width: ($pad-lg-media)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-pad-md() {
+  @media all and (max-width: ($pad-md-media)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-pad-sm() {
+  @media all and (max-width: ($pad-sm-media)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-phone-lg() {
+  @media all and (max-width: ($phone-lg-media)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-phone-md() {
+  @media all and (max-width: ($phone-md-media)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-phone-sm() {
+  @media all and (max-width: ($phone-sm-media)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-phone-xs() {
+  @media all and (max-width: ($phone-xs-media)) {
+    @content;
+  }
+}
+
+@mixin input-range-track() {
+  &::-webkit-slider-runnable-track {
+    @content;
+  }
+
+  &::-ms-track {
+    @content;
+  }
+  &::-moz-range-track {
+    @content;
+  }
+}
+
+@mixin input-range-thumb() {
+  &::-webkit-slider-thumb {
+    @content;
+  }
+
+  &::-moz-range-thumb {
+    @content;
+  }
+  &::-ms-thumb {
+    @content;
+  }
+}
+
+@mixin appearance($value) {
+  -webkit-appearance: $value;
+  -moz-appearance: $value;
+  appearance: $value;
+}
+
+@mixin modal_container() {
+  max-width: calc(100vw - 1rem);
+  margin: 0;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  max-height: 100%;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <meta
+      name="description"
+      content="辨識並去除音檔中的背景雜音，提升人聲的清晰程度。 Identify and extract the background noise to improve the human voice clarity in the uploaded audio file."
+    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hullaballoo.dwave.cc" />
+    <meta property="og:title" content="Noise Eraser" />
+    <meta
+      property="og:description"
+      content="辨識並去除音檔中的背景雜音，提升人聲的清晰程度。 Identify and extract the background noise to improve the human voice clarity in the uploaded audio file."
+    />
+    <meta property="og:image" content="%PUBLIC_URL%/share.jpeg'" />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://hullaballoo.dwave.cc" />
+    <meta property="twitter:title" content="Noise Eraser" />
+    <meta
+      property="twitter:description"
+      content="辨識並去除音檔中的背景雜音，提升人聲的清晰程度。 Identify and extract the background noise to improve the human voice clarity in the uploaded audio file."
+    />
+    <meta property="twitter:image" content="%PUBLIC_URL%/share.jpeg'" />
+    <% if (process.env.REACT_APP_ENVIRONMENT !== 'production') { %>
+    <meta name="robots" content="noindex,nofollow" />
+    <% } %>
+    <title>Noise Eraser</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <div id="portal"></div>
+  </body>
+</html>

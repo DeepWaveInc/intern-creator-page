@@ -1,0 +1,101 @@
+@import '../../../css/_variable';
+@import '../../../css/_mixin';
+
+.ant-select {
+  &.hullaballoo-dropdown {
+    &.ant-select-single {
+      font-size: $font-size-base;
+      color: $color-grey-scale;
+      line-height: 1.4;
+      outline: none;
+
+      &.ant-select-show-arrow {
+        .ant-select-selection-item,
+        .ant-select-selection-placeholder {
+          padding-right: 28px;
+        }
+      }
+
+      &.ant-select-focused {
+        &:not(.ant-select-disabled) {
+          &.ant-select {
+            &:not(.ant-select-customize-input) {
+              .ant-select-selector {
+                box-shadow: none;
+                border-color: $color-grey-scale7;
+              }
+            }
+          }
+        }
+      }
+
+      &:not(.ant-select-customize-input) {
+        .ant-select-selector {
+          padding: 6px 11px;
+          height: auto;
+          border-color: $color-grey-scale7;
+          border-radius: 8px;
+
+          .ant-select-selection-search-input {
+            height: 100%;
+            font-size: $font-size-body-20;
+            color: $color-grey-scale;
+          }
+        }
+      }
+
+      &.ant-select-show-search {
+        min-width: 150px;
+      }
+
+      .ant-select-selection-item {
+        font-size: $font-size-body-20;
+      }
+
+      .ant-select-arrow {
+        width: 24px;
+        height: 24px;
+        right: 10px;
+        font-size: 20px;
+        color: $color-grey-scale;
+        transform: translateY(-50%);
+        margin-top: 0;
+
+        svg {
+          width: 100%;
+        }
+      }
+
+      .ant-select-selection-search-input {
+        width: calc(100% - 14px);
+      }
+    }
+
+    &--text {
+      &.ant-select-single {
+        .ant-select-selector {
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+.ant-select-dropdown {
+  &.hullaballoo-dropdown {
+    &__inner {
+      .ant-select-item {
+        font-size: $font-size-body-16;
+        line-height: 22.4px;
+        padding: 8px 11px;
+      }
+
+      .ant-select-item-option-selected {
+        &:not(.ant-select-item-option-disabled) {
+          background-color: $color-white;
+          color: $color-primary-default;
+        }
+      }
+    }
+  }
+}

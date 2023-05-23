@@ -1,0 +1,213 @@
+@import '../../../../../css/_variable';
+@import '../../../../../css/_mixin';
+
+.home-page {
+  .landing-feedback {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__container {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 1290px;
+      width: 100%;
+      height: 100%;
+      flex: 1;
+      margin: 0 auto;
+      margin-top: 125px;
+
+      @include breakpoint-pad-sm() {
+        max-width: 100%;
+        margin-top: 70px;
+      }
+
+      > button {
+        margin-top: 25px;
+        min-width: 183px;
+        font-size: $font-size-h4-24;
+        line-height: 30px;
+
+        @include breakpoint-pc-md() {
+          font-size: $font-size-body-20;
+          line-height: 28px;
+        }
+
+        @include breakpoint-pad-sm() {
+          margin-top: 15px;
+        }
+      }
+    }
+
+    &__title {
+      @include breakpoint-pad-md() {
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+
+      > h2 {
+        font-weight: 500;
+        font-size: $font-size-h1-40;
+        line-height: 1.4;
+        color: $color-primary-default;
+        text-align: center;
+
+        @include breakpoint-pc-md() {
+          font-size: $font-size-h3-32;
+          line-height: 40px;
+        }
+
+        @include breakpoint-pad-md() {
+          font-size: 28px;
+          line-height: 40px;
+        }
+      }
+
+      > p {
+        font-size: $font-size-body-20;
+        color: $color-grey-scale;
+        line-height: 1.4;
+        margin: 0;
+        margin-top: 20px;
+        text-align: center;
+      }
+    }
+
+    &__content {
+      position: relative;
+      display: flex;
+      margin-top: 75px;
+      width: 100%;
+
+      @include breakpoint-pad-md() {
+        margin-top: 26px;
+      }
+
+      &__slider {
+        position: relative;
+        width: 100%;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+
+        &:before,
+        &:after {
+          position: absolute;
+          display: block;
+          content: '';
+          top: 0;
+          height: 100%;
+          width: 71px;
+          z-index: 2;
+
+          @include breakpoint-pc-sm() {
+            width: 157px;
+          }
+
+          @include breakpoint-pad-lg() {
+            width: 200px;
+          }
+
+          @include breakpoint-pad-md() {
+            display: none;
+          }
+        }
+
+        &:before {
+          background-image: linear-gradient(
+            to left,
+            transparent 0%,
+            white 58.33%,
+            white 100%
+          );
+          left: 0;
+
+          @include breakpoint-pad-lg() {
+            background-image: linear-gradient(
+              to left,
+              transparent 0%,
+              rgba(255, 255, 255, 0.75) 20%,
+              rgba(255, 255, 255, 1) 35%,
+              rgb(255, 255, 255) 100%
+            );
+          }
+        }
+
+        &:after {
+          background-image: linear-gradient(
+            to right,
+            transparent 0%,
+            white 58.33%,
+            white 100%
+          );
+          right: 0;
+
+          @include breakpoint-pad-lg() {
+            background-image: linear-gradient(
+              to right,
+              transparent 0%,
+              rgba(255, 255, 255, 0.75) 20%,
+              rgba(255, 255, 255, 1) 35%,
+              rgb(255, 255, 255) 100%
+            );
+          }
+        }
+      }
+
+      .swiper-wrapper {
+        @include breakpoint-pad-lg() {
+          align-items: center;
+        }
+      }
+
+      .swiper-slide {
+        display: flex;
+        width: 100%;
+        max-width: 413px;
+
+        @include breakpoint-pad-md() {
+          max-width: 300px;
+        }
+      }
+    }
+
+    &__navigation {
+      position: absolute;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      top: 60%;
+      transform: translateY(-50%);
+      z-index: 1;
+
+      svg {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        z-index: 2;
+
+        &:first-of-type {
+          left: calc(50% - 238px);
+          transform: translateX(-50%);
+
+          @include breakpoint-pad-md() {
+            left: calc(50% - 150.5px);
+          }
+        }
+
+        &:last-of-type {
+          transform: rotate(180deg) translateX(-50%);
+          right: calc(50% - 238px);
+
+          @include breakpoint-pad-md() {
+            right: calc(50% - 150.5px);
+          }
+        }
+      }
+    }
+  }
+}
