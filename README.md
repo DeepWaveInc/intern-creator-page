@@ -37,3 +37,6 @@ youtube link - https://www.youtube.com/watch?v=e9zENcqkY28
 # Section - 合作創作者
 
 可查看 `src/pages/Home/component/web/Creator/media.js`
+
+# other
+陳昕玫確認用
