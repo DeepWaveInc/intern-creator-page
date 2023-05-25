@@ -50,12 +50,12 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "ENVIRONMENT=development COMMIT_HASH=$(git rev-parse --short HEAD) GENERATE_SOURCEMAP=false PORT=8080 react-app-rewired start",
-    "build": "ENVIRONMENT=production GENERATE_SOURCEMAP=false react-app-rewired build",
-    "build:test": "export COMMIT_HASH=$(git rev-parse --short HEAD) ENVIRONMENT=testing GENERATE_SOURCEMAP=false && react-app-rewired build",
+    "start": "cross-env ENVIRONMENT=development COMMIT_HASH=$(git rev-parse --short HEAD) GENERATE_SOURCEMAP=false PORT=8080 react-app-rewired start",
+    "build": "cross-env ENVIRONMENT=production GENERATE_SOURCEMAP=false react-app-rewired build",
+    "build:test": "cross-env COMMIT_HASH=$(git rev-parse --short HEAD) ENVIRONMENT=testing GENERATE_SOURCEMAP=false && react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject",
-    "storybook": "COMMIT_HASH=$(git rev-parse --short HEAD) start-storybook -p 6006 -s public"
+    "storybook": "cross-env COMMIT_HASH=$(git rev-parse --short HEAD) start-storybook -p 6006 -s public"
   },
   "eslintConfig": {
     "extends": [
@@ -85,6 +85,7 @@
     "@storybook/testing-library": "0.0.13",
     "@svgr/webpack": "^6.3.1",
     "antd-dayjs-webpack-plugin": "^1.0.6",
+    "cross-env": "^7.0.3",
     "css-loader": "^6.7.1",
     "raw-loader": "^4.0.2",
     "react-app-rewired": "^2.2.1",
