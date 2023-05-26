@@ -13,19 +13,6 @@ import { alertActions } from './'
 import { axios } from '../_services'
 import i18n from 'i18next'
 import Cookies from 'universal-cookie'
-import getBlobDuration from 'get-blob-duration'
-const FileType = require('file-type/browser')
-const mime = [
-  'audio/mpeg',
-  'audio/wav',
-  'audio/x-wav',
-  'audio/x-m4a',
-  'audio/wave',
-  'audio/x-pn-wav',
-  'audio/vnd.wave',
-  'video/mp4',
-  'video/quicktime'
-]
 
 const cookies = new Cookies()
 const language = function () {
@@ -41,7 +28,6 @@ export const userActions = {
   save_current,
   modal_close,
   remove_current,
-  check_type,
   upload_modal_close,
   async_analysis,
   logout,
@@ -179,51 +165,6 @@ function modal_qr_code_shown(dispatch) {
 
 function modal_qr_code_close(dispatch) {
   dispatch({ type: userConstants.QR_CODE_CLOSE })
-}
-
-function check_type(files) {
-  return (dispatch) => {
-    let filename = []
-    let file = []
-
-    if (files.length >= 6) {
-      errorClose(language().limitError)
-    } else {
-      for (let i = 0; i < files.length; i++) {
-        //check type, duration
-        ;(async () => {
-          const blob = new Blob([files[i]])
-          const type_object = await FileType.fromBlob(blob)
-          if (
-            type_object === undefined ||
-            mime.find((arr) => arr === type_object.mime) === undefined
-          ) {
-            errorClose(language().formatError)
-          }
-        })()
-        ;(async () => {
-          const blob = new Blob([files[i]])
-          const duration = await getBlobDuration(blob)
-          if (duration > 1800) {
-            errorClose(language().longError)
-          }
-        })()
-
-        if (files[i].size / 1000000 > 1024) {
-          errorClose(language().sizeError)
-        } else {
-          file.push(files[i])
-          filename.push(files[i].name)
-        }
-      }
-
-      dispatch({ type: userConstants.CURRENT_FILE, file, filename })
-    }
-    function errorClose(error) {
-      dispatch({ type: userConstants.REMOVE_FILE })
-      dispatch(alertActions.error(error))
-    }
-  }
 }
 
 async function logout(dispatch, navigate) {
