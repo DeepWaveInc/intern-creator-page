@@ -1,0 +1,235 @@
+@import '../../../../css/_variable';
+@import '../../../../css/_mixin';
+
+$topSpace:652px;
+@mixin backgroundLetter{
+    width: 1157px;
+    height: 375px;
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 300px;
+    line-height: 125%;
+    color: #FAFAFA;
+}
+
+@mixin  contextLetter {
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.creator-page{
+    .shutter{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 2517px;
+        overflow: hidden;
+        top: -144px;
+
+       
+
+        &__podcast{
+            position: relative;
+
+            &_container{
+                position: absolute;
+                top: 0;
+                z-index: 1;
+            }
+            
+            &_background{
+                position: absolute;
+                left: 505px;
+                top: 0px;
+                @include backgroundLetter;
+            }
+
+            &_circle{
+                position: absolute;
+                left: 1010px;
+                top: 224px;
+                width: 537px;
+                height: 537px;
+                border-radius: 50%;
+                background: linear-gradient(180deg, #FCB448 0%, #F5A429 100%);
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items:center;
+               
+            }
+
+            &_title {
+                font-size: 32px;
+                line-height: 125%;
+                font-family: 'Noto Sans TC';
+                font-style: normal;
+                font-weight: 500;
+                text-align: center;
+                color: #FFFFFF;
+                margin-top: 60px;
+            }
+            &_bar {
+                margin-top: 20px;
+                width: 221px;
+                height: 4px;
+                background-color: #0157CB;
+            }
+            &_text{
+                width: 440px;
+                height: 84px;
+                margin-top: 35px;
+                @include contextLetter;
+            } 
+
+            &_name{
+                position: absolute;
+                width: 204px;
+                height: 72px;
+                right: 95px;
+                top: 319px;
+                @include contextLetter;
+            }
+            &_bluecircle {
+                position: absolute;
+                bottom: -52px;
+                left: -49px;
+                width: 246px;
+                height: 246px;
+                border-radius: 50%;
+                background-color: #0157CB;;
+            }
+            &_bluemarkup {
+                font-size: 100px;
+                position: absolute;
+                top: 100px;
+                left: -55px;
+                width: 96px;
+                height: 78px;           
+                color: #0157CB;;
+            }
+            &_bluemarkdown {
+                font-size: 100px;
+                position: absolute;
+                bottom: 23px;
+                right: -24px;
+                width: 67px;
+                height: 55px;           
+                color: #0157CB;
+                transform: rotate(180deg);
+            }
+            
+            
+
+        }
+
+        &__youtube{
+            position: relative;
+
+            &_container{
+                position: absolute;
+                top: 869px;
+                z-index: 1;
+            }
+
+            &_background{
+                position: absolute;
+                left: 130px;
+                top: 0px;
+                @include backgroundLetter;
+                opacity: 0.6;
+            }
+
+            &_circle{
+                position: absolute;
+                left: 416px;
+                top: 240px;
+                width: 511px;
+                height: 511px;
+                border-radius: 50%;
+                background: #0157CB;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items:center;
+               
+            }
+
+            &_title {
+                font-size: 28px;
+                line-height: 125%;
+                font-family: 'Noto Sans TC';
+                font-style: medium;
+                line-height: 41px;
+                line-height: 100%;
+                text-align: center;
+                color: #FFFFFF;
+                margin-top: 60px;
+            }
+            &_bar {
+                margin-top: 20px;
+                width: 221px;
+                height: 4px;
+                background-color: #F8A933;
+            }
+            &_yellowcircle {
+                position: absolute;
+                bottom: -52px;
+                left: -49px;
+                width: 246px;
+                height: 246px;
+                border-radius: 50%;
+                background-color: #F5A623;
+            }
+            &_yellowmarkup {
+                font-size: 100px;
+                position: absolute;
+                top: 100px;
+                left: -55px;
+                width: 96px;
+                height: 78px;           
+                color: #F5A623;
+            }
+            &_yellowmarkdown {
+                font-size: 100px;
+                position: absolute;
+                bottom: 23px;
+                right: -24px;
+                width: 67px;
+                height: 55px;           
+                color: #F5A623;
+                transform: rotate(180deg);
+            }
+            
+            
+
+        }
+
+
+
+        
+        
+
+        &__circle {
+            position: absolute;
+            width: 1227px;
+            height: 1227px;
+            left: -754px;
+            top: 1723px - $topSpace;
+            background: linear-gradient(180deg, #FDCF62 0%, #F6C245 100%);
+            border-radius: 50%;
+        }
+        
+
+        
+
+
+    }
+}

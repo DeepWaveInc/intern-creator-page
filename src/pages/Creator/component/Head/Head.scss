@@ -1,0 +1,41 @@
+@import '../../../../css/_variable';
+@import '../../../../css/_mixin';
+
+.creator-page{
+    .landing-head{
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 796px;
+        overflow: hidden;
+
+        &__circle {
+            position: absolute;
+            display: block;
+            width: 1458px;
+            height: 1458px;
+            background: linear-gradient(180deg, #064bb2 0%, #0a378e 100%);
+            border-radius: 50%;
+            left: 776px;
+            right: -314px;
+            top: -762px;
+
+        }
+      
+
+        &__background {
+            width: 3500px;
+            height: 503px;
+            position: absolute;
+            left: 50%;
+            top: 234px;
+            transform: translateX(-50%);
+        }
+
+
+
+
+
+
+    }
+}

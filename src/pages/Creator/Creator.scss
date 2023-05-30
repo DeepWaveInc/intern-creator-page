@@ -3,5 +3,10 @@
 
 
 .creator-page {
-  
+    display: flex;
+    flex-direction: column;
+    font-size: $font-size-base;
+    font-family: $font-stack;
+
+    
 }
