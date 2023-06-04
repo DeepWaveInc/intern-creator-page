@@ -2,26 +2,12 @@
 @import '../../../../css/_mixin';
 
 .creator-page{
-    .landing-head{
+    .creator-head{
         position: relative;
         display: flex;
         width: 100%;
         height: 796px;
         overflow: hidden;
-
-        &__circle {
-            position: absolute;
-            display: block;
-            width: 1458px;
-            height: 1458px;
-            background: linear-gradient(180deg, #064bb2 0%, #0a378e 100%);
-            border-radius: 50%;
-            left: 776px;
-            right: -314px;
-            top: -762px;
-
-        }
-      
 
         &__background {
             width: 3500px;
@@ -31,6 +17,130 @@
             top: 234px;
             transform: translateX(-50%);
         }
+
+        &__circle {
+            position: absolute;
+            display: block;
+            width: 1458px;
+            height: 1458px;
+            background: linear-gradient(180deg, #064bb2 0%, #0a378e 100%);
+            border-radius: 50%;
+            left: 40%;
+            
+            top: -762px;
+
+        }
+
+        
+        &__container{
+
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            max-width: 1440px;
+            width: 100%;
+            height: 100%;
+            flex: 1;
+            margin: 0 auto;
+        }
+
+        &__content {
+            display: flex;
+            flex: 1;
+            justify-content: space-between;
+            
+            
+        }
+        
+
+        &__dialog{
+            position: relative;
+            top: 135px;
+            right: 106px;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        &__dialogBox{
+            
+            z-index: 0;
+            
+           
+            
+            
+        }
+        &__youtuber{
+            position: relative;
+            left: 87px;
+            top: 101.6px;
+            display: flex;
+            flex-direction: column;
+            & img{
+                width: 826.3px;
+                height: 696.4px;
+                
+            }
+
+            & h3{
+                position: absolute;
+                line-height: 125%;
+                font-style: normal;
+                font-weight: 500;
+                z-index: 2;
+                top: 540px;
+                left: 86px;
+                color: $color-white;
+                font-size: $font-size-h3-32;
+                transform: matrix(1, -0.06, 0.06, 1, 0, 0);
+            }
+
+        }
+        
+        &__context{
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            transform: matrix(0.99, 0.15, -0.19, 0.98, 0, 0);
+            top: 85px;
+            left: 60px;
+
+            &_head {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 10px;
+
+                > button{
+                    font-size: $font-size-h4-24;
+                    line-height: 30px;
+                    margin-right: 25px;
+                }
+
+            }
+
+            & h3{
+                
+                z-index: 2;
+                color: $color-white;
+                font-size: $font-size-h3-32;
+            }
+
+            & p{
+                
+                z-index: 2; 
+                color: $color-white;
+                font-size: $font-size-body-20;
+                line-height: 140%;
+                font-weight: 400;
+    
+            }
+    
+            
+
+        }
+        
+
+        
 
 
 
