@@ -4,6 +4,7 @@ import Footer from '../../component/footer'
 import Head from './component/Head'
 import Shutter from './component/Shutter'
 
+
 const Creator = () => {
   return (
     <>
@@ -11,6 +12,7 @@ const Creator = () => {
       <main className="creator-page">
         <Head />
         <Shutter/>
+        
       
       </main>
       <Footer />

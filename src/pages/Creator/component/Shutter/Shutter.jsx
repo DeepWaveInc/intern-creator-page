@@ -1,6 +1,7 @@
 
 import { ReactComponent as QuotationMarksBlue } from '../../../../assets/image/creator/shutter/quotationmarks.svg'
 import { ReactComponent as QuotationMarksYellow } from '../../../../assets/image/creator/shutter/quotationmarks_y.svg'
+import { ReactComponent as LaptopMockup } from '../../../../assets/image/creator/shutter/laptopmockup.svg'
 import { ReactComponent as IconPodcast } from '../../../../assets/image/creator/shutter/iconpodcast.svg'
 import { ReactComponent as IconYoutube } from '../../../../assets/image/creator/shutter/iconyoutube.svg'
 import './Shutter.scss'
@@ -47,7 +48,12 @@ const Shutter = () => {
                 </div>
                  
             </div>
-            
+            <div className="shutter__effect_container">
+                <h1>效果，就是這麼驚人 !</h1>
+                <p>你沒聽錯，我們把人聲以外的聲音都消掉了！</p>
+                <LaptopMockup className="shutter__effect_laptop"/>
+                <p className='credit'>Credit: <a href="https://www.instagram.com/hsu.mabel/">@hsu.mabel</a></p>
+            </div>
             
             <div className="shutter__circle" />
         </section>
