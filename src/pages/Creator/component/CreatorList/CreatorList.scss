@@ -1,2 +1,45 @@
 @import '../../../../css/_variable';
 @import '../../../../css/_mixin';
+
+$image-margin:20px;
+
+.creator-page{
+
+
+    .CreatorList{
+        background-color: $color-grey-scale9;
+        &__container{
+            width: 1220px + $image-margin*2;
+            height: 719px;
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+
+            h1 {
+                font-size: $font-size-title-40;
+                color: $color-primary-default;
+                line-height: 140%;
+                margin: 56px auto 0;
+            }
+
+            Button {
+                margin: 40px auto 0;
+            }
+            
+
+            
+        }
+
+        &__image{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content:space-between;
+            margin-top: 69px;
+
+            &_item{
+                width: 170px;
+                margin: $image-margin;
+            }
+        }
+    }
+}
