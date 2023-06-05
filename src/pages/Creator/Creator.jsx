@@ -3,6 +3,7 @@ import Navbar from '../../component/navbar'
 import Footer from '../../component/footer'
 import Head from './component/Head'
 import Shutter from './component/Shutter'
+import CreatorList from './component/CreatorList'
 
 
 const Creator = () => {
@@ -12,6 +13,7 @@ const Creator = () => {
       <main className="creator-page">
         <Head />
         <Shutter/>
+        <CreatorList/>
         
       
       </main>
