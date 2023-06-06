@@ -1,0 +1,197 @@
+@import '../../../../css/_variable';
+@import '../../../../css/_mixin';
+
+
+.creator-page{
+    .plan{
+        height: 1111px;
+        &__container{
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        
+        &__creatorplan{
+
+            position: absolute;
+            left: calc(50% - 804px/2 - 647px);
+            top: 186px;
+            width: 804px;
+            height: 804px;
+            border-radius: 50%;
+            background: linear-gradient(180deg, #064BB2 0%, #0A378E 100%);
+
+            &_context{
+                position: absolute;
+                top: 241px;
+                left: 242px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+
+            }
+
+            &_title{
+
+                font-size: $font-size-h1-40;
+                line-height: 56px;
+                font-weight: 500;
+                text-align: left;
+                color: $color-white;
+                
+
+            }
+            &_bar{
+
+                margin-top: 10px;
+                width: 220px;
+                height: 4px;
+                background-color: $color-white;
+                z-index: 1;
+                text-align: left;
+
+            }
+            &_text{
+                font-size: $font-size-title-24;
+                width: 485px;
+                line-height: 140%;
+                margin-top: 24px;
+                color: $color-white;
+                text-align: left;
+
+            }
+
+        
+        }
+
+        &__creatorpromote{
+
+            position: absolute;
+            left: calc(50% - 496px/2 + 34px);
+            top: 496px;
+            width: 496px;
+            height: 496px;
+            border-radius: 50%;
+            background: linear-gradient(180deg, #60A0FF 0%, #0157CB 100%);
+            
+            &_background{
+                position: absolute;
+                width: 472px;
+                height: 472px;
+                border-radius: 50%;
+                top: 12px;left: 12px;
+                background-color: #fff;
+
+                
+            }
+            
+
+            &_context{
+                position: absolute;
+                top: 132px;
+                left: 61px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+
+            }
+            
+
+            &_title{
+
+                font-size: $font-size-h2-36;
+                line-height: 125%;
+                font-weight: 500;
+                text-align: left;
+                margin-left: 34px;
+                color: $color-primary-default;
+            }
+            &_bar{
+
+                margin-top: 10px;
+                width: 272px;
+                height: 4px;
+                background-color: $color-primary-default;
+                
+                margin-left: 24px;
+                text-align: left;
+
+            }
+            &_text{
+                font-size: $font-size-body-20;
+                width: 361px;
+                line-height: 140%;
+                margin-top: 30px;
+                color: $color-primary-default;
+                text-align: center;
+
+            }
+
+            &_icon{
+                position: absolute;
+                top: -2px;
+                left: 41px;
+            }
+        }
+
+        &__creatorexperience{
+
+            position: absolute;
+            left: calc(50% - 561px/2 + 430px);
+            top: 234px;
+            width: 561px;
+            height: 561px;
+            border-radius: 50%;
+            background: linear-gradient(180deg, #FFBD4F 0%, #EFA222 100%);
+            
+
+            &_context{
+                position: absolute;
+                top: 130px;
+                left: 58px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+
+            }
+            
+
+            &_title{
+
+                font-size: $font-size-h2-36;
+                line-height: 125%;
+                font-weight: 500;
+                text-align: left;
+                margin-left: 53px;
+                color: $color-white;
+            }
+            &_bar{
+
+                margin-top: 10px;
+                width: 272px;
+                height: 4px;
+                background-color: $color-white;
+                
+                margin-left: 48px;
+                text-align: left;
+
+            }
+            &_text{
+                font-size: $font-size-body-20;
+                width: 440px;
+                line-height: 140%;
+                margin-top: 30px;
+                color:  $color-white;
+                text-align: center;
+
+            }
+
+            &_icon{
+                position: absolute;
+                top: -56px;
+                right: 23px;
+            }
+        }
+    }
+}
+

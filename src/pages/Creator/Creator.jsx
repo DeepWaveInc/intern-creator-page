@@ -4,6 +4,7 @@ import Footer from '../../component/footer'
 import Head from './component/Head'
 import Shutter from './component/Shutter'
 import CreatorList from './component/CreatorList'
+import Plan from './component/Plan'
 
 
 const Creator = () => {
@@ -14,6 +15,7 @@ const Creator = () => {
         <Head />
         <Shutter/>
         <CreatorList/>
+        <Plan/>
         
       
       </main>
