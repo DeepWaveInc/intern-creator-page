@@ -71,16 +71,13 @@
             top: 496px;
             width: 496px;
             height: 496px;
-            border-radius: 50%;
-            background: linear-gradient(180deg, #60A0FF 0%, #0157CB 100%);
             
-            &_background{
+            
+            &_bluearc{
                 position: absolute;
-                width: 472px;
-                height: 472px;
-                border-radius: 50%;
-                top: 12px;left: 12px;
-                background-color: #fff;
+                top: -41.5px;
+                left: -41.5px;
+                
 
                 
             }
@@ -141,8 +138,21 @@
             top: 234px;
             width: 561px;
             height: 561px;
-            border-radius: 50%;
-            background: linear-gradient(180deg, #FFBD4F 0%, #EFA222 100%);
+
+            &_yellowarc{
+                position: absolute;
+                top: -55.5px;
+                left: -55.5px;
+   
+            }
+
+            &_yellowtriangle{
+                position: absolute;
+                top: 619.16px;
+                left: 177.3px;
+   
+            }
+
             
 
             &_context{

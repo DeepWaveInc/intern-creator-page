@@ -1,6 +1,9 @@
 import './Plan.scss'
 import { ReactComponent as Moneyicon } from '../../../../assets/image/creator/plan/moneyicon.svg'
 import { ReactComponent as Bulbicon } from '../../../../assets/image/creator/plan/bulbicon.svg'
+import { ReactComponent as Bluearc } from '../../../../assets/image/creator/plan/bluearc.svg'
+import { ReactComponent as Yellowarc } from '../../../../assets/image/creator/plan/yellowarc.svg'
+import { ReactComponent as Yellowtriangle } from '../../../../assets/image/creator/plan/yellowtriangle.svg'
 
 
 
@@ -19,7 +22,8 @@ const Plan = () => {
             </div>
 
             <div className="plan__creatorpromote">
-                <div className="plan__creatorpromote_background"></div>
+                <Bluearc className='plan__creatorpromote_bluearc'/>
+                
                 <div className='plan__creatorpromote_context'>
                 
 
@@ -32,7 +36,8 @@ const Plan = () => {
             </div>
 
             <div className="plan__creatorexperience">
-                
+            <Yellowarc className="plan__creatorexperience_yellowarc"/>
+            <Yellowtriangle className="plan__creatorexperience_yellowtriangle"/>
                 <div className='plan__creatorexperience_context'>
                 
 
