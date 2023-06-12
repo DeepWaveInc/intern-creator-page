@@ -7,6 +7,8 @@ import { ReactComponent as IconYoutube } from '../../../../assets/image/creator/
 import './Shutter.scss'
 
 const Shutter = () => {
+
+    
     return(
         <section className='shutter'>
             <div className="shutter__podcast_container">

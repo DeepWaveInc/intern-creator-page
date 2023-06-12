@@ -9,13 +9,15 @@ const ImageList = ({ images }) => {
         {images.map((image, index) => (
           <li className="CreatorList__image_item" key={index}>
             
-            <a href={image.link}>
+            <a href={image.link} className="imageContainer">
                 <img 
                 src={image.src} 
                 srcSet={image.srcset} 
                 alt={image.link}
                 />
+                <div className={index < 6 ? "overlay yellow" : "overlay blue"}></div>
             </a>
+            
           </li>
         ))}
       </ul>

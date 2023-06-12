@@ -98,7 +98,9 @@ $topSpace:652px;
                 @include contextLetter;
             }
             &_bluecircle {
-                
+                position: absolute;
+                top: 343px;
+                left: -12.77px;
                 width: 246px;
                 height: 246px;
                 border-radius: 50%;
