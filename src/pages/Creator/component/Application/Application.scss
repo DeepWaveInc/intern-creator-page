@@ -1,0 +1,206 @@
+@import '../../../../css/_variable';
+@import '../../../../css/_mixin';
+
+
+.creator-page{
+
+    .application{
+        height: 1058px;
+        
+
+        &__container{
+            height: 100%;
+            width: 1520px;
+            display:flex;
+            margin: auto;
+            justify-content: space-between;
+        }
+
+        &__text{
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+            margin-top: 30px;
+
+            h1{
+                font-size: $font-size-h1-40;
+                color: $color-primary-default;
+                line-height: 140%;
+                
+            }
+            h3{
+                font-size: $font-size-h3-32;
+                color: $color-primary-default;
+                line-height: 125%;
+                margin-top: 40px;
+
+            }
+            p{
+                font-size: $font-size-body-18;
+                color: $color-primary-default;
+                line-height: 140%;
+                margin-top: 24px;
+            }
+
+        }
+
+
+        &__form{
+            height: 737px;
+            width: 1079px;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #CCCCCC;
+            border-radius: 12px;
+            margin-top: 30px;
+            background-color: #fff;
+            font-size: $font-size-base;
+
+
+
+            &_content{
+                margin: 40px;
+                display: flex;
+                flex-direction: column;
+
+
+                label{
+                    margin-bottom: 12px;
+                }
+
+                label:before{
+                    content:'*';
+                    color: red;
+                }
+
+                
+
+                select{
+                    height: 48px;
+                    width: 100%;
+                    border: 1px solid #CCCCCC;
+                    border-radius: 8px;
+                    margin-bottom: 20px;
+                }
+
+                textarea{
+                    height: 106px;
+                    width: 100%;
+                    border: 1px solid #CCCCCC;
+                    border-radius: 8px;
+                    margin-bottom: 20px; 
+                }
+
+                .block1{
+                    display: flex;
+                    justify-content: space-between;
+                    input{
+                        height: 48px;
+                        width: 100%;
+                        border: 1px solid #CCCCCC;
+                        border-radius: 8px;
+                        margin-bottom: 20px;
+                    }
+
+                    
+
+
+
+                    .part{
+                        width: 481.5px;
+                        display: flex;
+                        flex-direction: column;
+                        
+                    }
+
+
+                }
+
+                .block2{
+                    input{
+                        height: 48px;
+                        width: 100%;
+                        border: 1px solid #CCCCCC;
+                        border-radius: 8px;
+                        margin-bottom: 20px;
+                    }
+                    
+                }
+
+                .block3{
+                    display: flex;
+                    justify-content: space-between;
+                    .part{
+
+                        display: flex;
+                        flex-direction: column;
+                        
+
+                        
+
+                        
+
+                    }
+                    .checkpart{
+                        display: flex;
+                    }
+                    .check{
+                        border: 1px solid #455D86;
+                        border-radius: 4px;
+                        width: 24px;
+                        height: 24px;
+                    }
+
+                    .checklabel{
+                        font-size: $font-size-body-18;
+                        line-height: 140%;
+                        margin: 0 12px 0px 10px;
+                    }
+
+                    .checklabel::before{
+                        content:' ';
+                    }
+                    .buttonpart{
+                        display: flex;
+                        justify-content:flex-end ;
+                    }
+
+                    .applybutton{
+                        height: 59px;
+                        
+                    }
+
+                    .buttontext{
+                        font-size: $font-size-body-16 ;
+                        line-height: 140%;
+                        margin-top: 16px;
+                    }
+                    
+
+                    
+                    
+                }
+
+                
+
+            }
+
+            
+        }
+
+        &__circle{
+            position: absolute;
+            display: block;
+            width: 1122px;
+            height: 1122px;
+            background: linear-gradient(180deg, #074AB0 0%, #0A3991 100%);
+            border-radius: 50%;
+            left: calc(50% - 1122px/2 + 651px);
+            
+            z-index: -1;
+        }
+
+
+    }
+}
+

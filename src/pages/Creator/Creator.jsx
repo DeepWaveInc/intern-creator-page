@@ -5,6 +5,7 @@ import Head from './component/Head'
 import Shutter from './component/Shutter'
 import CreatorList from './component/CreatorList'
 import Plan from './component/Plan'
+import Application from './component/Application'
 
 
 const Creator = () => {
@@ -16,6 +17,7 @@ const Creator = () => {
         <Shutter/>
         <CreatorList/>
         <Plan/>
+        <Application />
         
       
       </main>
