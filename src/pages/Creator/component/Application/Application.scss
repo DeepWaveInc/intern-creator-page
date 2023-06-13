@@ -6,11 +6,13 @@
 
     .application{
         height: 1058px;
+        width: 100%;
+        overflow: hidden;
         
 
         &__container{
             height: 100%;
-            width: 1520px;
+            width: 1920px;
             display:flex;
             margin: auto;
             justify-content: space-between;
@@ -196,6 +198,7 @@
             background: linear-gradient(180deg, #074AB0 0%, #0A3991 100%);
             border-radius: 50%;
             left: calc(50% - 1122px/2 + 651px);
+            overflow: hidden;
             
             z-index: -1;
         }

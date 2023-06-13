@@ -8,6 +8,8 @@ $image-margin:20px;
 
     .CreatorList{
         background-color: $color-grey-scale9;
+        width: 100%;
+        overflow: hidden;
         &__container{
             width: 1220px + $image-margin*2;
             height: 719px;

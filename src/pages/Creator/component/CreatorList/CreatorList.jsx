@@ -14,8 +14,9 @@ const ImageList = ({ images }) => {
                 src={image.src} 
                 srcSet={image.srcset} 
                 alt={image.link}
+                
                 />
-                <div className={index < 6 ? "overlay yellow" : "overlay blue"}></div>
+                <div  className={image.type === "podcast" ?   "overlay yellow" : "overlay blue"}></div>
             </a>
             
           </li>

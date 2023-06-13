@@ -28,62 +28,74 @@ const IMAGES = [
   {
     src: CreatorImage_0,
     srcSet: `${CreatorImage_0} 1x,${CreatorImage_0_2x} 2x`,
-    link: 'https://www.facebook.com/travelshutter35/'
+    link: 'https://www.facebook.com/travelshutter35/',
+    type:'youtube'
   },
   {
     src: CreatorImage_1,
     srcSet: `${CreatorImage_1} 1x,${CreatorImage_1_2x} 2x`,
-    link: 'https://podcasts.apple.com/tw/podcast/%E6%A5%B5%E9%99%90%E7%99%BD%E6%97%A5%E5%A4%A2-by-beouter/id1575410931'
+    link: 'https://podcasts.apple.com/tw/podcast/%E6%A5%B5%E9%99%90%E7%99%BD%E6%97%A5%E5%A4%A2-by-beouter/id1575410931',
+    type:'podcast'
   },
   {
     src: CreatorImage_2,
     srcSet: `${CreatorImage_2} 1x,${CreatorImage_2_2x} 2x`,
-    link: 'https://open.firstory.me/user/girlsonwave'
+    link: 'https://open.firstory.me/user/girlsonwave',
+    type:'podcast'
   },
   {
     src: CreatorImage_3,
     srcSet: `${CreatorImage_3} 1x,${CreatorImage_3_2x} 2x`,
-    link: 'https://www.facebook.com/LightTri/'
+    link: 'https://www.facebook.com/LightTri/',
+    type:'podcast'
   },
   {
     src: CreatorImage_4,
     srcSet: `${CreatorImage_4} 1x,${CreatorImage_4_2x} 2x`,
-    link: 'https://open.firstory.me/user/beerseatalks'
+    link: 'https://open.firstory.me/user/beerseatalks',
+    type:'podcast'
   },
   {
     src: CreatorImage_5,
     srcSet: `${CreatorImage_5} 1x,${CreatorImage_5_2x} 2x`,
-    link: 'https://podcasts.apple.com/us/podcast/%E6%8D%95%E6%8D%89%E9%87%8E%E7%94%9F%E7%9A%84%E6%9D%8E%E6%AD%90%E9%82%A3x-%E9%98%BF%E4%BA%AE/id1540891505'
+    link: 'https://podcasts.apple.com/us/podcast/%E6%8D%95%E6%8D%89%E9%87%8E%E7%94%9F%E7%9A%84%E6%9D%8E%E6%AD%90%E9%82%A3x-%E9%98%BF%E4%BA%AE/id1540891505',
+    type:'podcast'
   },
   {
     src: CreatorImage_6,
     srcSet: `${CreatorImage_6} 1x,${CreatorImage_6_2x} 2x`,
-    link: ''
+    link: '',
+    type:'podcast'
   },
   {
     src: CreatorImage_7,
     srcSet: `${CreatorImage_7} 1x,${CreatorImage_7_2x} 2x`,
-    link: 'https://podcasts.apple.com/tw/podcast/%E5%86%B7%E6%B0%A3%E6%88%BF%E5%B0%91%E5%A5%B3-%E6%88%B6%E5%A4%96%E7%B3%BB%E5%B0%91%E5%A5%B3/id1621484039'
+    link: 'https://podcasts.apple.com/tw/podcast/%E5%86%B7%E6%B0%A3%E6%88%BF%E5%B0%91%E5%A5%B3-%E6%88%B6%E5%A4%96%E7%B3%BB%E5%B0%91%E5%A5%B3/id1621484039',
+    type:'podcast'
   },
   {
     src: CreatorImage_8,
     srcSet: `${CreatorImage_8} 1x,${CreatorImage_8_2x} 2x`,
-    link: 'https://travelingdrug.com/'
+    link: 'https://travelingdrug.com/',
+    type:'podcast'
   },
   {
     src: CreatorImage_9,
     srcSet: `${CreatorImage_9} 1x,${CreatorImage_9_2x} 2x`,
-    link: 'https://www.youtube.com/c/hearingaction'
+    link: 'https://www.youtube.com/c/hearingaction',
+    type:'podcast'
   },
   {
     src: CreatorImage_10,
     srcSet: `${CreatorImage_10} 1x,${CreatorImage_10_2x} 2x`,
-    link: 'https://www.facebook.com/unlock.the.earth.travel/'
+    link: 'https://www.facebook.com/unlock.the.earth.travel/',
+    type:'podcast'
   },
   {
     src: CreatorImage_11,
     srcSet: `${CreatorImage_11} 1x,${CreatorImage_11_2x} 2x`,
-    link: 'https://www.youtube.com/@cuonglpnd'
+    link: 'https://www.youtube.com/@cuonglpnd',
+    type:'youtube'
   }
 ]
 

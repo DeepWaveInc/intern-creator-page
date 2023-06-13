@@ -4,16 +4,19 @@ import { ReactComponent as QuotationMarksYellow } from '../../../../assets/image
 import { ReactComponent as LaptopMockup } from '../../../../assets/image/creator/shutter/laptopmockup.svg'
 import { ReactComponent as IconPodcast } from '../../../../assets/image/creator/shutter/iconpodcast.svg'
 import { ReactComponent as IconYoutube } from '../../../../assets/image/creator/shutter/iconyoutube.svg'
+import ReactPlayer from 'react-player'
 import './Shutter.scss'
 
 const Shutter = () => {
 
-    
+
     return(
         <section className='shutter'>
             <div className="shutter__podcast_container">
                 <p className='shutter__podcast_background '>Podcast</p>
                 <div className="shutter__podcast">
+                <div className="shutter__podcast_video">
+                    </div>
                     <div className="shutter__podcast_circle">
                     
                         <span className="shutter__podcast_title">旅行快門</span>
@@ -32,7 +35,9 @@ const Shutter = () => {
             </div>
             <div className="shutter__youtube_container">  
                 <p className='shutter__youtube_background'>Youtube</p> 
-                <div className="shutter__youtube">    
+                <div className="shutter__youtube">  
+                    <div className="shutter__youtube_video">
+                    </div>  
                     
                     
                     <div className="shutter__youtube_circle">
@@ -53,7 +58,22 @@ const Shutter = () => {
             <div className="shutter__effect_container">
                 <h1>效果，就是這麼驚人 !</h1>
                 <p>你沒聽錯，我們把人聲以外的聲音都消掉了！</p>
+                
+                <div className='shutter__effect_laptopcontainer'>
                 <LaptopMockup className="shutter__effect_laptop"/>
+                <div className='shutter__effect_videocontainer'>
+                    <ReactPlayer
+                        className='shutter__effect_video'
+                        url='https://www.youtube.com/watch?v=e9zENcqkY28'
+                        width='100%'
+                        height='100%'
+                        
+                        />
+
+                </div>
+
+      
+                </div>
                 <p className='credit'>Credit: <a href="https://www.instagram.com/hsu.mabel/">@hsu.mabel</a></p>
             </div>
             

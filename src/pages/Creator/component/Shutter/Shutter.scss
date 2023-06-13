@@ -51,6 +51,13 @@ $topSpace:652px;
                 top: 0px;
                 @include backgroundLetter;
             }
+            &_video{
+                position: absolute;
+                left: calc(50% - 742px/2 - 300px);
+                top: 383px;
+                width: 742px;
+                height: 456px;
+            }
 
             &_circle{
                 position: absolute;
@@ -150,6 +157,15 @@ $topSpace:652px;
                 @include backgroundLetter;
                 opacity: 0.6;
                 ;
+            }
+
+            &_video{
+                position: absolute;
+                width: 721px;
+                height: 443px;
+                left: calc(50% - 721px/2 + 286.5px);
+                top: 373px;
+                
             }
 
             &_circle{
@@ -263,10 +279,36 @@ $topSpace:652px;
 
             }
             
-            &_laptop{
+            
+
+            &_laptopcontainer{
+                width: 612px;
+                height: 386px;
                 margin-top: 80.2px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: relative;
+
+            }
+            &_videocontainer{
+                position: absolute;
+                width: 475px;
+                height: 242.85px;
+                top: 46.3px;
+
+            }
+
+            &_laptop{
+                top: 0;
 
 
+            }
+
+            &_video{
+                
+                
+                
             }
         }
 
