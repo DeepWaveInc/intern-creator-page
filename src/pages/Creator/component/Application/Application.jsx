@@ -23,7 +23,7 @@ const Application = () => {
                     <input type="text"  name="" placeholder="請輸入內容"/>
                     
                     <label>國籍</label>
-                    <select name="" value="" >請選擇類型</select>
+                    <select name=""  ><option selected value disabled>請選擇類型</option></select>
                   </div >
                   <div className="part">
                   <label>頻道/團隊名稱</label>
@@ -32,12 +32,12 @@ const Application = () => {
                     <input type="text"  name="" placeholder="請輸入內容"/>
                     
                     <label>語言</label>
-                    <select name="" disabled selected>請選擇類型</select>
+                    <select name="" ><option selected value disabled>請選擇類型</option></select>
                   </div>
                 </div>
                 <div className='block2'>
                   <label>頻道性質</label>
-                  <select name="" disabled selected>請選擇類型</select>
+                  <select name="" ><option selected value disabled>請選擇類型</option></select>
                   <label>加入原因</label>
                   <textarea name=""></textarea>
 
