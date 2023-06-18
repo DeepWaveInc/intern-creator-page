@@ -8,6 +8,9 @@
         width: 100%;
         height: 796px;
         overflow: hidden;
+        @include breakpoint-pad-md(){
+            height: 860px;
+        }
 
         &__background {
             width: 3500px;
@@ -16,6 +19,22 @@
             left: 50%;
             top: 234px;
             transform: translateX(-50%);
+
+            @include breakpoint-pc-md() {
+                top: 180px;
+                left: 75%;
+              }
+        
+              @include breakpoint-pad-md() {
+                left: 120%;                
+              }
+              @include breakpoint-phone-lg() {
+                left: 120%;                
+              }
+        
+              @include breakpoint-phone-sm() {                
+                left: 230%;
+              }
         }
 
         &__circle {
@@ -28,6 +47,16 @@
             left: 40%;
             
             top: -762px;
+            @include breakpoint-pc-md(){
+                left: 50%;
+            }
+            @include breakpoint-pc-sm() {
+                width: 1376px;
+                
+
+              }
+
+            
 
         }
 
@@ -36,35 +65,76 @@
 
             position: relative;
             display: flex;
-            flex-direction: column;
-            max-width: 1440px;
-            width: 100%;
-            height: 100%;
-            flex: 1;
-            margin: 0 auto;
-        }
-
-        &__content {
-            display: flex;
-            flex: 1;
+            
             justify-content: space-between;
             
+            width: 100%;
+            height: 100%;
             
+            margin: 0 auto;
+            @include breakpoint-pad-md() {
+                flex-direction: column;
+                align-items: center;
+                justify-content:flex-start
+                
+                
+
+              }
         }
+
+
         
 
         &__dialog{
             position: relative;
             top: 135px;
-            right: 106px;
+            right: 14.73%;
             display: flex;
             flex-direction: column;
+            
+            flex-shrink: 1; 
+            min-width: 0; 
+            
+
+            @include breakpoint-pc-lg(){
+                 
+            }
+
+            @include breakpoint-pc-sm(){
+                right: 12.66%;
+
+            }
+
+
+
+            @include breakpoint-pad-lg(){
+                
+            }
+
+            @include breakpoint-pad-md(){
+                order: 1;
+                top: 80px;
+                right: 0;
+            }
+            
 
         }
 
         &__dialogBox{
             
+            
             z-index: 0;
+            @include breakpoint-pc-sm() {
+                
+                width: 529px;
+                height: 352px;
+
+            }
+            @include breakpoint-pad-md(){
+                min-height: 352px;
+                width: 430px;
+                
+            }
             
            
             
@@ -72,14 +142,54 @@
         }
         &__youtuber{
             position: relative;
-            left: 87px;
+            left: calc(50% - 81.77px/2 - 592.12px);
             top: 101.6px;
             display: flex;
             flex-direction: column;
+            z-index: 2;
+            flex-shrink: 1; 
+            min-width: 0; 
+        
+
+            @include breakpoint-pc-lg(){
+                left: calc(50% - 76.13px/2 - 537.94px);
+            }
+
+            @include breakpoint-pc-sm(){
+                left: calc(50% - 66.39px/2 - 413.8px);
+
+            }
+
+
+
+            @include breakpoint-pad-lg(){
+                left:calc(50% - 66.39px/2 - 379.8px);
+            }
+
+            @include breakpoint-pad-md(){
+                
+                    order: 2;
+                    left: 0;
+                    top: 50px;
+                
+                
+
+            }
+             
+
             & img{
                 width: 826.3px;
                 height: 696.4px;
-                
+                @include breakpoint-pc-sm(){
+                    width: 630.5px;
+                    height: 584px;
+                }
+                @include breakpoint-pad-md(){
+                    width: 473px;
+                    height: 424px;
+                }
+
+   
             }
 
             & h3{
@@ -93,6 +203,18 @@
                 color: $color-white;
                 font-size: $font-size-h3-32;
                 transform: matrix(1, -0.06, 0.06, 1, 0, 0);
+                @include breakpoint-pc-sm(){
+                    font-size: $font-size-h4-24;
+                    width: 490px;
+                    top: 447px;
+                    left: 64px;
+                }
+                @include breakpoint-pad-md(){
+                    width: 370px;
+                    top: 330px;
+                    left: 60px;
+                    text-align: center;
+                }
             }
 
         }
@@ -104,6 +226,19 @@
             transform: matrix(0.99, 0.15, -0.19, 0.98, 0, 0);
             top: 85px;
             left: 60px;
+            width: 490px;
+            
+            @include breakpoint-pc-sm() {
+                top: 70px;
+                left: 60px;
+                width:440px;
+            }
+            @include breakpoint-pad-md(){
+                top: 55px;
+                left: 40px;
+                
+                width:360px;
+            }
 
             &_head {
                 display: flex;
@@ -114,6 +249,9 @@
                     font-size: $font-size-h4-24;
                     line-height: 30px;
                     margin-right: 25px;
+                    @include breakpoint-pad-md(){
+                        font-size: $font-size-body-20;
+                    }
                 }
 
             }
@@ -123,6 +261,17 @@
                 z-index: 2;
                 color: $color-white;
                 font-size: $font-size-h3-32;
+                @include breakpoint-pc-sm() {
+                
+                    font-size: 28px;
+                    
+    
+                }
+                @include breakpoint-pad-md(){
+                    font-size: $font-size-h4-24;
+                }
+
+                
             }
 
             & p{
@@ -132,6 +281,15 @@
                 font-size: $font-size-body-20;
                 line-height: 140%;
                 font-weight: 400;
+
+                @include breakpoint-pc-sm() {
+                
+                    font-size: $font-size-body-18;    
+    
+                }
+                @include breakpoint-pad-md(){
+                    margin-bottom: 0;
+                }
     
             }
     
