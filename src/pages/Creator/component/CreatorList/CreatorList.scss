@@ -1,21 +1,44 @@
 @import '../../../../css/_variable';
 @import '../../../../css/_mixin';
 
-$image-margin:20px;
+$image-marginpclg:20px;
+$imagepclg:170px;
+$image-marginpcsm:16.5px;
+$imagepcsm:136px;   
+$image-marginpadlg:(25.73px / 2);
+$imagepadlg:106px;
+$image-marginpadmd:(75.78px / 2);
+$imagepadmd:106px;
+
 
 .creator-page{
-
+    
+    
 
     .CreatorList{
         background-color: $color-grey-scale9;
         width: 100%;
         overflow: hidden;
+        
         &__container{
-            width: 1220px + $image-margin*2;
+            width:($imagepclg + $image-marginpclg*2)*6 ;
             height: 719px;
             display: flex;
             flex-direction: column;
             margin: 0 auto;
+            @include breakpoint-pc-sm(){
+                width: ($imagepcsm + $image-marginpcsm*2)*6 ;
+                height: 674px;
+            }
+            @include breakpoint-pad-lg(){
+                width: ($imagepadlg + $image-marginpadlg*2)*6 ;
+                height: 600px;
+            }
+            @include breakpoint-pad-md(){
+                width:($imagepadmd + $image-marginpadmd*2)*2 ;
+                height: 1276px;
+            }
+            
 
             h1 {
                 font-size: $font-size-title-40;
@@ -40,10 +63,26 @@ $image-margin:20px;
             
 
             &_item{
-                width: 170px;
-                height: 170px;
-                margin: $image-margin;
+                width: $imagepclg;
+                height: $imagepclg;
+                margin: $image-marginpclg;
+
                 display: inline-block;
+                @include breakpoint-pc-sm(){
+                    width: $imagepcsm;
+                height: $imagepcsm;
+                margin: $image-marginpcsm;
+                }
+                @include breakpoint-pad-lg(){
+                    width: $imagepadlg;
+                height: $imagepadlg;
+                margin: $image-marginpadlg;
+                }
+                @include breakpoint-pad-md(){
+                    width: $imagepadmd;
+                height: $imagepadmd;
+                margin: $image-marginpadmd;
+                }
 
                 .imageContainer {
                     position: relative;
