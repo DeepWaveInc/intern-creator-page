@@ -5,9 +5,24 @@ import { ReactComponent as LaptopMockup } from '../../../../assets/image/creator
 import { ReactComponent as IconPodcast } from '../../../../assets/image/creator/shutter/iconpodcast.svg'
 import { ReactComponent as IconYoutube } from '../../../../assets/image/creator/shutter/iconyoutube.svg'
 import ReactPlayer from 'react-player'
+import { useState, useEffect } from 'react';
 import './Shutter.scss'
 
 const Shutter = () => {
+
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+      const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+      };
+  
+      window.addEventListener('resize', handleResize);
+  
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, []);
 
 
     return(
@@ -15,13 +30,23 @@ const Shutter = () => {
             <div className="shutter__podcast_container">
                 <p className='shutter__podcast_background '>Podcast</p>
                 <div className="shutter__podcast">
-                <div className="shutter__podcast_video">
+                    <div className="shutter__podcast_video">
+                    <ReactPlayer
+                        className='shutter__effect_video'
+                        url='https://www.youtube.com/watch?v=e9zENcqkY28'
+                        width='100%'
+                        height='100%'
+                        
+                        />
                     </div>
                     <div className="shutter__podcast_circle">
-                    
+                        <div className="shutter__podcast_context">
+                            
                         <span className="shutter__podcast_title">旅行快門</span>
                         <div className="shutter__podcast_bar"></div>
                         <p className="shutter__podcast_text">Noise Eraser 是一個非常智能的工具，他能精準地降低環境噪音，讓人聲更清晰凸顯，影音創作者可在後製剪輯過程提升很大的效率。</p>
+                        
+                       
                         <p className="shutter__podcast_name">頻道主持人<br/>Firas</p>
                         <div className="shutter__podcast_bluecircle"></div>
 
@@ -29,7 +54,7 @@ const Shutter = () => {
                         <QuotationMarksBlue className="shutter__podcast_markdown"/>
                         <IconPodcast className='shutter__podcast_icon'/>
                         
-                        
+                        </div>
                     </div>
                 </div> 
             </div>
@@ -37,19 +62,28 @@ const Shutter = () => {
                 <p className='shutter__youtube_background'>Youtube</p> 
                 <div className="shutter__youtube">  
                     <div className="shutter__youtube_video">
+                    <ReactPlayer
+                        className='shutter__effect_video'
+                        url='https://www.youtube.com/watch?v=e9zENcqkY28'
+                        width='100%'
+                        height='100%'
+                        
+                        />
                     </div>  
                     
                     
                     <div className="shutter__youtube_circle">
+                        <div className="shutter__youtube_context">
                         
-                        <span className="shutter__youtube_title">旅行快門</span>
-                        <div className="shutter__youtube_bar"></div>
-                        <p className="shutter__youtube_text"></p>
-                        <div className="shutter__youtube_yellowcircle"></div>
-                         
-                        <QuotationMarksYellow className="shutter__youtube_markup"/>
-                        <QuotationMarksYellow className="shutter__youtube_markdown"/>
-                        <IconYoutube className='shutter__youtube_icon'/>
+                            <span className="shutter__youtube_title">旅行快門</span>
+                            <div className="shutter__youtube_bar"></div>
+                            <p className="shutter__youtube_text">XXXXXX XXXX XXXXXXXXX XXXXX XXXXX XXXXX XXXXXXXXXXXX XXXXXXXXXXXX XXXXXXXXX XXXXXXXXXXXX</p>
+                            <div className="shutter__youtube_yellowcircle"></div>
+                            
+                            <QuotationMarksYellow className="shutter__youtube_markup"/>
+                            <QuotationMarksYellow className="shutter__youtube_markdown"/>
+                            <IconYoutube className='shutter__youtube_icon'/>
+                        </div>
                     </div>
                     
                 </div>
@@ -60,7 +94,12 @@ const Shutter = () => {
                 <p>你沒聽錯，我們把人聲以外的聲音都消掉了！</p>
                 
                 <div className='shutter__effect_laptopcontainer'>
-                <LaptopMockup className="shutter__effect_laptop"/>
+                {windowWidth <= 960 ? (
+                 ""
+                ) : (
+                    <LaptopMockup className="shutter__effect_laptop"/>
+                 )}
+                
                 <div className='shutter__effect_videocontainer'>
                     <ReactPlayer
                         className='shutter__effect_video'
