@@ -43,7 +43,8 @@ const Plan = () => {
 
                     <span className="plan__creatorexperience_title">創作者體驗計畫</span>
                     <div className="plan__creatorexperience_bar"></div>
-                        <p className="plan__creatorexperience_text">於下方表單填寫創作資料與頻道資訊，迪威智能將為您提供完整的限量專業訂閱體驗，並給予進一步的技術應用建議，讓您使用新技術免負擔！同時，我們也將有不定期的創作者實體 &amp; 線上活動，加入計畫掌握更多合作可能與學習機會！<br/><br/>在本合作中，也有機會讓您的作品【免費】在迪威官方媒體中得到更多的曝光與推廣！</p>
+                        <p className="plan__creatorexperience_text">於下方表單填寫創作資料與頻道資訊，迪威智能將為您提供完整的限量專業訂閱體驗，並給予進一步的技術應用建議，讓您使用新技術免負擔！同時，我們也將有不定期的創作者實體 &amp; 線上活動，加入計畫掌握更多合作可能與學習機會！</p>
+                        <p className="plan__creatorexperience_text2">在本合作中，也有機會讓您的作品【免費】在迪威官方媒體中得到更多的曝光與推廣！</p>
                 </div>
                 <Bulbicon className='plan__creatorexperience_icon'/>
                     
