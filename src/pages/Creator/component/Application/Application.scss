@@ -6,30 +6,78 @@
 
     .application{
         height: 1058px;
-        width: 1920px;
-        overflow: hidden;
-        
+
+        @include breakpoint-pc-md(){
+                  
+        }
+        @include breakpoint-pc-sm(){
+            
+        }
+        @include breakpoint-pad-lg(){
+           height: 1135px; 
+        }
+        @include breakpoint-pad-md(){
+            height: 1514px;
+        }
 
         &__container{
             position: relative;
-            height: 100%;
-            width: 1520px;
+            
+            max-width: 1540px;
             display:flex;
             margin: auto;
             justify-content: space-between;
+            @include breakpoint-pc-md(){
+                width: 1240px;      
+            }
+            @include breakpoint-pc-sm(){
+                width: 1080px; 
+            }
+            @include breakpoint-pad-lg(){
+                flex-direction: column;
+                max-width: 872px;
+            }
+            @include breakpoint-pad-md(){
+                width: 100%;
+                
+            }
         }
 
         &__text{
             display: flex;
             flex-direction: column;
             width: 400px;
-            margin-top: 30px;
-            
+            margin: 30px 20px;
+            @include breakpoint-pc-md(){
+                margin: 35px 24px 24px 24px;
+            }
+            @include breakpoint-pc-sm(){
+                
+            }
+            @include breakpoint-pad-lg(){
+               width: 100%; 
+            }
+            @include breakpoint-pad-md(){
+                margin: 0;
+                padding: 35px 20px 16px;
+            }
 
             h1{
                 font-size: $font-size-h1-40;
                 color: $color-primary-default;
                 line-height: 140%;
+                @include breakpoint-pc-md(){
+                    font-size: 28px;
+                }
+                @include breakpoint-pc-sm(){
+                    
+                }
+                @include breakpoint-pad-lg(){
+                    
+                }
+                @include breakpoint-pad-md(){
+                    
+                }
                 
             }
             h3{
@@ -37,6 +85,19 @@
                 color: $color-primary-default;
                 line-height: 125%;
                 margin-top: 40px;
+                @include breakpoint-pc-md(){
+                    font-size: $font-size-body-20;
+                    margin-top: 24px;
+                }
+                @include breakpoint-pc-sm(){
+                    
+                }
+                @include breakpoint-pad-lg(){
+                    
+                }
+                @include breakpoint-pad-md(){
+                    
+                }
 
             }
             p{
@@ -44,6 +105,19 @@
                 color: $color-primary-default;
                 line-height: 140%;
                 margin-top: 24px;
+                @include breakpoint-pc-md(){
+                    font-size: $font-size-body-16;
+                    margin-top: 16px;
+                }
+                @include breakpoint-pc-sm(){
+                    
+                }
+                @include breakpoint-pad-lg(){
+                    
+                }
+                @include breakpoint-pad-md(){
+                    
+                }
             }
 
         }
@@ -51,25 +125,50 @@
 
         &__form{
             height: 737px;
-            width: 1079px;
+            flex-grow: 1;
+            max-width: 1079px;
             display: flex;
             flex-direction: column;
             border: 1px solid #CCCCCC;
             border-radius: 12px;
-            margin-top: 30px;
+            margin: 30px 20px;
             background-color: #fff;
             font-size: $font-size-base;
-
+            @include breakpoint-pc-md(){
+                margin: 35px 24px;
+            }
+            @include breakpoint-pc-sm(){
+                
+            }
+            @include breakpoint-pad-lg(){
+                margin: 24px;
+            }
+            @include breakpoint-pad-md(){
+                margin: 16px 20px;
+                height: 1149px;
+            }
 
 
             &_content{
-                margin: 40px;
+                margin: 32px 32px;
                 display: flex;
                 flex-direction: column;
-
+                @include breakpoint-pc-md(){
+                  
+                }
+                @include breakpoint-pc-sm(){
+                    margin: 32px 24px;
+                }
+                @include breakpoint-pad-lg(){
+                    
+                }
+                @include breakpoint-pad-md(){
+                    
+                }
 
                 label{
-                    margin-bottom: 12px;
+                    margin-bottom: 8px;
+                    height: 28px;
                 }
 
                 label:before{
@@ -84,7 +183,19 @@
                     width: 100%;
                     border: 1px solid #CCCCCC;
                     border-radius: 8px;
-                    margin-bottom: 20px;
+                    @include breakpoint-pc-md(){
+                  
+                    }
+                    @include breakpoint-pc-sm(){
+                        
+                    }
+                    @include breakpoint-pad-lg(){
+                        
+                    }
+                    @include breakpoint-pad-md(){
+                        
+                    }
+                    
                 }
 
                 textarea{
@@ -92,77 +203,143 @@
                     width: 100%;
                     border: 1px solid #CCCCCC;
                     border-radius: 8px;
-                    margin-bottom: 20px; 
+                    
+                    @include breakpoint-pc-md(){
+                  
+                    }
+                    @include breakpoint-pc-sm(){
+                        
+                    }
+                    @include breakpoint-pad-lg(){
+                        
+                    }
+                    @include breakpoint-pad-md(){
+                        
+                    }
                 }
 
-                .block1{
+                .block{
                     display: flex;
                     justify-content: space-between;
+                    @include breakpoint-pc-md(){
+                  
+                    }
+                    @include breakpoint-pc-sm(){
+                        
+                    }
+                    @include breakpoint-pad-lg(){
+                        
+                    }
+                    @include breakpoint-pad-md(){
+                        flex-direction: column;
+                    }
                     input{
                         height: 48px;
                         width: 100%;
                         border: 1px solid #CCCCCC;
                         border-radius: 8px;
-                        margin-bottom: 20px;
+                        @include breakpoint-pc-md(){
+                  
+                        }
+                        @include breakpoint-pc-sm(){
+                            
+                        }
+                        @include breakpoint-pad-lg(){
+                            
+                        }
+                        @include breakpoint-pad-md(){
+                            
+                        }
+                        
                     }
 
                     
 
 
 
-                    .part{
-                        width: 481.5px;
+                    
+                }
+                .part{
+                        flex-grow: 1;
                         display: flex;
                         flex-direction: column;
-                        
-                    }
-
+                        margin: 8px;
+                        @include breakpoint-pc-md(){
+                  
+                        }
+                        @include breakpoint-pc-sm(){
+                            
+                        }
+                        @include breakpoint-pad-lg(){
+                            
+                        }
+                        @include breakpoint-pad-md(){
+                            
+                        }
 
                 }
+
+                
 
                 .block2{
-                    input{
-                        height: 48px;
-                        width: 100%;
-                        border: 1px solid #CCCCCC;
-                        border-radius: 8px;
-                        margin-bottom: 20px;
-                    }
-                    
-                }
-
-                .block3{
                     display: flex;
                     justify-content: space-between;
-                    .part{
-
-                        display: flex;
+                    @include breakpoint-pc-md(){
+                  
+                    }
+                    @include breakpoint-pc-sm(){
+                        
+                    }
+                    @include breakpoint-pad-lg(){
+                        
+                    }
+                    @include breakpoint-pad-md(){
                         flex-direction: column;
-                        
+                    }
 
-                        
-
-                        
-
+                    .check{
+                        display: flex;
+                        height: 25px;
+                        @include breakpoint-pad-md(){
+                            flex-direction: column;
+                            height: 62px;
+                            
+                            
+                        }
                     }
                     .checkpart{
+                        margin-right: 12px;
+                        height: 25px;
+                        align-items: center;
                         display: flex;
+                        margin-bottom: 12px;
+                        
+                        
+                        
                     }
-                    .check{
+                    .checkbox{
                         border: 1px solid #455D86;
                         border-radius: 4px;
-                        width: 24px;
-                        height: 24px;
+                        width: 25px;
+                        height: 25px;
+                        margin-right: 10px;
                     }
 
                     .checklabel{
                         font-size: $font-size-body-18;
+                        margin-bottom: 0;
+                        height: 25px;
+                        padding: auto 0;
                         line-height: 140%;
-                        margin: 0 12px 0px 10px;
+                        
+                        
+                        
+                        
+                        
                     }
 
                     .checklabel::before{
-                        content:' ';
+                        content:none;
                     }
                     .buttonpart{
                         display: flex;
@@ -174,15 +351,17 @@
                         
                     }
 
-                    .buttontext{
-                        font-size: $font-size-body-16 ;
-                        line-height: 140%;
-                        margin-top: 16px;
-                    }
+                    
                     
 
                     
                     
+                }
+                .buttontext{
+                    font-size: $font-size-body-16 ;
+                    line-height: 140%;
+                    margin: 8px;
+                    text-align: end;
                 }
 
                 
@@ -203,6 +382,22 @@
             overflow: hidden;
             
             z-index: -1;
+
+            @include breakpoint-pc-md(){
+                  top: -208px;
+                  left: calc(50% - 1122px/2 + 572px);
+            }
+            @include breakpoint-pc-sm(){
+                
+            }
+            @include breakpoint-pad-lg(){
+                top: 279px;
+                left: calc(50% - 1122px/2 + 438px);
+            }
+            @include breakpoint-pad-md(){
+                top: 398px;
+                left: calc(50% - 1122px/2 + 131px);
+            }
         }
 
 
