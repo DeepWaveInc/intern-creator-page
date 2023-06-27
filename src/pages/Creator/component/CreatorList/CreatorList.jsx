@@ -1,5 +1,7 @@
 import './CreatorList.scss'
 import { Normal as Button } from '../../../../component/button'
+import { ReactComponent as IconPodcast } from '../../../../assets/image/creator/creatorlist/podcast.svg'
+import { ReactComponent as IconYoutube } from '../../../../assets/image/creator/creatorlist/youtube.svg'
 import IMAGES from './media'
 
 
@@ -16,7 +18,10 @@ const ImageList = ({ images }) => {
                 alt={image.link}
                 
                 />
-                <div  className={image.type === "podcast" ?   "overlay yellow" : "overlay blue"}></div>
+                <div  className={image.type === "podcast" ?   "overlay yellow" : "overlay blue"}>
+                  {image.type === "podcast" ? <IconPodcast className="overlay_icon" /> : <IconYoutube className="overlay_icon" />}
+                  <span className="overlay_text">{image.name}</span>
+                </div>
             </a>
             
           </li>
