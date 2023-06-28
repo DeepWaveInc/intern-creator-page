@@ -1,406 +1,385 @@
 @import '../../../../css/_variable';
 @import '../../../../css/_mixin';
 
+.creator-page {
+  &__application {
+    height: 1058px;
 
-.creator-page{
-
-    .application{
-        height: 1058px;
-
-        @include breakpoint-pc-md(){
-                  
-        }
-        @include breakpoint-pc-sm(){
-            
-        }
-        @include breakpoint-pad-lg(){
-           height: 1135px; 
-        }
-        @include breakpoint-pad-md(){
-            height: 1514px;
-        }
-
-        &__container{
-            position: relative;
-            
-            max-width: 1540px;
-            display:flex;
-            margin: auto;
-            justify-content: space-between;
-            @include breakpoint-pc-md(){
-                width: 1240px;      
-            }
-            @include breakpoint-pc-sm(){
-                width: 1080px; 
-            }
-            @include breakpoint-pad-lg(){
-                flex-direction: column;
-                max-width: 872px;
-            }
-            @include breakpoint-pad-md(){
-                width: 100%;
-                
-            }
-        }
-
-        &__text{
-            display: flex;
-            flex-direction: column;
-            width: 400px;
-            margin: 30px 20px;
-            @include breakpoint-pc-md(){
-                margin: 35px 24px 24px 24px;
-            }
-            @include breakpoint-pc-sm(){
-                
-            }
-            @include breakpoint-pad-lg(){
-               width: 100%; 
-            }
-            @include breakpoint-pad-md(){
-                margin: 0;
-                padding: 35px 20px 16px;
-            }
-
-            h1{
-                font-size: $font-size-h1-40;
-                color: $color-primary-default;
-                line-height: 140%;
-                @include breakpoint-pc-md(){
-                    font-size: 28px;
-                }
-                @include breakpoint-pc-sm(){
-                    
-                }
-                @include breakpoint-pad-lg(){
-                    
-                }
-                @include breakpoint-pad-md(){
-                    
-                }
-                
-            }
-            h3{
-                font-size: $font-size-h3-32;
-                color: $color-primary-default;
-                line-height: 125%;
-                margin-top: 40px;
-                @include breakpoint-pc-md(){
-                    font-size: $font-size-body-20;
-                    margin-top: 24px;
-                }
-                @include breakpoint-pc-sm(){
-                    
-                }
-                @include breakpoint-pad-lg(){
-                    
-                }
-                @include breakpoint-pad-md(){
-                    
-                }
-
-            }
-            p{
-                font-size: $font-size-body-18;
-                color: $color-primary-default;
-                line-height: 140%;
-                margin-top: 24px;
-                @include breakpoint-pc-md(){
-                    font-size: $font-size-body-16;
-                    margin-top: 16px;
-                }
-                @include breakpoint-pc-sm(){
-                    
-                }
-                @include breakpoint-pad-lg(){
-                    
-                }
-                @include breakpoint-pad-md(){
-                    
-                }
-            }
-
-        }
-
-
-        &__form{
-            height: 737px;
-            flex-grow: 1;
-            max-width: 1079px;
-            display: flex;
-            flex-direction: column;
-            border: 1px solid #CCCCCC;
-            border-radius: 12px;
-            margin: 30px 20px;
-            background-color: #fff;
-            font-size: $font-size-base;
-            @include breakpoint-pc-md(){
-                margin: 35px 24px;
-            }
-            @include breakpoint-pc-sm(){
-                
-            }
-            @include breakpoint-pad-lg(){
-                margin: 24px;
-            }
-            @include breakpoint-pad-md(){
-                margin: 16px 20px;
-                height: 1149px;
-            }
-
-
-            &_content{
-                margin: 32px 32px;
-                display: flex;
-                flex-direction: column;
-                @include breakpoint-pc-md(){
-                  
-                }
-                @include breakpoint-pc-sm(){
-                    margin: 32px 24px;
-                }
-                @include breakpoint-pad-lg(){
-                    
-                }
-                @include breakpoint-pad-md(){
-                    
-                }
-
-                label{
-                    margin-bottom: 8px;
-                    height: 28px;
-                }
-
-                label:before{
-                    content:'*';
-                    color: red;
-                }
-
-                
-
-                select{
-                    height: 48px;
-                    width: 100%;
-                    border: 1px solid #CCCCCC;
-                    border-radius: 8px;
-                    @include breakpoint-pc-md(){
-                  
-                    }
-                    @include breakpoint-pc-sm(){
-                        
-                    }
-                    @include breakpoint-pad-lg(){
-                        
-                    }
-                    @include breakpoint-pad-md(){
-                        
-                    }
-                    
-                }
-
-                textarea{
-                    height: 106px;
-                    width: 100%;
-                    border: 1px solid #CCCCCC;
-                    border-radius: 8px;
-                    
-                    @include breakpoint-pc-md(){
-                  
-                    }
-                    @include breakpoint-pc-sm(){
-                        
-                    }
-                    @include breakpoint-pad-lg(){
-                        
-                    }
-                    @include breakpoint-pad-md(){
-                        
-                    }
-                }
-
-                .block{
-                    display: flex;
-                    justify-content: space-between;
-                    @include breakpoint-pc-md(){
-                  
-                    }
-                    @include breakpoint-pc-sm(){
-                        
-                    }
-                    @include breakpoint-pad-lg(){
-                        
-                    }
-                    @include breakpoint-pad-md(){
-                        flex-direction: column;
-                    }
-                    input{
-                        height: 48px;
-                        width: 100%;
-                        border: 1px solid #CCCCCC;
-                        border-radius: 8px;
-                        @include breakpoint-pc-md(){
-                  
-                        }
-                        @include breakpoint-pc-sm(){
-                            
-                        }
-                        @include breakpoint-pad-lg(){
-                            
-                        }
-                        @include breakpoint-pad-md(){
-                            
-                        }
-                        
-                    }
-
-                    
-
-
-
-                    
-                }
-                .part{
-                        flex-grow: 1;
-                        display: flex;
-                        flex-direction: column;
-                        margin: 8px;
-                        @include breakpoint-pc-md(){
-                  
-                        }
-                        @include breakpoint-pc-sm(){
-                            
-                        }
-                        @include breakpoint-pad-lg(){
-                            
-                        }
-                        @include breakpoint-pad-md(){
-                            
-                        }
-
-                }
-
-                
-
-                .block2{
-                    display: flex;
-                    justify-content: space-between;
-                    @include breakpoint-pc-md(){
-                  
-                    }
-                    @include breakpoint-pc-sm(){
-                        
-                    }
-                    @include breakpoint-pad-lg(){
-                        
-                    }
-                    @include breakpoint-pad-md(){
-                        flex-direction: column;
-                    }
-
-                    .check{
-                        display: flex;
-                        height: 25px;
-                        @include breakpoint-pad-md(){
-                            flex-direction: column;
-                            height: 62px;
-                            
-                            
-                        }
-                    }
-                    .checkpart{
-                        margin-right: 12px;
-                        height: 25px;
-                        align-items: center;
-                        display: flex;
-                        margin-bottom: 12px;
-                        
-                        
-                        
-                    }
-                    .checkbox{
-                        border: 1px solid #455D86;
-                        border-radius: 4px;
-                        width: 25px;
-                        height: 25px;
-                        margin-right: 10px;
-                    }
-
-                    .checklabel{
-                        font-size: $font-size-body-18;
-                        margin-bottom: 0;
-                        height: 25px;
-                        padding: auto 0;
-                        line-height: 140%;
-                        
-                        
-                        
-                        
-                        
-                    }
-
-                    .checklabel::before{
-                        content:none;
-                    }
-                    .buttonpart{
-                        display: flex;
-                        justify-content:flex-end ;
-                    }
-
-                    .applybutton{
-                        height: 59px;
-                        
-                    }
-
-                    
-                    
-
-                    
-                    
-                }
-                .buttontext{
-                    font-size: $font-size-body-16 ;
-                    line-height: 140%;
-                    margin: 8px;
-                    text-align: end;
-                }
-
-                
-
-            }
-
-            
-        }
-
-        &__circle{
-            position: absolute;
-            display: block;
-            width: 1122px;
-            height: 1122px;
-            background: linear-gradient(180deg, #074AB0 0%, #0A3991 100%);
-            border-radius: 50%;
-            left: calc(50% - 1122px/2 + 651px);
-            overflow: hidden;
-            
-            z-index: -1;
-
-            @include breakpoint-pc-md(){
-                  top: -208px;
-                  left: calc(50% - 1122px/2 + 572px);
-            }
-            @include breakpoint-pc-sm(){
-                
-            }
-            @include breakpoint-pad-lg(){
-                top: 279px;
-                left: calc(50% - 1122px/2 + 438px);
-            }
-            @include breakpoint-pad-md(){
-                top: 398px;
-                left: calc(50% - 1122px/2 + 131px);
-            }
-        }
-
-
+    @include breakpoint-pc-md() {
     }
-}
 
+    @include breakpoint-pc-sm() {
+    }
+
+    @include breakpoint-pad-lg() {
+      height: 1135px;
+    }
+
+    @include breakpoint-pad-md() {
+      height: 1514px;
+    }
+
+    &__container {
+      position: relative;
+      max-width: 1540px;
+      display: flex;
+      margin: auto;
+      justify-content: space-between;
+
+      @include breakpoint-pc-md() {
+        width: 1240px;
+      }
+
+      @include breakpoint-pc-sm() {
+        width: 1080px;
+      }
+
+      @include breakpoint-pad-lg() {
+        flex-direction: column;
+        max-width: 872px;
+      }
+
+      @include breakpoint-pad-md() {
+        width: 100%;
+      }
+    }
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      width: 400px;
+      margin: 30px 20px;
+
+      @include breakpoint-pc-md() {
+        margin: 35px 24px 24px 24px;
+      }
+
+      @include breakpoint-pc-sm() {
+      }
+
+      @include breakpoint-pad-lg() {
+        width: 100%;
+      }
+
+      @include breakpoint-pad-md() {
+        margin: 0;
+        padding: 35px 20px 16px;
+      }
+
+      h1 {
+        font-size: $font-size-h1-40;
+        color: $color-primary-default;
+        line-height: 140%;
+
+        @include breakpoint-pc-md() {
+          font-size: 28px;
+        }
+
+        @include breakpoint-pc-sm() {
+        }
+
+        @include breakpoint-pad-lg() {
+        }
+
+        @include breakpoint-pad-md() {
+        }
+      }
+
+      h3 {
+        font-size: $font-size-h3-32;
+        color: $color-primary-default;
+        line-height: 125%;
+        margin-top: 40px;
+
+        @include breakpoint-pc-md() {
+          font-size: $font-size-body-20;
+          margin-top: 24px;
+        }
+
+        @include breakpoint-pc-sm() {
+        }
+
+        @include breakpoint-pad-lg() {
+        }
+
+        @include breakpoint-pad-md() {
+        }
+      }
+
+      p {
+        font-size: $font-size-body-18;
+        color: $color-primary-default;
+        line-height: 140%;
+        margin-top: 24px;
+
+        @include breakpoint-pc-md() {
+          font-size: $font-size-body-16;
+          margin-top: 16px;
+        }
+
+        @include breakpoint-pc-sm() {
+        }
+
+        @include breakpoint-pad-lg() {
+        }
+
+        @include breakpoint-pad-md() {
+        }
+      }
+    }
+
+    &__form {
+      height: 737px;
+      flex-grow: 1;
+      max-width: 1079px;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #cccccc;
+      border-radius: 12px;
+      margin: 30px 20px;
+      background-color: #fff;
+      font-size: $font-size-base;
+
+      @include breakpoint-pc-md() {
+        margin: 35px 24px;
+      }
+
+      @include breakpoint-pc-sm() {
+      }
+
+      @include breakpoint-pad-lg() {
+        margin: 24px;
+      }
+
+      @include breakpoint-pad-md() {
+        margin: 16px 20px;
+        height: 1149px;
+      }
+
+      &__content {
+        margin: 32px 32px;
+        display: flex;
+        flex-direction: column;
+
+        @include breakpoint-pc-md() {
+        }
+
+        @include breakpoint-pc-sm() {
+          margin: 32px 24px;
+        }
+
+        @include breakpoint-pad-lg() {
+        }
+
+        @include breakpoint-pad-md() {
+        }
+
+        // TODO: 未根據 UI 稿設定 label style
+        label {
+          margin-bottom: 8px;
+          height: 28px;
+          &:before {
+            content: '*';
+            color: red;
+          }
+
+          &.creator-page__application__form__check-label {
+            font-size: $font-size-body-18;
+            margin-bottom: 0;
+            height: 25px;
+            padding: auto 0;
+            line-height: 140%;
+
+            &:before {
+              content: none;
+            }
+          }
+        }
+
+        select {
+          height: 48px;
+          width: 100%;
+          border: 1px solid #cccccc;
+          border-radius: 8px;
+
+          @include breakpoint-pc-md() {
+          }
+
+          @include breakpoint-pc-sm() {
+          }
+
+          @include breakpoint-pad-lg() {
+          }
+
+          @include breakpoint-pad-md() {
+          }
+        }
+
+        textarea {
+          height: 106px;
+          width: 100%;
+          border: 1px solid #cccccc;
+          border-radius: 8px;
+
+          @include breakpoint-pc-md() {
+          }
+
+          @include breakpoint-pc-sm() {
+          }
+
+          @include breakpoint-pad-lg() {
+          }
+
+          @include breakpoint-pad-md() {
+          }
+        }
+      }
+
+      &__block {
+        display: flex;
+        justify-content: space-between;
+
+        @include breakpoint-pc-md() {
+        }
+
+        @include breakpoint-pc-sm() {
+        }
+
+        @include breakpoint-pad-lg() {
+        }
+
+        @include breakpoint-pad-md() {
+          flex-direction: column;
+        }
+
+        input {
+          height: 48px;
+          width: 100%;
+          border: 1px solid #cccccc;
+          border-radius: 8px;
+
+          @include breakpoint-pc-md() {
+          }
+
+          @include breakpoint-pc-sm() {
+          }
+
+          @include breakpoint-pad-lg() {
+          }
+
+          @include breakpoint-pad-md() {
+          }
+        }
+      }
+
+      &__part {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        margin: 8px;
+
+        @include breakpoint-pc-md() {
+        }
+
+        @include breakpoint-pc-sm() {
+        }
+
+        @include breakpoint-pad-lg() {
+        }
+
+        @include breakpoint-pad-md() {
+        }
+      }
+
+      &__block2 {
+        display: flex;
+        justify-content: space-between;
+
+        @include breakpoint-pc-md() {
+        }
+
+        @include breakpoint-pc-sm() {
+        }
+
+        @include breakpoint-pad-lg() {
+        }
+
+        @include breakpoint-pad-md() {
+          flex-direction: column;
+        }
+      }
+
+      &__check {
+        display: flex;
+        height: 25px;
+
+        @include breakpoint-pad-md() {
+          flex-direction: column;
+          height: 62px;
+        }
+      }
+
+      &__check-part {
+        margin-right: 12px;
+        height: 25px;
+        align-items: center;
+        display: flex;
+        margin-bottom: 12px;
+      }
+
+      &__checkbox {
+        border: 1px solid #455d86;
+        border-radius: 4px;
+        width: 25px;
+        height: 25px;
+        margin-right: 10px;
+      }
+
+      &__button-part {
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      &__apply-button {
+        height: 59px;
+      }
+
+      &__button-text {
+        font-size: $font-size-body-16;
+        line-height: 140%;
+        margin: 8px;
+        text-align: end;
+      }
+    }
+
+    &__circle {
+      position: absolute;
+      display: block;
+      width: 1122px;
+      height: 1122px;
+      background: linear-gradient(180deg, #074ab0 0%, #0a3991 100%);
+      border-radius: 50%;
+      left: calc(50% - 1122px / 2 + 651px);
+      overflow: hidden;
+      z-index: -1;
+
+      @include breakpoint-pc-md() {
+        top: -208px;
+        left: calc(50% - 1122px / 2 + 572px);
+      }
+
+      @include breakpoint-pc-sm() {
+      }
+
+      @include breakpoint-pad-lg() {
+        top: 279px;
+        left: calc(50% - 1122px / 2 + 438px);
+      }
+
+      @include breakpoint-pad-md() {
+        top: 398px;
+        left: calc(50% - 1122px / 2 + 131px);
+      }
+    }
+  }
+}

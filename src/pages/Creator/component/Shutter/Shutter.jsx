@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next'
+import Trans from '../../../../component/trans'
 
 import { ReactComponent as QuotationMarksBlue } from '../../../../assets/image/creator/shutter/quotationmarks.svg'
 import { ReactComponent as QuotationMarksYellow } from '../../../../assets/image/creator/shutter/quotationmarks_y.svg'
@@ -5,124 +7,126 @@ import { ReactComponent as LaptopMockup } from '../../../../assets/image/creator
 import { ReactComponent as IconPodcast } from '../../../../assets/image/creator/shutter/iconpodcast.svg'
 import { ReactComponent as IconYoutube } from '../../../../assets/image/creator/shutter/iconyoutube.svg'
 import ReactPlayer from 'react-player'
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react'
 import './Shutter.scss'
 
 const Shutter = () => {
+  const { t } = useTranslation()
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
 
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth)
+    }
 
-    useEffect(() => {
-      const handleResize = () => {
-        setWindowWidth(window.innerWidth);
-      };
-  
-      window.addEventListener('resize', handleResize);
-  
-      return () => {
-        window.removeEventListener('resize', handleResize);
-      };
-    }, []);
+    window.addEventListener('resize', handleResize)
 
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
 
-    return(
-        <section className='shutter'>
-            <div className="shutter__podcast_container">
-                <p className='shutter__podcast_background '>Podcast</p>
-                <div className="shutter__podcast">
-                    <div className="shutter__podcast_video">
-                    <ReactPlayer
-                        className='shutter__effect_video'
-                        url='https://www.youtube.com/watch?v=e9zENcqkY28'
-                        width='100%'
-                        height='100%'
-                        
-                        />
-                    </div>
-                    <div className="shutter__podcast_circle">
-                        <div className="shutter__podcast_context">
-                            
-                        <span className="shutter__podcast_title">旅行快門</span>
-                        <div className="shutter__podcast_bar"></div>
-                        <p className="shutter__podcast_text">Noise Eraser 是一個非常智能的工具，他能精準地降低環境噪音，讓人聲更清晰凸顯，影音創作者可在後製剪輯過程提升很大的效率。</p>
-                        
-                       
-                        <p className="shutter__podcast_name">頻道主持人<br/>Firas</p>
-                        <div className="shutter__podcast_bluecircle"></div>
+  return (
+    <section className="creator-page__shutter">
+      <div className="creator-page__shutter__podcast__container">
+        <p className="creator-page__shutter__podcast__background ">Podcast</p>
+        <div className="creator-page__shutter__podcast">
+          <div className="creator-page__shutter__podcast__video">
+            <ReactPlayer
+              className="creator-page__shutter__effect__video"
+              url="https://www.youtube.com/watch?v=e9zENcqkY28"
+              width="100%"
+              height="100%"
+            />
+          </div>
+          <div className="creator-page__shutter__podcast__circle">
+            <div className="creator-page__shutter__podcast__context">
+              <span className="creator-page__shutter__podcast__title">
+                {t('creator.podcast.title')}
+              </span>
+              <div className="creator-page__shutter__podcast__bar" />
+              <p className="creator-page__shutter__podcast__text">
+                {t('creator.podcast.description')}
+              </p>
 
-                        <QuotationMarksBlue className="shutter__podcast_markup"/>
-                        <QuotationMarksBlue className="shutter__podcast_markdown"/>
-                        <IconPodcast className='shutter__podcast_icon'/>
-                        
-                        </div>
-                    </div>
-                </div> 
+              <p className="creator-page__shutter__podcast__name">
+                <Trans i18nKey="creator.podcast.author">
+                  <br />
+                </Trans>
+              </p>
+              <div className="creator-page__shutter__podcast__blue-circle" />
+
+              <QuotationMarksBlue className="creator-page__shutter__podcast__markup" />
+              <QuotationMarksBlue className="creator-page__shutter__podcast__markdown" />
+              <IconPodcast className="creator-page__shutter__podcast__icon" />
             </div>
-            <div className="shutter__youtube_container">  
-                <p className='shutter__youtube_background'>Youtube</p> 
-                <div className="shutter__youtube">  
-                    <div className="shutter__youtube_video">
-                    <ReactPlayer
-                        className='shutter__effect_video'
-                        url='https://www.youtube.com/watch?v=e9zENcqkY28'
-                        width='100%'
-                        height='100%'
-                        
-                        />
-                    </div>  
-                    
-                    
-                    <div className="shutter__youtube_circle">
-                        <div className="shutter__youtube_context">
-                        
-                            <span className="shutter__youtube_title">旅行快門</span>
-                            <div className="shutter__youtube_bar"></div>
-                            <p className="shutter__youtube_text">XXXXXX XXXX XXXXXXXXX XXXXX XXXXX XXXXX XXXXXXXXXXXX XXXXXXXXXXXX XXXXXXXXX XXXXXXXXXXXX</p>
-                            <div className="shutter__youtube_yellowcircle"></div>
-                            
-                            <QuotationMarksYellow className="shutter__youtube_markup"/>
-                            <QuotationMarksYellow className="shutter__youtube_markdown"/>
-                            <IconYoutube className='shutter__youtube_icon'/>
-                        </div>
-                    </div>
-                    
-                </div>
-                 
-            </div>
-            <div className="shutter__effect_container">
-                <h1>效果，就是這麼驚人 !</h1>
-                <p>你沒聽錯，我們把人聲以外的聲音都消掉了！</p>
-                
-                <div className='shutter__effect_laptopcontainer'>
-                {windowWidth <= 960 ? (
-                 ""
-                ) : (
-                    <LaptopMockup className="shutter__effect_laptop"/>
-                 )}
-                
-                <div className='shutter__effect_videocontainer'>
-                    <ReactPlayer
-                        className='shutter__effect_video'
-                        url='https://www.youtube.com/watch?v=e9zENcqkY28'
-                        width='100%'
-                        height='100%'
-                        
-                        />
+          </div>
+        </div>
+      </div>
+      <div className="creator-page__shutter__youtube__container">
+        <p className="creator-page__shutter__youtube__background">Youtube</p>
+        <div className="creator-page__shutter__youtube">
+          <div className="creator-page__shutter__youtube__video">
+            <ReactPlayer
+              className="creator-page__shutter__effect__video"
+              url="https://www.youtube.com/watch?v=e9zENcqkY28"
+              width="100%"
+              height="100%"
+            />
+          </div>
 
-                </div>
-
-      
-                </div>
-                <p className='credit'>Credit: <a href="https://www.instagram.com/hsu.mabel/">@hsu.mabel</a></p>
+          <div className="creator-page__shutter__youtube__circle">
+            <div className="creator-page__shutter__youtube__context">
+              <span className="creator-page__shutter__youtube__title">
+                {t('creator.youtube.title')}
+              </span>
+              <div className="creator-page__shutter__youtube__bar" />
+              <p className="creator-page__shutter__youtube__text">
+                {t('creator.youtube.description')}
+              </p>
+              <div className="creator-page__shutter__youtube__yellow-circle" />
+              <QuotationMarksYellow className="creator-page__shutter__youtube__markup" />
+              <QuotationMarksYellow className="creator-page__shutter__youtube__markdown" />
+              <IconYoutube className="creator-page__shutter__youtube__icon" />
             </div>
-            
-            <div className="shutter__circle" />
-        </section>
-    )
+          </div>
+        </div>
+      </div>
+      <div className="creator-page__shutter__effect__container">
+        <h1>{t('creator.shutter.effect.title')}</h1>
+        <p>{t('creator.shutter.effect.description')}</p>
+
+        <div className="creator-page__shutter__effect__laptop-container">
+          {windowWidth <= 960 ? (
+            ''
+          ) : (
+            <LaptopMockup className="creator-page__shutter__effect__laptop" />
+          )}
+
+          <div className="creator-page__shutter__effect__video-container">
+            <ReactPlayer
+              className="creator-page__shutter__effect__video"
+              url="https://www.youtube.com/watch?v=e9zENcqkY28"
+              width="100%"
+              height="100%"
+            />
+          </div>
+        </div>
+        <p className="creator-page__shutter__effect__video-container--credit">
+          {t('creator.shutter.effect.credit')}{' '}
+          <a
+            href="https://www.instagram.com/hsu.mabel/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            @hsu.mabel
+          </a>
+        </p>
+      </div>
+
+      <div className="creator-page__shutter__circle" />
+    </section>
+  )
 }
 
 export default Shutter
-
-
-
-
