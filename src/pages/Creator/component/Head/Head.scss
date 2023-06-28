@@ -214,11 +214,14 @@
                     left: 64px;
                 }
                 @include breakpoint-pad-md(){
-                    width: 370px;
+                    max-width: 360px;
+                   
                     top: 330px;
                     left: 60px;
                     text-align: center;
                 }
+
+                
             }
 
         }
@@ -240,8 +243,13 @@
             @include breakpoint-pad-md(){
                 top: 55px;
                 left: 40px;
-                
                 width:360px;
+
+            }
+
+            @include breakpoint-phone-sm(){
+                width:330px;  
+                left: 60px; 
             }
 
             &_head {

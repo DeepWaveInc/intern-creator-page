@@ -10,6 +10,8 @@ $image-marginpadlg: calc(25.73px / 2);
 $imagepadlg: 106px;
 $image-marginpadmd: calc(75.78px / 2);
 $imagepadmd: 106px;
+$image-marginphonesm: calc(55px / 2);
+$imagephonesm: 106px;
 
 .creator-page {
   &__creator-list {
@@ -36,6 +38,10 @@ $imagepadmd: 106px;
 
       @include breakpoint-pad-md() {
         width: calc(($imagepadmd + $image-marginpadmd * 2) * 2);
+        height: 1276px;
+      }
+      @include breakpoint-phone-sm() {
+        width: calc(($imagephonesm + $image-marginphonesm * 2) * 2);
         height: 1276px;
       }
 
@@ -83,6 +89,54 @@ $imagepadmd: 106px;
           width: $imagepadmd;
           margin: 0 $image-marginpadmd 16px;
           height: auto;
+          &:nth-child(1) {
+            order: 1 ;
+          }
+    
+          &:nth-child(2) {
+            order: 2 ;
+          }
+    
+          &:nth-child(3) {
+            order:5 ;
+          }
+          &:nth-child(4) {
+            order: 4 ;
+          }
+    
+          &:nth-child(5) {
+            order: 9 ;
+          }
+    
+          &:nth-child(6) {
+            order:8 ;
+          }
+          &:nth-child(7) {
+            order: 7 ;
+          }
+    
+          &:nth-child(8) {
+            order: 11 ;
+          }
+    
+          &:nth-child(9) {
+            order:3 ;
+          }
+          &:nth-child(10) {
+            order: 6 ;
+          }
+    
+          &:nth-child(11) {
+            order: 10 ;
+          }
+    
+          &:nth-child(12) {
+            order:12 ;
+          }
+        }
+        @include breakpoint-phone-sm(){
+            width: $imagephonesm;
+          margin: 0 $image-marginphonesm 16px;
         }
 
         &__container {
@@ -111,13 +165,16 @@ $imagepadmd: 106px;
           transition: opacity 0.3s ease;
           display: flex;
           padding: 10px;
+          
 
           @include breakpoint-pad-md() {
             position: static;
             height: auto;
             opacity: 1;
             padding: 0;
-            margin: 8px 0 0 0;
+            margin: 8px 0 0 ;
+            justify-content: center;
+           
           }
 
           &--yellow {
@@ -167,7 +224,8 @@ $imagepadmd: 106px;
               color: $color-grey-scale;
               font-size: $font-size-caption;
               text-align: start;
-              margin-left: 8px;
+              margin: 0 0 0 8px;
+              width: auto;
             }
           }
 
@@ -176,8 +234,10 @@ $imagepadmd: 106px;
             opacity: 1;
             margin-left: 10;
             width: 42px;
+            position: absolute;
 
             @include breakpoint-pad-md() {
+                position: static;
               width: 24px;
               height: 24px;
             }

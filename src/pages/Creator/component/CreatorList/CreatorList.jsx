@@ -6,9 +6,11 @@ import './CreatorList.scss'
 import IMAGES from './media'
 
 const ImageList = ({ images }) => {
+
+  const sortedImages = images.sort((a, b) => a.order - b.order);
   return (
     <ul className="creator-page__creator-list__image">
-      {images.map((image, index) => (
+      {sortedImages.map((image, index) => (
         <li className="creator-page__creator-list__image__item" key={index}>
           <a
             href={image.link}
