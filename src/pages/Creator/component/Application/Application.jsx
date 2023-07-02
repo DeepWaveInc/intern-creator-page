@@ -4,7 +4,8 @@ import './Application.scss'
 import { Normal as Button } from '../../../../component/button'
 
 const Application = () => {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
+
   return (
     <section className="creator-page__application">
       <div className="creator-page__application__container">
@@ -18,7 +19,7 @@ const Application = () => {
           </p>
         </div>
         <div className="creator-page__application__form">
-          <form action="" className="creator-page__application__form__content">
+          <form action="" className="creator-page__application__form__content" >
             <div className="creator-page__application__form__block">
               <div className="creator-page__application__form__part">
                 <label>{t('creator.form.contact_name.label')}</label>
@@ -26,7 +27,11 @@ const Application = () => {
                   type="text"
                   name=""
                   placeholder={t('creator.form.input.placeholder')}
+                  
                 />
+                <div className="input-error">
+                  {"xxxxxxxxxxx"}
+                </div>
               </div>
 
               <div className="creator-page__application__form__part">

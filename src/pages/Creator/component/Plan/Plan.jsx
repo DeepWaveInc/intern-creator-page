@@ -17,7 +17,7 @@ const Plan = () => {
             <span className="creator-page__plan__creator-plan__title">
               {t('creator.plan.title')}
             </span>
-            <div className="creator-page__plan__creator-plan__bar" />
+            
             <p className="creator-page__plan__creator-plan__text">
               <Trans i18nKey="creator.plan.description">
                 <br />
@@ -32,7 +32,7 @@ const Plan = () => {
             <span className="creator-page__plan__creator-promote__title">
               {t('creator.plan.creator_promote.title')}
             </span>
-            <div className="creator-page__plan__creator-promote__bar" />
+            
             <p className="creator-page__plan__creator-promote__text">
               {t('creator.plan.creator_promote.description')}
             </p>
@@ -47,7 +47,7 @@ const Plan = () => {
             <span className="creator-page__plan__creator-experience__title">
               {t('creator.plan.creator_experience.title')}
             </span>
-            <div className="creator-page__plan__creator-experience__bar"></div>
+            
             <p className="creator-page__plan__creator-experience__text">
               {t('creator.plan.creator_experience.description_1')}
             </p>

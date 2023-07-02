@@ -37,6 +37,8 @@ const Shutter = () => {
               url="https://www.youtube.com/watch?v=e9zENcqkY28"
               width="100%"
               height="100%"
+              
+             
             />
           </div>
           <div className="creator-page__shutter__podcast__circle">
@@ -72,6 +74,7 @@ const Shutter = () => {
               url="https://www.youtube.com/watch?v=e9zENcqkY28"
               width="100%"
               height="100%"
+             
             />
           </div>
 
@@ -109,6 +112,7 @@ const Shutter = () => {
               url="https://www.youtube.com/watch?v=e9zENcqkY28"
               width="100%"
               height="100%"
+              
             />
           </div>
         </div>

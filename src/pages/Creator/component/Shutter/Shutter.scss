@@ -79,18 +79,27 @@ $topSpace: 652px;
         width: 742px;
         height: 456px;
         z-index: 0;
+        background-color: #000;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, .1);
         @include breakpoint-pc-sm() {
           width: 675px;
           height: 415px;
           left: calc(50% - 675.57px / 2 - 139.21px);
           top: 297px;
+          border-radius: 10px; 
         }
         @include breakpoint-pad-md() {
           position: static;
           order: 2;
           margin-top: 82px;
-          height: 517px;
+          height: auto;
+          max-height: 517px;
+          max-width: 403px;
           width: 100%;
+          aspect-ratio: 403/517;
+          border-radius: 0;
         }
       }
 
@@ -303,6 +312,10 @@ $topSpace: 652px;
         height: 443px;
         left: calc(50% - 721px / 2 + 286.5px);
         top: 373px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, .1);
+        
         @include breakpoint-pc-sm() {
           width: 658.27px;
           height: 404.76px;
@@ -313,8 +326,12 @@ $topSpace: 652px;
           position: static;
           order: 2;
           margin-top: 74px;
-          height: 404px;
+          max-height: 404px;
+          max-width: 400px;
           width: 100%;
+          height: auto;
+          aspect-ratio: 400/404;
+          border-radius: 0;
         }
       }
 
@@ -539,11 +556,18 @@ $topSpace: 652px;
         height: 242.85px;
         top: 46.3px;
         @include breakpoint-pad-md() {
-          height: 250px;
+          aspect-ratio: 400/250;
+          max-width: 400px;
+          height: auto;
+          max-height: 250px;
           width: 100%;
           top: 0;
+          background: #000;
+          border-top:24.5px solid #000;
+          border-bottom:17.5px solid #000;
         }
       }
+
 
       &__laptop {
         top: 0;

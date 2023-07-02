@@ -4,9 +4,11 @@
 .creator-page {
   &__plan {
     height: 1111px;
+    display: flex;
+    justify-content: center;
 
     &__container {
-      width: 100%;
+      width: 1920px;
       height: 100%;
       position: relative;
     }
@@ -66,55 +68,53 @@
 
       &__context {
         position: absolute;
-        top: 241px;
+        top: 231px;
         left: 242px;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
 
         @include breakpoint-pc-md() {
-          top: 188px;
+          top: 178px;
           left: 250px;
         }
 
         @include breakpoint-pad-lg() {
-          top: 166px;
+          top: 156px;
           left: 221px;
         }
         @include breakpoint-pad-md() {
-          top: 102px;
+          top: 92px;
           left: 235.5px;
         }
       }
 
       &__title {
         font-size: $font-size-h1-40;
-        line-height: 56px;
+        
         font-weight: 500;
         text-align: left;
         color: $color-white;
+        padding: 10px;
+        
+        width: fit-content;
+        border-bottom: 4px solid #fff;
 
         @include breakpoint-pc-md() {
           font-size: $font-size-h2-36;
+          padding: 10px 34px 10px 0;
         }
 
         @include breakpoint-pad-lg() {
           font-size: 28px;
+          
         }
-      }
-
-      &__bar {
-        margin-top: 10px;
-        width: 220px;
-        height: 4px;
-        background-color: $color-white;
-        z-index: 1;
-        text-align: left;
-
         @include breakpoint-pad-md() {
-          width: 151px;
+          padding-right: 10px;
         }
       }
+
+      
 
       &__text {
         font-size: $font-size-title-24;
@@ -184,23 +184,23 @@
 
       &__context {
         position: absolute;
-        top: 132px;
+        top: 122px;
         left: 61px;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
 
         @include breakpoint-pc-md() {
-          top: 113px;
+          top: 103px;
           justify-content: center;
         }
 
         @include breakpoint-pad-lg() {
-          top: 100px;
+          top: 90px;
         }
 
         @include breakpoint-pad-md() {
-          top: 86.7px;
+          top: 76.7px;
         }
       }
 
@@ -211,6 +211,9 @@
         text-align: left;
         margin-left: 34px;
         color: $color-primary-default;
+        padding: 10px;        
+        width: fit-content;
+        border-bottom: 4px solid $color-primary-default;
 
         @include breakpoint-pc-md() {
           font-size: 28px;
@@ -226,24 +229,7 @@
         }
       }
 
-      &__bar {
-        margin-top: 10px;
-        width: 272px;
-        height: 4px;
-        background-color: $color-primary-default;
-        margin-left: 24px;
-        text-align: left;
-
-        @include breakpoint-pc-md() {
-          width: 218px;
-          margin: 10px auto 0;
-          text-align: center;
-        }
-
-        @include breakpoint-pad-lg() {
-          width: 218px;
-        }
-      }
+      
 
       &__text {
         font-size: $font-size-body-20;
@@ -378,29 +364,29 @@
 
       &__context {
         position: absolute;
-        top: 130px;
+        top: 120px;
         left: 58px;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
 
         @include breakpoint-pc-md() {
-          top: 124.6px;
+          top: 114.6px;
           left: 55px;
         }
 
         @include breakpoint-pc-sm() {
-          top: 104.7px;
+          top: 94.7px;
           left: 57px;
         }
 
         @include breakpoint-pad-lg() {
-          top: 122px;
+          top: 112px;
           left: 47px;
         }
 
         @include breakpoint-pad-md() {
-          top: 102.6px;
+          top: 92.6px;
           left: 150px;
         }
       }
@@ -410,12 +396,15 @@
         line-height: 125%;
         font-weight: 500;
         text-align: left;
-        margin-left: 53px;
+        margin-left: 43px;
         color: $color-white;
+        padding: 10px;        
+        width: fit-content;
+        border-bottom: 4px solid $color-white;
 
         @include breakpoint-pc-md() {
           font-size: 28px;
-          margin-left: 42px;
+          margin-left: 32px;
         }
 
         @include breakpoint-pc-sm() {
@@ -423,43 +412,21 @@
 
         @include breakpoint-pad-lg() {
           font-size: $font-size-h4-24;
-          margin-left: 31px;
-        }
-
-        @include breakpoint-pad-md() {
-          margin-left: 10px;
-        }
-      }
-
-      &__bar {
-        margin-top: 10px;
-        width: 272px;
-        height: 4px;
-        background-color: $color-white;
-        margin-left: 48px;
-        text-align: left;
-
-        @include breakpoint-pc-md() {
-          width: 208px;
-          margin-left: 32px;
-        }
-
-        @include breakpoint-pad-lg() {
           margin-left: 21px;
-          width: 201px;
-          margin-top: 15px;
         }
+
         @include breakpoint-pad-md() {
           margin-left: 0;
-          margin-top: 10px;
         }
       }
+
+      
 
       &__text {
         font-size: $font-size-body-20;
         width: 440px;
         line-height: 140%;
-        margin-top: 30px;
+        margin-top: 26px;
         color: $color-white;
         text-align: center;
 
