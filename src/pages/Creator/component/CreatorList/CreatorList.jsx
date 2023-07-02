@@ -11,11 +11,15 @@ const ImageList = ({ images }) => {
   return (
     <ul className="creator-page__creator-list__image">
       {sortedImages.map((image, index) => (
-        <li className="creator-page__creator-list__image__item" key={index}>
+        <li className="creator-page__creator-list__image__item" key={index} >
           <a
             href={image.link}
             className="creator-page__creator-list__image__item__container"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ cursor: image.link === '' ? 'auto' : 'pointer'}}           
           >
+            
             <img src={image.src} srcSet={image.srcset} alt={image.link} />
             <div
               className={`creator-page__creator-list__image__item__overlay ${
@@ -45,9 +49,9 @@ const CreatorList = () => {
   return (
     <section className="creator-page__creator-list">
       <div className="creator-page__creator-list__container">
-        <h1>{t('creator.list.title')}</h1>
+        <h2>{t('creator.list.title')}</h2>
         <ImageList images={IMAGES} />
-        <Button
+        <Button className="creator-page__creator-list__button"
           {...{
             type: 'primary'
           }}

@@ -2,16 +2,16 @@
 @import '../../../../css/_mixin';
 
 // TODO: 為增進程式碼的可讀性，變數名稱中盡量使用 - 符號來區隔詞彙，ex: $image-margin-pc-lg
-$image-marginpclg: 20px;
-$imagepclg: 170px;
-$image-marginpcsm: 16.5px;
-$imagepcsm: 136px;
-$image-marginpadlg: calc(25.73px / 2);
-$imagepadlg: 106px;
-$image-marginpadmd: calc(75.78px / 2);
-$imagepadmd: 106px;
-$image-marginphonesm: calc(55px / 2);
-$imagephonesm: 106px;
+$image-gap-pc-lg: 40px;
+$image-pc-lg: 170px;
+$image-gap-pc-sm: 31px;
+$image-pc-sm: 136px;
+$image-gap-pad-lg: 24.7px;
+$image-pad-lg: 106px;
+$image-gap-pad-md: 75px;
+$image-pad-md: 106px;
+$image-gap-phone-sm: 55px;
+$image-phone-sm: 106px;
 
 .creator-page {
   &__creator-list {
@@ -20,40 +20,48 @@ $imagephonesm: 106px;
     overflow: hidden;
 
     &__container {
-      width: calc(($imagepclg + $image-marginpclg * 2) * 6);
-      height: 719px;
+      width: calc($image-pc-lg* 6 + $image-gap-pc-lg * 5);
+      
       display: flex;
       flex-direction: column;
       margin: 0 auto;
+      padding: 56px 0 64px;
+      
 
       @include breakpoint-pc-sm() {
-        width: calc(($imagepcsm + $image-marginpcsm * 2) * 6);
-        height: 674px;
+        width: calc($image-pc-sm* 6 + $image-gap-pc-sm * 5);
+        
       }
 
       @include breakpoint-pad-lg() {
-        width: calc(($imagepadlg + $image-marginpadlg * 2) * 6);
-        height: 600px;
+        width: calc($image-pad-lg* 6 + $image-gap-pad-lg * 5);
+        
       }
 
       @include breakpoint-pad-md() {
-        width: calc(($imagepadmd + $image-marginpadmd * 2) * 2);
-        height: 1276px;
+        width: calc($image-pad-md* 2 + $image-gap-pad-md);
+        
       }
       @include breakpoint-phone-sm() {
-        width: calc(($imagephonesm + $image-marginphonesm * 2) * 2);
-        height: 1276px;
+        width: calc($image-phone-sm* 2 + $image-gap-phone-sm);
+        
       }
 
-      h1 {
+      h2 {
         font-size: $font-size-title-40;
         color: $color-primary-default;
+        font-weight: 500;
         line-height: 140%;
-        margin: 56px auto 0;
+        margin: 0px auto ;
       }
 
       button {
         margin: 40px auto 0;
+        padding: 20px;
+        font-size: $font-size-title-24;
+        @include breakpoint-pc-sm(){
+          font-size: $font-size-body-20;
+        }
       }
     }
 
@@ -61,33 +69,52 @@ $imagephonesm: 106px;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      margin-top: 69px;
+      gap: 35px $image-gap-pc-lg;
+      margin-top: 40px;
+
+
+
+      @include breakpoint-pc-sm() {
+        
+        gap: 29px $image-gap-pc-sm;
+      }
+
+      @include breakpoint-pad-lg() {
+        
+        gap: 22px $image-gap-pad-lg;
+      }
 
       @include breakpoint-pad-md() {
-        margin-top: 40px;
+        gap: 16px $image-gap-pad-md;
+        
       }
+      @include breakpoint-phone-sm(){
+        gap: 16px $image-gap-phone-sm;
+        
+      
+    }
 
       &__item {
         display: inline-block;
-        width: $imagepclg;
-        height: $imagepclg;
-        margin: $image-marginpclg;
+        width: $image-pc-lg;
+        height: $image-pc-lg;
+        
+        
 
         @include breakpoint-pc-sm() {
-          width: $imagepcsm;
-          height: $imagepcsm;
-          margin: $image-marginpcsm;
+          width: $image-pc-sm;
+          height: $image-pc-sm;
+          
         }
 
         @include breakpoint-pad-lg() {
-          width: $imagepadlg;
-          height: $imagepadlg;
-          margin: $image-marginpadlg;
+          width: $image-pad-lg;
+          height: $image-pad-lg;
+          
         }
 
         @include breakpoint-pad-md() {
-          width: $imagepadmd;
-          margin: 0 $image-marginpadmd 16px;
+          width: $image-pad-md;          
           height: auto;
           &:nth-child(1) {
             order: 1 ;
@@ -135,8 +162,7 @@ $imagephonesm: 106px;
           }
         }
         @include breakpoint-phone-sm(){
-            width: $imagephonesm;
-          margin: 0 $image-marginphonesm 16px;
+            width: $image-phone-sm;         
         }
 
         &__container {
