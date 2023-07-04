@@ -6,6 +6,10 @@ import { ReactComponent as QuotationMarksYellow } from '../../../../assets/image
 import { ReactComponent as LaptopMockup } from '../../../../assets/image/creator/shutter/laptopmockup.svg'
 import { ReactComponent as IconPodcast } from '../../../../assets/image/creator/shutter/iconpodcast.svg'
 import { ReactComponent as IconYoutube } from '../../../../assets/image/creator/shutter/iconyoutube.svg'
+import PodcastAvactar_2x from '../../../../assets/image/creator/shutter/podcastavactar@2x.png'
+import PodcastAvactar from '../../../../assets/image/creator/shutter/podcastavactar.png'
+import YoutubeAvactar_2x from '../../../../assets/image/creator/shutter/youtubeavactar@2x.png'
+import YoutubeAvactar from '../../../../assets/image/creator/shutter/youtubeavactar.png'
 import ReactPlayer from 'react-player'
 import { useState, useEffect } from 'react'
 import './Shutter.scss'
@@ -37,8 +41,7 @@ const Shutter = () => {
               url="https://www.youtube.com/watch?v=e9zENcqkY28"
               width="100%"
               height="100%"
-              
-             
+
             />
           </div>
           <div className="creator-page__shutter__podcast__circle">
@@ -56,7 +59,13 @@ const Shutter = () => {
                   <br />
                 </Trans>
               </p>
-              <div className="creator-page__shutter__podcast__blue-circle" />
+              <div className="creator-page__shutter__podcast__blue-circle" >
+              <img className="creator-page__shutter__podcast__blue-circle__avactar"
+                            src={PodcastAvactar}
+                            srcSet={`${PodcastAvactar} 1x,${PodcastAvactar_2x} 2x`}
+                            alt="PodcastAvactar"
+                        />
+              </div>
 
               <QuotationMarksBlue className="creator-page__shutter__podcast__markup" />
               <QuotationMarksBlue className="creator-page__shutter__podcast__markdown" />
@@ -87,7 +96,13 @@ const Shutter = () => {
               <p className="creator-page__shutter__youtube__text">
                 {t('creator.youtube.description')}
               </p>
-              <div className="creator-page__shutter__youtube__yellow-circle" />
+              <div className="creator-page__shutter__youtube__yellow-circle" > 
+              <img className="creator-page__shutter__youtube__yellow-circle__avactar"
+                            src={YoutubeAvactar}
+                            srcSet={`${YoutubeAvactar} 1x,${YoutubeAvactar_2x} 2x`}
+                            alt="YoutubeAvactar"
+                        />
+              </div> 
               <QuotationMarksYellow className="creator-page__shutter__youtube__markup" />
               <QuotationMarksYellow className="creator-page__shutter__youtube__markdown" />
               <IconYoutube className="creator-page__shutter__youtube__icon" />

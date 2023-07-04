@@ -75,7 +75,7 @@ const Head = () => {
                 <br />
               </Trans>
               {/* TODO: 使用 css 來調整段落之間的行距，盡量不使用 br tag 來分段 */}
-              <br />
+              
             </p>
             <p>
               <Trans i18nKey="creator.head.description_2">

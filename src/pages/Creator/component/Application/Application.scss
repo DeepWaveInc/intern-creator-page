@@ -160,6 +160,9 @@
         margin: 32px 32px;
         display: flex;
         flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 18px ;
 
         @include breakpoint-pc-md() {
         }
@@ -176,7 +179,7 @@
 
         // TODO: 未根據 UI 稿設定 label style
         label {
-          margin-bottom: 8px;
+          margin-bottom: 6px;
           height: 28px;
           display: flex;
           align-items: center;
@@ -204,6 +207,8 @@
           border: 1px solid #cccccc;
           border-radius: 8px;
 
+          
+
           @include breakpoint-pc-md() {
           }
 
@@ -215,6 +220,10 @@
 
           @include breakpoint-pad-md() {
           }
+        }
+        option[disabled] {
+          color: red; /* 更改顏色 */
+          font-size: 14px; /* 更改字型大小 */
         }
 
         textarea {
@@ -222,33 +231,23 @@
           width: 100%;
           border: 1px solid #cccccc;
           border-radius: 8px;
-
-          @include breakpoint-pc-md() {
+          &::placeholder {
+            color: #909090; 
+            font-weight: 400;
+            font-size: 16px; 
+            padding-left: 16px;
+            padding-top: 13px;
           }
 
-          @include breakpoint-pc-sm() {
-          }
 
-          @include breakpoint-pad-lg() {
-          }
-
-          @include breakpoint-pad-md() {
-          }
         }
       }
 
       &__block {
         display: flex;
         justify-content: space-between;
-
-        @include breakpoint-pc-md() {
-        }
-
-        @include breakpoint-pc-sm() {
-        }
-
-        @include breakpoint-pad-lg() {
-        }
+        flex-wrap: wrap;
+        gap: 0 16px;
 
         @include breakpoint-pad-md() {
           flex-direction: column;
@@ -259,6 +258,12 @@
           width: 100%;
           border: 1px solid #cccccc;
           border-radius: 8px;
+          &::placeholder {
+            color: #909090; 
+            font-weight: 400;
+            font-size: 16px; 
+            padding-left: 16px;
+          }
 
           @include breakpoint-pc-md() {
           }
@@ -272,26 +277,16 @@
           @include breakpoint-pad-md() {
           }
         }
+        
       }
 
       &__part {
         flex-grow: 1;
         display: flex;
+
         flex-direction: column;
-        margin: 8px;
+       
         
-
-        @include breakpoint-pc-md() {
-        }
-
-        @include breakpoint-pc-sm() {
-        }
-
-        @include breakpoint-pad-lg() {
-        }
-
-        @include breakpoint-pad-md() {
-        }
       }
 
       &__block2 {

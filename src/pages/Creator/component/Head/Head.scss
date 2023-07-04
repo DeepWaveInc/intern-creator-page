@@ -7,7 +7,7 @@
         display: flex;
         width: 100%;
         height: 796px;
-        overflow: hidden;
+        
         @include breakpoint-pc-sm(){
             height: 740px;
         }
@@ -21,16 +21,16 @@
             height: 503px;
             position: absolute;
             left: 50%;
-            top: 234px;
+            top: 214px;
             transform: translateX(-50%);
 
             @include breakpoint-pc-md() {
-                top: 180px;
-                left: 75%;
+                top: 234px;
+                left: 70%;
               }
         
               @include breakpoint-pad-lg() {
-                left: 100%;                
+                left: 95%;                
               }
               @include breakpoint-phone-lg() {
                 left: 120%;                
@@ -52,13 +52,21 @@
             
             top: -762px;
             @include breakpoint-pc-md(){
-                left: 50%;
+                left: 54%;
             }
             @include breakpoint-pc-sm() {
                 width: 1376px;
                 
 
               }
+              @include breakpoint-pad-lg(){
+                width: 1248px; 
+                left: 56%;
+            }
+            @include breakpoint-pad-md(){
+                width: 988px; 
+                left: 51%;
+            }
 
             
 
@@ -90,9 +98,9 @@
         
 
         &__dialog{
-            position: relative;
+            position: absolute;
             top: 135px;
-            right: 14.73%;
+            right: 18%;
             display: flex;
             flex-direction: column;
             
@@ -101,21 +109,25 @@
             
 
             @include breakpoint-pc-lg(){
-                 
+                right: 8%;
             }
 
             @include breakpoint-pc-sm(){
-                right: 12.66%;
+                top: 126px;
+                right: 12.6%;
 
             }
 
 
 
             @include breakpoint-pad-lg(){
+                right: 8%;
+                top: 109px;
                 
             }
 
             @include breakpoint-pad-md(){
+                position: relative;
                 order: 1;
                 top: 80px;
                 right: 0;
@@ -126,7 +138,8 @@
 
         &__dialogBox{
             
-            
+            width: 571px;
+            height: 393px;
             z-index: 0;
             @include breakpoint-pc-sm() {
                 
@@ -152,21 +165,24 @@
             flex-direction: column;
             z-index: 2;
             flex-shrink: 1; 
-            min-width: 0; 
+             
         
 
             @include breakpoint-pc-lg(){
+                top: 135px;
                 left: calc(50% - 76.13px/2 - 537.94px);
             }
 
             @include breakpoint-pc-sm(){
                 left: calc(50% - 66.39px/2 - 413.8px);
+                
 
             }
 
 
 
             @include breakpoint-pad-lg(){
+                top: 144px;
                 left:calc(50% - 66.39px/2 - 379.8px);
             }
 

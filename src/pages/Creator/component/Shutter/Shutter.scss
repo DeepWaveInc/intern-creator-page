@@ -211,6 +211,25 @@ $topSpace: 652px;
           width: 136.3px;
           height: 136.3px;
         }
+        &__avactar{
+          position: relative;
+          top: -34px;
+          left: -32px;
+          @include breakpoint-pc-sm() {
+            width: 194px;
+            height: 194px;
+            top: -25px;
+            left: -20px;
+            
+          }
+          @include breakpoint-pad-md() {
+            width: 160px;
+            height: 160px;
+            top: -20.85px;
+            left: -16.47px;
+          }
+
+        }
       }
       &__icon {
         position: absolute;
@@ -437,6 +456,24 @@ $topSpace: 652px;
           height: 150px;
           top: 253px;
           left: 23px;
+        }
+        &__avactar{
+          position: relative;
+          top: -14px;
+          left: 2px;
+          @include breakpoint-pc-sm() {
+            width: 202px;
+            height: 206px;
+            top: -10px;
+            left: -11px;
+            
+          }
+          @include breakpoint-pad-md() {
+            width: 165px;
+            height: 167px;
+            top: -9px;
+            left: -8px;
+          }
         }
       }
       &__markup {

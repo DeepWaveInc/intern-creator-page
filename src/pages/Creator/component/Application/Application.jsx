@@ -2,9 +2,17 @@ import { useTranslation } from 'react-i18next'
 import Trans from '../../../../component/trans'
 import './Application.scss'
 import { Normal as Button } from '../../../../component/button'
+import React, { useRef } from 'react';
 
 const Application = () => {
   const { t } = useTranslation();
+  const inputRefs = useRef([]);
+
+  const handleLabelClick = (index) => {
+    inputRefs.current[index].focus();
+  };
+
+  
 
   return (
     <section className="creator-page__application">
@@ -22,44 +30,47 @@ const Application = () => {
           <form action="" className="creator-page__application__form__content" >
             <div className="creator-page__application__form__block">
               <div className="creator-page__application__form__part">
-                <label>{t('creator.form.contact_name.label')}</label>
+                <label onClick={() => handleLabelClick(0)}>{t('creator.form.contact_name.label')}</label>
                 <input
                   type="text"
                   name=""
                   placeholder={t('creator.form.input.placeholder')}
-                  
+                  ref={(ref) => (inputRefs.current[0] = ref)}
                 />
                 <div className="input-error">
-                  {"xxxxxxxxxxx"}
+                  
                 </div>
               </div>
 
               <div className="creator-page__application__form__part">
-                <label>{t('creator.form.name_of_channel_or_team.label')}</label>
+                <label onClick={() => handleLabelClick(1)}>{t('creator.form.name_of_channel_or_team.label')}</label>
                 <input
                   type="text"
                   name=""
                   placeholder={t('creator.form.input.placeholder')}
+                  ref={(ref) => (inputRefs.current[1] = ref)}
                 />
               </div>
             </div>
 
             <div className="creator-page__application__form__block">
               <di className="creator-page__application__form__part">
-                <label>{t('creator.form.channel_url.label')}</label>
+                <label onClick={() => handleLabelClick(2)}>{t('creator.form.channel_url.label')}</label>
                 <input
                   type="text"
                   name=""
                   placeholder={t('creator.form.input.placeholder')}
+                  ref={(ref) => (inputRefs.current[2] = ref)}
                 />
               </di>
 
               <div className="creator-page__application__form__part">
-                <label>{t('creator.form.email.label')}</label>
+                <label onClick={() => handleLabelClick(3)}>{t('creator.form.email.label')}</label>
                 <input
                   type="text"
                   name=""
                   placeholder={t('creator.form.input.placeholder')}
+                  ref={(ref) => (inputRefs.current[3] = ref)}
                 />
               </div>
             </div>
@@ -97,10 +108,11 @@ const Application = () => {
 
             <div className="creator-page__application__form__block">
               <div className="creator-page__application__form__part">
-                <label>{t('creator.form.reason.label')}</label>
+                <label onClick={() => handleLabelClick(4)}>{t('creator.form.reason.label')}</label>
                 <textarea
                   name=""
                   placeholder={t('creator.form.input.placeholder')}
+                  ref={(ref) => (inputRefs.current[4] = ref)}
                 ></textarea>
               </div>
             </div>
