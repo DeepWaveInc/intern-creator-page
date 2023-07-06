@@ -33,9 +33,11 @@ $topSpace: 652px;
     height: 2517px;
     overflow: hidden;
     top: -144px;
+
     @include breakpoint-pc-sm() {
       height: 2768px - $topSpace;
     }
+
     @include breakpoint-pad-md() {
       top: -70px;
       height: 2910px;
@@ -52,7 +54,6 @@ $topSpace: 652px;
 
       &__container {
         width: 100%;
-        z-index: -1;
         height: 858px;
         @include breakpoint-pc-sm() {
           height: 620px;
@@ -72,6 +73,7 @@ $topSpace: 652px;
           left: calc(50% - 818px / 2 + 228px);
         }
       }
+
       &__video {
         position: absolute;
         left: calc(50% - 742px / 2 - 300px);
@@ -79,16 +81,13 @@ $topSpace: 652px;
         width: 742px;
         height: 456px;
         z-index: 0;
-        background-color: #000;
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, .1);
+
         @include breakpoint-pc-sm() {
           width: 675px;
           height: 415px;
           left: calc(50% - 675.57px / 2 - 139.21px);
           top: 297px;
-          border-radius: 10px; 
+          border-radius: 10px;
         }
         @include breakpoint-pad-md() {
           position: static;
@@ -100,6 +99,47 @@ $topSpace: 652px;
           width: 100%;
           aspect-ratio: 403/517;
           border-radius: 0;
+        }
+
+        &__player {
+          display: flex;
+          position: relative;
+          justify-content: center;
+          box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1);
+          overflow: hidden;
+          border-radius: 10px;
+          height: 100%;
+
+          @include breakpoint-pad-lg() {
+            border-radius: 0;
+
+            .player {
+              margin-top: 0;
+              width: 100%;
+            }
+          }
+        }
+
+        &__credit {
+          font-size: 1.429rem;
+          color: #5f5f5f;
+          line-height: 29px;
+          margin: 0;
+          margin-top: 20px;
+          text-align: center;
+          line-height: 140%;
+          margin-top: 17px;
+
+          @include breakpoint-pc-sm() {
+            margin-top: 11px;
+          }
+          @include breakpoint-pad-md() {
+            margin-top: 17px;
+          }
+
+          > a {
+            color: #000;
+          }
         }
       }
 
@@ -139,16 +179,17 @@ $topSpace: 652px;
       &__title {
         font-size: $font-size-h3-32;
         line-height: 125%;
-
         font-weight: 500;
         text-align: center;
         color: $color-white;
         margin-top: 60px;
+
         @include breakpoint-pc-sm() {
           font-size: $font-size-h4-24;
           margin-top: 54px;
         }
       }
+
       &__bar {
         margin-top: 20px;
         width: 221px;
@@ -159,6 +200,7 @@ $topSpace: 652px;
           margin-top: 16px;
         }
       }
+
       &__text {
         width: 440px;
         height: 84px;
@@ -191,6 +233,7 @@ $topSpace: 652px;
           right: 100px;
         }
       }
+
       &__blue-circle {
         position: absolute;
         top: 343px;
@@ -211,7 +254,8 @@ $topSpace: 652px;
           width: 136.3px;
           height: 136.3px;
         }
-        &__avactar{
+
+        &__avatar {
           position: relative;
           top: -34px;
           left: -32px;
@@ -220,7 +264,6 @@ $topSpace: 652px;
             height: 194px;
             top: -25px;
             left: -20px;
-            
           }
           @include breakpoint-pad-md() {
             width: 160px;
@@ -228,9 +271,9 @@ $topSpace: 652px;
             top: -20.85px;
             left: -16.47px;
           }
-
         }
       }
+
       &__icon {
         position: absolute;
         top: 90px;
@@ -265,6 +308,7 @@ $topSpace: 652px;
           left: 4.7px;
         }
       }
+
       &__markdown {
         position: absolute;
         bottom: 23px;
@@ -331,16 +375,14 @@ $topSpace: 652px;
         height: 443px;
         left: calc(50% - 721px / 2 + 286.5px);
         top: 373px;
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, .1);
-        
+
         @include breakpoint-pc-sm() {
           width: 658.27px;
           height: 404.76px;
           left: calc(50% - 658.27px / 2 + 149.86px);
           top: 400px;
         }
+
         @include breakpoint-pad-md() {
           position: static;
           order: 2;
@@ -351,6 +393,34 @@ $topSpace: 652px;
           height: auto;
           aspect-ratio: 400/404;
           border-radius: 0;
+        }
+
+        &__player {
+          box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1);
+          overflow: hidden;
+          border-radius: 10px;
+        }
+
+        &__credit {
+          font-size: 1.429rem;
+          color: #5f5f5f;
+          line-height: 29px;
+          margin: 0;
+          margin-top: 20px;
+          text-align: center;
+          line-height: 140%;
+          margin-top: 17px;
+
+          @include breakpoint-pc-sm() {
+            margin-top: 11px;
+          }
+          @include breakpoint-pad-md() {
+            margin-top: 17px;
+          }
+
+          > a {
+            color: #000;
+          }
         }
       }
 
@@ -436,6 +506,26 @@ $topSpace: 652px;
           margin-top: 20px;
         }
       }
+
+      &__name {
+        position: absolute;
+        width: 204px;
+        height: 72px;
+        right: 95px;
+        top: 319px;
+        @include context-letter;
+        @include breakpoint-pc-sm() {
+          font-size: 20px;
+          right: 81px;
+          top: 257px;
+          width: 141px;
+          height: 65px;
+        }
+        @include breakpoint-pad-md() {
+          top: 242px;
+          right: 100px;
+        }
+      }
       &__yellow-circle {
         position: absolute;
         top: 313px;
@@ -457,7 +547,8 @@ $topSpace: 652px;
           top: 253px;
           left: 23px;
         }
-        &__avactar{
+
+        &__avatar {
           position: relative;
           top: -14px;
           left: 2px;
@@ -466,7 +557,6 @@ $topSpace: 652px;
             height: 206px;
             top: -10px;
             left: -11px;
-            
           }
           @include breakpoint-pad-md() {
             width: 165px;
@@ -476,6 +566,7 @@ $topSpace: 652px;
           }
         }
       }
+
       &__markup {
         position: absolute;
         top: 100px;
@@ -600,11 +691,10 @@ $topSpace: 652px;
           width: 100%;
           top: 0;
           background: #000;
-          border-top:24.5px solid #000;
-          border-bottom:17.5px solid #000;
+          border-top: 24.5px solid #000;
+          border-bottom: 17.5px solid #000;
         }
       }
-
 
       &__laptop {
         top: 0;
