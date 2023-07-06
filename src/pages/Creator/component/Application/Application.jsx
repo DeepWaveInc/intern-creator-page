@@ -2,7 +2,6 @@ import { useTranslation } from 'react-i18next'
 import Trans from '../../../../component/trans'
 import './Application.scss'
 import { Normal as Button } from '../../../../component/button'
-<<<<<<< HEAD
 import { useForm } from "react-hook-form";
 
 const Application = () => {
@@ -20,17 +19,6 @@ const Application = () => {
     };
 
   
-=======
-import React, { useRef } from 'react'
-
-const Application = () => {
-  const { t } = useTranslation()
-  const inputRefs = useRef([])
-
-  const handleLabelClick = (index) => {
-    inputRefs.current[index].focus()
-  }
->>>>>>> 7a97546e24c68be24297850a88145243e1f761ac
 
   return (
     <section className="creator-page__application">
@@ -45,7 +33,6 @@ const Application = () => {
           </p>
         </div>
         <div className="creator-page__application__form">
-<<<<<<< HEAD
           <form
           onSubmit={handleSubmit (onSubmit)} 
           action="" 
@@ -54,19 +41,10 @@ const Application = () => {
             <div className="creator-page__application__form__block">
               <div className="creator-page__application__form__part">
                 <label for="contact_name" >{t('creator.form.contact_name.label')}</label>
-=======
-          <form action="" className="creator-page__application__form__content">
-            <div className="creator-page__application__form__block">
-              <div className="creator-page__application__form__part">
-                <label onClick={() => handleLabelClick(0)}>
-                  {t('creator.form.contact_name.label')}
-                </label>
->>>>>>> 7a97546e24c68be24297850a88145243e1f761ac
                 <input
                   type="text"
                   name=""
                   placeholder={t('creator.form.input.placeholder')}
-<<<<<<< HEAD
                   id="contact_name"
                   {...register("contact_name", { required: true })}
                   
@@ -78,17 +56,6 @@ const Application = () => {
 
               <div className="creator-page__application__form__part">
                 <label for="name_of_channel_or_team">{t('creator.form.name_of_channel_or_team.label')}</label>
-=======
-                  ref={(ref) => (inputRefs.current[0] = ref)}
-                />
-                <div className="input-error"></div>
-              </div>
-
-              <div className="creator-page__application__form__part">
-                <label onClick={() => handleLabelClick(1)}>
-                  {t('creator.form.name_of_channel_or_team.label')}
-                </label>
->>>>>>> 7a97546e24c68be24297850a88145243e1f761ac
                 <input
                   type="text"
                   name=""
@@ -105,13 +72,7 @@ const Application = () => {
 
             <div className="creator-page__application__form__block">
               <div className="creator-page__application__form__part">
-<<<<<<< HEAD
                 <label for="channel_url">{t('creator.form.channel_url.label')}</label>
-=======
-                <label onClick={() => handleLabelClick(2)}>
-                  {t('creator.form.channel_url.label')}
-                </label>
->>>>>>> 7a97546e24c68be24297850a88145243e1f761ac
                 <input
                   type="text"
                   name=""
@@ -119,7 +80,6 @@ const Application = () => {
                   id="channel_url"
                   {...register("channel_url", { required: true })}
                 />
-<<<<<<< HEAD
                 <div className="creator-page__application__form__error">
                 {errors.channel_url && <p>This field is required</p>}
                 </div>
@@ -128,14 +88,6 @@ const Application = () => {
 
               <div className="creator-page__application__form__part">
                 <label for="email">{t('creator.form.email.label')}</label>
-=======
-              </div>
-
-              <div className="creator-page__application__form__part">
-                <label onClick={() => handleLabelClick(3)}>
-                  {t('creator.form.email.label')}
-                </label>
->>>>>>> 7a97546e24c68be24297850a88145243e1f761ac
                 <input
                   type="text"
                   name=""
@@ -151,15 +103,9 @@ const Application = () => {
 
             <div className="creator-page__application__form__block">
               <div className="creator-page__application__form__part">
-<<<<<<< HEAD
                 <label >{t('creator.form.country.label')}</label>
                 <select name="" {...register("country", { required: true })}>
                   <option selected value disabled>
-=======
-                <label>{t('creator.form.country.label')}</label>
-                <select name="">
-                  <option value disabled>
->>>>>>> 7a97546e24c68be24297850a88145243e1f761ac
                     {t('creator.form.selector.placeholder')}
                   </option>
                 </select>
@@ -171,7 +117,7 @@ const Application = () => {
               <div className="creator-page__application__form__part">
                 <label>{t('creator.form.language.label')}</label>
                 <select name="">
-                  <option value disabled>
+                  <option selected value disabled>
                     {t('creator.form.selector.placeholder')}
                   </option>
                 </select>
@@ -182,7 +128,7 @@ const Application = () => {
               <div className="creator-page__application__form__part">
                 <label>{t('creator.form.type.label')}</label>
                 <select name="">
-                  <option value disabled>
+                  <option selected value disabled>
                     {t('creator.form.selector.placeholder')}
                   </option>
                 </select>
@@ -191,13 +137,7 @@ const Application = () => {
 
             <div className="creator-page__application__form__block">
               <div className="creator-page__application__form__part">
-<<<<<<< HEAD
                 <label for="reason" >{t('creator.form.reason.label')}</label>
-=======
-                <label onClick={() => handleLabelClick(4)}>
-                  {t('creator.form.reason.label')}
-                </label>
->>>>>>> 7a97546e24c68be24297850a88145243e1f761ac
                 <textarea
                   name=""
                   placeholder={t('creator.form.input.placeholder')}

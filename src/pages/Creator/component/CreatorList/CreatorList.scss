@@ -247,6 +247,7 @@ $image-phone-sm: 106px;
               position: static;
               width: 24px;
               height: 24px;
+              flex-shrink: 0;
             }
           }
         }
