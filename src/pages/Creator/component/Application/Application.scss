@@ -179,7 +179,7 @@
 
         // TODO: 未根據 UI 稿設定 label style
         label {
-          margin-bottom: 6px;
+          margin-bottom: 2px;
           height: 28px;
           display: flex;
           align-items: center;
@@ -221,22 +221,19 @@
           @include breakpoint-pad-md() {
           }
         }
-        option[disabled] {
-          color: red; /* 更改顏色 */
-          font-size: 14px; /* 更改字型大小 */
-        }
+
 
         textarea {
           height: 106px;
           width: 100%;
           border: 1px solid #cccccc;
           border-radius: 8px;
+          padding: 13px 16px;
           &::placeholder {
             color: #909090; 
             font-weight: 400;
             font-size: 16px; 
-            padding-left: 16px;
-            padding-top: 13px;
+            
           }
 
 
@@ -258,11 +255,12 @@
           width: 100%;
           border: 1px solid #cccccc;
           border-radius: 8px;
+          padding: 13px 16px;
           &::placeholder {
             color: #909090; 
             font-weight: 400;
             font-size: 16px; 
-            padding-left: 16px;
+            
           }
 
           @include breakpoint-pc-md() {
@@ -283,7 +281,7 @@
       &__part {
         flex-grow: 1;
         display: flex;
-
+        position: relative;
         flex-direction: column;
        
         
@@ -305,6 +303,12 @@
         @include breakpoint-pad-md() {
           flex-direction: column;
         }
+      }
+
+      &__error {
+        position: absolute;
+        bottom: -37px;
+        color: red;
       }
 
       &__check {

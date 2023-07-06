@@ -2,15 +2,21 @@ import { useTranslation } from 'react-i18next'
 import Trans from '../../../../component/trans'
 import './Application.scss'
 import { Normal as Button } from '../../../../component/button'
-import React, { useRef } from 'react';
+import { useForm } from "react-hook-form";
 
 const Application = () => {
   const { t } = useTranslation();
-  const inputRefs = useRef([]);
+  
+  const {
+    register,
+    handleSubmit,
+    
+    formState: { errors }
+  } = useForm();
 
-  const handleLabelClick = (index) => {
-    inputRefs.current[index].focus();
-  };
+    const onSubmit = (data) => {
+      console.log(data);
+    };
 
   
 
@@ -27,62 +33,85 @@ const Application = () => {
           </p>
         </div>
         <div className="creator-page__application__form">
-          <form action="" className="creator-page__application__form__content" >
+          <form
+          onSubmit={handleSubmit (onSubmit)} 
+          action="" 
+          className="creator-page__application__form__content" 
+          >
             <div className="creator-page__application__form__block">
               <div className="creator-page__application__form__part">
-                <label onClick={() => handleLabelClick(0)}>{t('creator.form.contact_name.label')}</label>
+                <label for="contact_name" >{t('creator.form.contact_name.label')}</label>
                 <input
                   type="text"
                   name=""
                   placeholder={t('creator.form.input.placeholder')}
-                  ref={(ref) => (inputRefs.current[0] = ref)}
-                />
-                <div className="input-error">
+                  id="contact_name"
+                  {...register("contact_name", { required: true })}
                   
+                />
+                <div className="creator-page__application__form__error">
+                {errors.contact_name && <p>This field is required</p>}
                 </div>
               </div>
 
               <div className="creator-page__application__form__part">
-                <label onClick={() => handleLabelClick(1)}>{t('creator.form.name_of_channel_or_team.label')}</label>
+                <label for="name_of_channel_or_team">{t('creator.form.name_of_channel_or_team.label')}</label>
                 <input
                   type="text"
                   name=""
                   placeholder={t('creator.form.input.placeholder')}
-                  ref={(ref) => (inputRefs.current[1] = ref)}
+                  id="name_of_channel_or_team"
+                  {...register("name_of_channel_or_team", { required: true })}
                 />
+                <div className="creator-page__application__form__error">
+                {errors.name_of_channel_or_team && <p>This field is required</p>}
+                </div>
               </div>
-            </div>
-
-            <div className="creator-page__application__form__block">
-              <di className="creator-page__application__form__part">
-                <label onClick={() => handleLabelClick(2)}>{t('creator.form.channel_url.label')}</label>
-                <input
-                  type="text"
-                  name=""
-                  placeholder={t('creator.form.input.placeholder')}
-                  ref={(ref) => (inputRefs.current[2] = ref)}
-                />
-              </di>
-
-              <div className="creator-page__application__form__part">
-                <label onClick={() => handleLabelClick(3)}>{t('creator.form.email.label')}</label>
-                <input
-                  type="text"
-                  name=""
-                  placeholder={t('creator.form.input.placeholder')}
-                  ref={(ref) => (inputRefs.current[3] = ref)}
-                />
-              </div>
+              
             </div>
 
             <div className="creator-page__application__form__block">
               <div className="creator-page__application__form__part">
-                <label>{t('creator.form.country.label')}</label>
-                <select name="">
+                <label for="channel_url">{t('creator.form.channel_url.label')}</label>
+                <input
+                  type="text"
+                  name=""
+                  placeholder={t('creator.form.input.placeholder')}
+                  id="channel_url"
+                  {...register("channel_url", { required: true })}
+                />
+                <div className="creator-page__application__form__error">
+                {errors.channel_url && <p>This field is required</p>}
+                </div>
+              </div>
+              
+
+              <div className="creator-page__application__form__part">
+                <label for="email">{t('creator.form.email.label')}</label>
+                <input
+                  type="text"
+                  name=""
+                  placeholder={t('creator.form.input.placeholder')}
+                  id="email"
+                  {...register("email", { required: true })}
+                />
+                <div className="creator-page__application__form__error">
+                {errors.email && <p>This field is required</p>}
+                </div>
+              </div>
+            </div>
+
+            <div className="creator-page__application__form__block">
+              <div className="creator-page__application__form__part">
+                <label >{t('creator.form.country.label')}</label>
+                <select name="" {...register("country", { required: true })}>
                   <option selected value disabled>
                     {t('creator.form.selector.placeholder')}
                   </option>
                 </select>
+                <div className="creator-page__application__form__error">
+                {errors.country && <p>This field is required</p>}
+                </div>
               </div>
 
               <div className="creator-page__application__form__part">
@@ -108,12 +137,16 @@ const Application = () => {
 
             <div className="creator-page__application__form__block">
               <div className="creator-page__application__form__part">
-                <label onClick={() => handleLabelClick(4)}>{t('creator.form.reason.label')}</label>
+                <label for="reason" >{t('creator.form.reason.label')}</label>
                 <textarea
                   name=""
                   placeholder={t('creator.form.input.placeholder')}
-                  ref={(ref) => (inputRefs.current[4] = ref)}
+                  id="reason"
+                  {...register("reason", { required: true })}
                 ></textarea>
+                <div className="creator-page__application__form__error">
+                {errors.reason && <p>This field is required</p>}
+                </div>
               </div>
             </div>
 
@@ -127,8 +160,9 @@ const Application = () => {
                       type="checkbox"
                       name=""
                       value=""
+                      id="check_experience"
                     />
-                    <label className="creator-page__application__form__check-label">
+                    <label for="check_experience" className="creator-page__application__form__check-label">
                       {t('creator.form.plan.option.experience')}
                     </label>
                   </div>
@@ -138,8 +172,9 @@ const Application = () => {
                       type="checkbox"
                       name=""
                       value=""
+                      id="check_purchase"
                     />
-                    <label className="creator-page__application__form__check-label">
+                    <label for="check_purchase" className="creator-page__application__form__check-label">
                       {t('creator.form.plan.option.purchase')}
                     </label>
                   </div>
@@ -148,7 +183,7 @@ const Application = () => {
 
               <div className="creator-page__application__form__part">
                 <div className="creator-page__application__form__button-part">
-                  <Button
+                  <Button type="submit"
                     className="creator-page__application__form__apply-button"
                     {...{
                       type: 'primary'
