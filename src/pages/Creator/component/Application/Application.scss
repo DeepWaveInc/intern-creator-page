@@ -3,21 +3,9 @@
 
 .creator-page {
   &__application {
-    height: 1058px;
+    position: relative;
+    height: 100%;
 
-    @include breakpoint-pc-md() {
-    }
-
-    @include breakpoint-pc-sm() {
-    }
-
-    @include breakpoint-pad-lg() {
-      height: 1135px;
-    }
-
-    @include breakpoint-pad-md() {
-      height: 1514px;
-    }
 
     &__container {
       position: relative;
@@ -129,31 +117,30 @@
     }
 
     &__form {
-      height: 737px;
+      height:100%;
       flex-grow: 1;
       max-width: 1079px;
       display: flex;
       flex-direction: column;
       border: 1px solid #cccccc;
       border-radius: 12px;
-      margin: 30px 20px;
+      margin: 30px 20px 128px;
       background-color: #fff;
       font-size: $font-size-base;
 
       @include breakpoint-pc-md() {
-        margin: 35px 24px;
+        margin: 35px 24px 96px;
       }
 
-      @include breakpoint-pc-sm() {
-      }
+
 
       @include breakpoint-pad-lg() {
         margin: 24px;
       }
 
       @include breakpoint-pad-md() {
-        margin: 16px 20px;
-        height: 1149px;
+        margin: 16px 20px 96px ;
+        
       }
 
       &__content {
@@ -191,7 +178,7 @@
           &.creator-page__application__form__check-label {
             font-size: $font-size-body-18;
             margin-bottom: 0;
-            height: 25px;
+            height: 100%;
             padding: auto 0;
             line-height: 140%;
 
@@ -290,6 +277,8 @@
       &__block2 {
         display: flex;
         justify-content: space-between;
+        height: 100%;
+        
 
         @include breakpoint-pc-md() {
         }
@@ -314,16 +303,17 @@
       &__check {
         display: flex;
         height: 25px;
+        height: 100%;
 
         @include breakpoint-pad-md() {
           flex-direction: column;
-          height: 62px;
+          
         }
       }
 
       &__check-part {
         margin-right: 12px;
-        height: 25px;
+        height: 100%;
         align-items: center;
         display: flex;
         margin-bottom: 12px;
@@ -339,11 +329,13 @@
 
       &__button-part {
         display: flex;
-        justify-content: flex-end;
+        margin: auto 0;
+       justify-content: end;
       }
 
       &__apply-button {
         height: 59px;
+        
       }
 
       &__button-text {

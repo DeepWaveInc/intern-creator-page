@@ -62,7 +62,7 @@ const Head = () => {
           <div className="creator-head__context">
             <div className="creator-head__context_head">
               <h3>{t('creator.head.subtitle')}</h3>
-              <Button
+              <Button 
                 {...{
                   type: 'primary'
                 }}

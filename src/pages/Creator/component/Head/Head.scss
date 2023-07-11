@@ -219,7 +219,10 @@
                 font-weight: 500;
                 z-index: 2;
                 top: 540px;
-                left: 86px;
+                left:calc(50% - 620px/2 - 0px);
+                width: 620px;
+                text-align: center;
+                 
                 color: $color-white;
                 font-size: $font-size-h3-32;
                 transform: matrix(1, -0.06, 0.06, 1, 0, 0);
@@ -249,7 +252,7 @@
             transform: matrix(0.99, 0.15, -0.19, 0.98, 0, 0);
             top: 85px;
             left: 60px;
-            width: 490px;
+            width: 450px;
             
             @include breakpoint-pc-sm() {
                 top: 70px;
@@ -272,11 +275,15 @@
                 display: flex;
                 justify-content: space-between;
                 margin-bottom: 10px;
+                align-items: center;
 
                 > button{
                     font-size: $font-size-h4-24;
                     line-height: 30px;
                     margin-right: 25px;
+                    padding: 10px;
+                    min-width: 136px;
+                    height: 60px;
                     @include breakpoint-pad-md(){
                         font-size: $font-size-body-20;
                     }

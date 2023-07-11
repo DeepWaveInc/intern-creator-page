@@ -199,8 +199,9 @@ const Application = () => {
             </p>
           </form>
         </div>
-        <div className="creator-page__application__circle" />
+        
       </div>
+      <div className="creator-page__application__circle" />
     </section>
   )
 }

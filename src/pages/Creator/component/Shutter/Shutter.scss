@@ -83,8 +83,9 @@ $topSpace: 652px;
         z-index: 0;
 
         @include breakpoint-pc-sm() {
-          width: 675px;
-          height: 415px;
+          max-width: 675px;
+          max-height: 415px;
+          
           left: calc(50% - 675.57px / 2 - 139.21px);
           top: 297px;
           border-radius: 10px;
@@ -93,12 +94,24 @@ $topSpace: 652px;
           position: static;
           order: 2;
           margin-top: 82px;
+          max-width: 675px;
+          max-height: 415px;
+          width: 90%;
           height: auto;
+          aspect-ratio: 675/415;
+          
+          
+          
+        }
+        @include breakpoint-phone-lg(){
           max-height: 517px;
           max-width: 403px;
-          width: 100%;
+          
           aspect-ratio: 403/517;
           border-radius: 0;
+        }
+        @include breakpoint-phone-lg(){
+          width: 100%;
         }
 
         &__player {
@@ -109,14 +122,22 @@ $topSpace: 652px;
           overflow: hidden;
           border-radius: 10px;
           height: 100%;
-
-          @include breakpoint-pad-lg() {
-            border-radius: 0;
-
+          flex-direction: column;
+          @include breakpoint-pc-sm(){
+            
+              
             .player {
               margin-top: 0;
               width: 100%;
+              
             }
+          }
+
+
+          @include breakpoint-phone-md() {
+            border-radius: 0;
+
+            
           }
         }
 
@@ -183,7 +204,7 @@ $topSpace: 652px;
         text-align: center;
         color: $color-white;
         margin-top: 60px;
-
+        
         @include breakpoint-pc-sm() {
           font-size: $font-size-h4-24;
           margin-top: 54px;
@@ -377,8 +398,10 @@ $topSpace: 652px;
         top: 373px;
 
         @include breakpoint-pc-sm() {
-          width: 658.27px;
-          height: 404.76px;
+          max-width: 658.27px;
+          max-height: 404.76px;
+          width: 100%;
+          
           left: calc(50% - 658.27px / 2 + 149.86px);
           top: 400px;
         }
@@ -387,10 +410,15 @@ $topSpace: 652px;
           position: static;
           order: 2;
           margin-top: 74px;
+          height: auto;
+          aspect-ratio: 658.27/404.76;
+          
+          
+        }
+
+        @include breakpoint-phone-md(){
           max-height: 404px;
           max-width: 400px;
-          width: 100%;
-          height: auto;
           aspect-ratio: 400/404;
           border-radius: 0;
         }
@@ -399,6 +427,11 @@ $topSpace: 652px;
           box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1);
           overflow: hidden;
           border-radius: 10px;
+
+          @include breakpoint-phone-sm(){
+            border-radius: 0;
+          }
+          
         }
 
         &__credit {
@@ -624,6 +657,7 @@ $topSpace: 652px;
           font-size: 40px;
           color: #0146a2;
           line-height: 140%;
+          text-align: center;
           @include breakpoint-pc-sm() {
             font-size: $font-size-h3-32;
             line-height: 125%;

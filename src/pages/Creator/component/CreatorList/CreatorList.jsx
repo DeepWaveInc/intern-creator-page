@@ -46,8 +46,9 @@ const CreatorList = () => {
   const { t } = useTranslation()
   return (
     <section className="creator-page__creator-list">
+      <h2>{t('creator.list.title')}</h2>
       <div className="creator-page__creator-list__container">
-        <h2>{t('creator.list.title')}</h2>
+        
         <ImageList images={IMAGES} />
         {/* <Button className="creator-page__creator-list__button"
           {...{
