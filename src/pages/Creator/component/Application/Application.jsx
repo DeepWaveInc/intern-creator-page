@@ -12,8 +12,6 @@ const Application = () => {
   const {
     register,
     handleSubmit,
-    
-    
     formState: { errors }
   } = useForm();
 
@@ -120,7 +118,7 @@ const Application = () => {
                     {...register('country', { required: true })}
                     className={errors.country ? 'error' : ''}
                   >
-                  <option selected value disabled  >
+                  <option selected value="" disabled  >
                     {t('creator.form.selector.placeholder')}
                   </option>
                 </select>
@@ -131,22 +129,37 @@ const Application = () => {
 
               <div className="creator-page__application__form__part">
                 <label>{t('creator.form.language.label')}</label>
-                <select name="">
-                  <option selected value disabled>
+                <select 
+                  name=""
+                  id='language'
+                  {...register('language', { required: true })}
+                  className={errors.language ? 'error' : ''}
+                  >
+                  <option selected  value="" disabled>
                     {t('creator.form.selector.placeholder')}
                   </option>
                 </select>
+                <div className="creator-page__application__form__error">
+                  {errors.language && <p>This field is required</p>}
+                </div>
               </div>
             </div>
 
             <div className="creator-page__application__form__block">
               <div className="creator-page__application__form__part">
                 <label>{t('creator.form.type.label')}</label>
-                <select name="">
-                  <option selected value disabled>
+                <select 
+                  name=""
+                  id='type'
+                  {...register('type', { required: true })}
+                  className={errors.type ? 'error' : ''}>
+                  <option selected value=""d disabled>
                     {t('creator.form.selector.placeholder')}
                   </option>
                 </select>
+                <div className="creator-page__application__form__error">
+                  {errors.type && <p>This field is required</p>}
+                </div>
               </div>
             </div>
 
@@ -172,7 +185,7 @@ const Application = () => {
                 <div className="creator-page__application__form__check">
                   <div className="creator-page__application__form__check-part">
                   <input
-                      className="creator-page__application__form__checkbox"
+                       className={errors.experience && errors.purchase ? "creator-page__application__form__checkbox__error" :"creator-page__application__form__checkbox"}
                       type="checkbox"
                       name="experience"
                       id="check_experience"
@@ -184,7 +197,8 @@ const Application = () => {
                   </div>
                   <div className="creator-page__application__form__check-part">
                   <input
-                      className="creator-page__application__form__checkbox"
+                    className={errors.experience && errors.purchase ? "creator-page__application__form__checkbox__error" :"creator-page__application__form__checkbox"}
+                      
                       type="checkbox"
                       name="purchase"
                       id="check_purchase"
