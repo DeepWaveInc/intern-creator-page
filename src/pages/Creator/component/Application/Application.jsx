@@ -2,26 +2,32 @@ import { useTranslation } from 'react-i18next'
 import Trans from '../../../../component/trans'
 import './Application.scss'
 import { Normal as Button } from '../../../../component/button'
+
 import { useForm } from "react-hook-form";
 
 const Application = () => {
   const { t } = useTranslation();
   
+  
   const {
     register,
     handleSubmit,
+    
     
     formState: { errors }
   } = useForm();
 
     const onSubmit = (data) => {
+
       console.log(data);
     };
+  
 
   
 
   return (
     <section className="creator-page__application">
+
       <div className="creator-page__application__container">
         <div className="creator-page__application__text">
           <h1>{t('creator.application.title')}</h1>
@@ -47,6 +53,7 @@ const Application = () => {
                   placeholder={t('creator.form.input.placeholder')}
                   id="contact_name"
                   {...register("contact_name", { required: true })}
+                  className={errors.contact_name ? 'error' : ''}
                   
                 />
                 <div className="creator-page__application__form__error">
@@ -62,6 +69,7 @@ const Application = () => {
                   placeholder={t('creator.form.input.placeholder')}
                   id="name_of_channel_or_team"
                   {...register("name_of_channel_or_team", { required: true })}
+                  className={errors.name_of_channel_or_team ? 'error' : ''}
                 />
                 <div className="creator-page__application__form__error">
                 {errors.name_of_channel_or_team && <p>This field is required</p>}
@@ -79,6 +87,7 @@ const Application = () => {
                   placeholder={t('creator.form.input.placeholder')}
                   id="channel_url"
                   {...register("channel_url", { required: true })}
+                  className={errors.channel_url ? 'error' : ''}
                 />
                 <div className="creator-page__application__form__error">
                 {errors.channel_url && <p>This field is required</p>}
@@ -94,6 +103,7 @@ const Application = () => {
                   placeholder={t('creator.form.input.placeholder')}
                   id="email"
                   {...register("email", { required: true })}
+                  className={errors.email ? 'error' : ''}
                 />
                 <div className="creator-page__application__form__error">
                 {errors.email && <p>This field is required</p>}
@@ -104,8 +114,13 @@ const Application = () => {
             <div className="creator-page__application__form__block">
               <div className="creator-page__application__form__part">
                 <label >{t('creator.form.country.label')}</label>
-                <select name="" {...register("country", { required: true })}>
-                  <option selected value disabled>
+                <select
+                    name=""
+                    id="country"
+                    {...register('country', { required: true })}
+                    className={errors.country ? 'error' : ''}
+                  >
+                  <option selected value disabled  >
                     {t('creator.form.selector.placeholder')}
                   </option>
                 </select>
@@ -143,6 +158,7 @@ const Application = () => {
                   placeholder={t('creator.form.input.placeholder')}
                   id="reason"
                   {...register("reason", { required: true })}
+                  className={errors.reason ? 'error' : ''}
                 ></textarea>
                 <div className="creator-page__application__form__error">
                 {errors.reason && <p>This field is required</p>}
@@ -155,30 +171,35 @@ const Application = () => {
                 <label>{t('creator.form.plan.label')}</label>
                 <div className="creator-page__application__form__check">
                   <div className="creator-page__application__form__check-part">
-                    <input
+                  <input
                       className="creator-page__application__form__checkbox"
                       type="checkbox"
-                      name=""
-                      value=""
+                      name="experience"
                       id="check_experience"
+                      {...register('experience', { required: true })}
                     />
                     <label for="check_experience" className="creator-page__application__form__check-label">
                       {t('creator.form.plan.option.experience')}
                     </label>
                   </div>
                   <div className="creator-page__application__form__check-part">
-                    <input
+                  <input
                       className="creator-page__application__form__checkbox"
                       type="checkbox"
-                      name=""
-                      value=""
+                      name="purchase"
                       id="check_purchase"
+                      {...register('purchase', { required: true })}
                     />
                     <label for="check_purchase" className="creator-page__application__form__check-label">
                       {t('creator.form.plan.option.purchase')}
                     </label>
                   </div>
                 </div>
+                {errors.experience && errors.purchase ? (
+                  <div className="creator-page__application__form__error">
+                    <p>This field is required</p>
+                  </div>
+                ) : null}
               </div>
 
               <div className="creator-page__application__form__part">

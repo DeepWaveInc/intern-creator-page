@@ -193,21 +193,21 @@
           width: 100%;
           border: 1px solid #cccccc;
           border-radius: 8px;
+          background: url("../../../../assets/image/creator/application/selectarrow.svg") no-repeat right 13px center transparent;
 
-          
+          appearance:none;
+          -moz-appearance:none;
+          -webkit-appearance:none;
+          padding: 13px 16px;
+          color: #909090; 
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 100%;
 
-          @include breakpoint-pc-md() {
-          }
 
-          @include breakpoint-pc-sm() {
-          }
-
-          @include breakpoint-pad-lg() {
-          }
-
-          @include breakpoint-pad-md() {
-          }
         }
+
+
 
 
         textarea {
@@ -235,6 +235,7 @@
 
         @include breakpoint-pad-md() {
           flex-direction: column;
+          gap: 18px;
         }
 
         input {
@@ -270,6 +271,10 @@
         display: flex;
         position: relative;
         flex-direction: column;
+        .error{
+          border: 1.5px solid red;
+          
+        }
        
         
       }
@@ -330,7 +335,7 @@
       &__button-part {
         display: flex;
         margin: auto 0;
-       justify-content: end;
+       justify-content: flex-end;
       }
 
       &__apply-button {

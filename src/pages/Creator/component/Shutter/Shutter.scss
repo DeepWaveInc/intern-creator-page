@@ -409,26 +409,25 @@ $topSpace: 652px;
         @include breakpoint-pad-md() {
           position: static;
           order: 2;
-          margin-top: 74px;
+          margin: 74px ;
           height: auto;
           aspect-ratio: 658.27/404.76;
-          
+          width: 90%;
           
         }
-
-        @include breakpoint-phone-md(){
-          max-height: 404px;
-          max-width: 400px;
-          aspect-ratio: 400/404;
+        @include breakpoint-phone-lg() {
+          width: 100%;
           border-radius: 0;
         }
+
+
 
         &__player {
           box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1);
           overflow: hidden;
           border-radius: 10px;
 
-          @include breakpoint-phone-sm(){
+          @include breakpoint-phone-lg(){
             border-radius: 0;
           }
           
